@@ -1,14 +1,16 @@
 <template>
   <div class="indexPage">
-    <ElButton type="danger" @click="handleCount">add count, {{ currentCount }}</ElButton>
-    <ElButton type="danger" @click="handleNumber">add number, {{ currentNumber }}</ElButton>
-    <nuxt-img preload src="https://static.desty.app/desty-store/philippines-img.png" loading="lazy" width="200px" height="200px" />
+    <!-- <ElButton type="danger" @click="handleCount">add count, {{ currentCount }}</ElButton> -->
+    <!-- <ElButton type="danger" @click="handleNumber">add number, {{ currentNumber }}</ElButton> -->
+    <!-- <nuxt-img preload src="https://static.desty.app/desty-store/philippines-img.png" loading="lazy" width="200px" height="200px" /> -->
+    <Relation />
   </div>
 </template>
 
 <script setup>
-import { ElButton } from 'element-plus';
+// import { ElButton } from 'element-plus';
 import useUser from '~~/stores';
+import Relation from '~~/components/Relation';
 
 useHead({
   title: 'index page',
@@ -42,6 +44,6 @@ function handleNumber() {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  // height: 300px;
 }
 </style>
