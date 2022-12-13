@@ -20,14 +20,14 @@
     "cross-env": "^7.0.3",
     "less": "^4.1.3",
     "less-loader": "^11.0.0",
-    "nuxt": "^3.0.0-rc.10",
+    "nuxt": "3.0.0-rc.10",
     "postcss": "^8.4.17",
     "postcss-pxtorem": "^6.0.0",
     "unplugin-auto-import": "^0.9.1",
     "unplugin-vue-components": "^0.20.1"
   },
   "dependencies": {
-    "desty-design": "^1.1.6",
+    "desty-design": "^1.3.0",
     "element-plus": "^2.2.6",
     "pinia": "^2.0.14",
     "vue-i18n": "^9.1.10",

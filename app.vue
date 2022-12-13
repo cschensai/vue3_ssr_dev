@@ -1,16 +1,20 @@
 <template>
   <div>
     <ElConfigProvider :locale="elementPlusEn">
-      <DestyHeader />
+      <client-only>
+        <DestyHeaderV2 />
+      </client-only>
       <!-- 路由组件 -->
       <NuxtPage />
-      <DestyFooter />
+      <client-only>
+        <DestyFooter />
+      </client-only>
     </ElConfigProvider>
   </div>
 </template>
 
 <script setup>
-import { DestyHeader, DestyFooter } from 'desty-design/lib/index.cjs.js';
+// import { DestyHeaderV2 } from 'desty-design';
 import { ElConfigProvider } from 'element-plus';
 import elementPlusEn from 'element-plus/es/locale/lang/en';
 // import elementPlusId from 'element-plus/es/locale/lang/id';

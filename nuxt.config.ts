@@ -56,6 +56,18 @@ export default defineNuxtConfig({
       }
     }
   },
+  // source map
+  sourcemap: {
+    client: false,
+    server: false,
+  },
+  // 只在client渲染
+  plugins: [
+    {
+      src: '~/plugins/desty-design',
+      mode: 'client',
+    }
+  ],
   // 注册运行时环境配置变量
   publicRuntimeConfig: envData,
   vite: {
