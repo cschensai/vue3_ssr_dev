@@ -2,12 +2,13 @@
   <div class="indexPage">
     <ElButton type="danger" @click="handleCount">add count, {{ currentCount }}</ElButton>
     <ElButton type="danger" @click="handleNumber">add number, {{ currentNumber }}</ElButton>
+    <nuxt-img preload src="https://static.desty.app/desty-store/philippines-img.png" loading="lazy" width="200px" height="200px" />
   </div>
 </template>
 
 <script setup>
 import { ElButton } from 'element-plus';
-import useUser from '~/stores/user';
+import useUser from '~~/stores';
 
 useHead({
   title: 'index page',
