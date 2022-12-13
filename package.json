@@ -11,6 +11,7 @@
     "analyze": "nuxt analyze"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
     "@nuxtjs/composition-api": "^0.32.0",
     "@nuxtjs/i18n": "^7.2.2",
     "@nuxtjs/proxy": "^2.1.0",
@@ -26,7 +27,6 @@
     "unplugin-vue-components": "^0.20.1"
   },
   "dependencies": {
-    "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
     "desty-design": "^1.1.6",
     "element-plus": "^2.2.6",
     "pinia": "^2.0.14",

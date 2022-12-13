@@ -43,6 +43,7 @@ export default defineNuxtConfig({
   modules: [
     // 请求代理配置，解决跨域
 	  '@nuxtjs/proxy',
+    // 图片懒加载
     '@nuxt/image-edge',
   ],
   // 跨域代理配置
