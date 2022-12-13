@@ -1,20 +1,16 @@
 import { defineStore } from 'pinia';
 
-const useUser = defineStore('user', {
+const useMenuHome = defineStore('home', {
   state: () => {
     return {
-      number: 0,
+      isPhone: false,
     };
   },
   actions: {
-    addNumber() {
-      this.number++;
-    },
-    logUserOut() {
-      // todo
+    setPhone(isPhone) {
+      this.isPhone = isPhone;
     },
   },
-  getters: {},
 })
 
-export default useUser;
+export default useMenuHome;

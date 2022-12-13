@@ -14,14 +14,28 @@ import { DestyHeader, DestyFooter } from 'desty-design/lib/index.cjs.js';
 import { ElConfigProvider } from 'element-plus';
 import elementPlusEn from 'element-plus/es/locale/lang/en';
 // import elementPlusId from 'element-plus/es/locale/lang/id';
-import flexible from './utils/flexible';
+import useHome from './stores/index';
 
+const homeStore = useHome();
 
 // import { ref } from 'vue';
 // const time = ref(getLocaleTime()); 
-onMounted(() => {
-  flexible(window, document);
-})
+onBeforeMount(() => {
+  // 设置当前设备变量
+  const WIDTH = 768;
+  if (document.body.clientWidth < WIDTH) {
+    homeStore.setPhone(true);
+  }else{
+    homeStore.setPhone(false);
+  }
+  window.onresize = () => {
+    if (document.body.clientWidth < WIDTH) {
+      homeStore.setPhone(true);
+    } else {
+      homeStore.setPhone(false);
+    }
+  };
+});
 </script>
 
 <style lang="less">
