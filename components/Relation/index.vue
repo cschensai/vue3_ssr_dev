@@ -78,7 +78,11 @@
       </header>
       <section class="marquee" data-aos="zoom-in">
         <section class="wrapper">
-          <div class="content"></div>
+          <div class="content">
+            <div class="marquee-img" v-for="item in featured" :key="item">
+              <img :src="item" />
+            </div>
+          </div>
         </section>
       </section>
     </section>
@@ -114,6 +118,15 @@ const partners = ref([
   "https://static.desty.app/desty-homepage/ninja.png",
   "https://static.desty.app/desty-homepage/mahana.png",
   "https://static.desty.app/desty-homepage/jne.png",
+]);
+
+const featured = ref([
+  "https://static.desty.app/desty-homepage/v2/techinasia.png",
+  "https://static.desty.app/desty-homepage/v2/dailysocial.png",
+  "https://static.desty.app/desty-homepage/v2/liputan.png",
+  "https://static.desty.app/desty-homepage/v2/e27.png",
+  "https://static.desty.app/desty-homepage/v2/indotelk.png",
+  "https://static.desty.app/desty-homepage/v2/dealstreetasia.png",
 ]);
 </script>
 
@@ -279,8 +292,6 @@ const partners = ref([
     .title {
       margin: 60px 0 40px 0;
     }
-    &-middle {
-    }
     .marquee {
       width: 100%;
       padding: 0 60px;
@@ -291,70 +302,48 @@ const partners = ref([
       padding: 20px 0 110px;
 
       .wrapper {
-        width: 200vw;
+        width: 100vw;
         position: relative;
         overflow: hidden;
-
-        &::before,
-        &:after {
-          content: "";
-          position: absolute;
-          z-index: 1;
-          top: 0;
-          height: 100%;
-          width: 222px;
-        }
-
-        &::before {
-          left: 0;
-          background-image: linear-gradient(
-            90deg,
-            #fff 27%,
-            rgba(255, 255, 250, 0) 100%
-          );
-        }
-
-        &::after {
-          left: auto;
-          right: 0;
-          background-image: linear-gradient(
-            90deg,
-            rgba(255, 255, 250, 0) 27%,
-            #fff 100%
-          );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .content {
+          width: 750px;
+          height: 180px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 40px 80px;
+          .marquee-img {
+            height: 70px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .box {
-    margin-bottom: 20px;
-    text-align: center;
-
-    & > img {
-      display: block;
-      margin: 15px auto;
-      max-height: none;
-      max-width: 60vw;
-
-      &:first-of-type {
-        margin-left: auto;
+@media screen and (max-width: 768px) {
+  .relations {
+    .our-partners {
+      .title {
+        h3 {
+          font-size: 30px;
+          line-height: 44px;
+        }
       }
-
-      &:last-of-type {
-        margin-right: auto;
+      .marquee {
+        padding: 0;
+        &-img {
+          height: 42.5px !important;
+        }
       }
-    }
-  }
-
-  .marquee .wrapper {
-    padding-left: 0;
-    padding-right: 0;
-    &:before,
-    &:after {
-      width: 20vw;
     }
   }
 }

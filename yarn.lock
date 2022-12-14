@@ -1841,10 +1841,17 @@ destroy@1.2.0:
   resolved "http://nexus.desty.chat/repository/npm-group/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
 
+<<<<<<< HEAD
 desty-design@^1.3.3:
   version "1.3.3"
   resolved "http://nexus.desty.chat/repository/npm-group/desty-design/-/desty-design-1.3.3.tgz#de6140e3b0a3b519abea42bb544da6d68b3c296b"
   integrity sha512-Fy39zfRCS8ti/ohxFZSa2mRWy8saZXt+VI3WRWn0yEyfY53PFYeASuNCdUavZKLfMaUVpky/POjlMYLLpwjuJQ==
+=======
+desty-design@^1.3.0:
+  version "1.3.0"
+  resolved "http://nexus.desty.chat/repository/npm-group/desty-design/-/desty-design-1.3.0.tgz#c4b3461a76d719f7c7cace99b8dcd91481a6f699"
+  integrity sha512-w3jIHERL7uIw9HjBkKt7jeq6cYCAYIN2+jb0qjq1z5j4IV/raIRTbUwYrG0rXdVNCaLBeNKU/vLENgTw3Dwz8g==
+>>>>>>> 2803a702b0b457b1e2a77a669dd9b19713255dd7
   dependencies:
     axios "^0.27.2"
     lodash.debounce "^4.0.8"
