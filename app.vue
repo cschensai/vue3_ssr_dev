@@ -2,7 +2,13 @@
   <div>
     <ElConfigProvider :locale="elementPlusEn">
       <client-only>
-        <DestyHeaderV2 />
+        <DestyHeaderV2>
+          <template v-slot:sub-menu-products-content>
+            <div class="content-box">
+              asdada
+            </div>
+          </template>
+        </DestyHeaderV2>
       </client-only>
       <!-- 路由组件 -->
       <NuxtPage />
