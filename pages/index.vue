@@ -1,10 +1,12 @@
 <template>
   <div class="indexPage">
+    <ManageBusiness />
+    <DashBoardList />
     <!-- <ElButton type="danger" @click="handleCount">add count, {{ currentCount }}</ElButton> -->
     <!-- <ElButton type="danger" @click="handleNumber">add number, {{ currentNumber }}</ElButton> -->
     <!-- <nuxt-img preload src="https://static.desty.app/desty-store/philippines-img.png" loading="lazy" width="200px" height="200px" /> -->
-    <relation />
-    <experience />
+    <!-- <relation />
+    <experience /> -->
   </div>
 </template>
 
@@ -13,6 +15,8 @@
 import useUser from '~~/stores';
 import Relation from '~~/components/Relation';
 import experience from '~~/components/Experience'
+import ManageBusiness from '~/pages/home/components/ManageBusiness/index.vue';
+import DashBoardList from '~/pages/home/components/DashBoardList/index.vue';
 
 useHead({
   title: 'index page',
@@ -43,10 +47,10 @@ function handleNumber() {
 
 <style lang="less" scoped>
 .indexPage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
   // height: 300px;
 }
 </style>

@@ -1,30 +1,23 @@
 <template>
   <div>
     <ElConfigProvider :locale="elementPlusEn">
-      <client-only>
-        <DestyHeaderV2>
-          <template v-slot:sub-menu-products-content>
-            <div class="content-box">
-              asdada
-            </div>
-          </template>
-        </DestyHeaderV2>
-      </client-only>
+      <Header />
       <!-- 路由组件 -->
       <NuxtPage />
-      <client-only>
-        <DestyFooter />
-      </client-only>
+      <Footer />
     </ElConfigProvider>
   </div>
 </template>
 
 <script setup>
-// import { DestyHeaderV2 } from 'desty-design';
 import { ElConfigProvider } from 'element-plus';
+import Header from '~/components/Header/index.vue';
+import Footer from '~/components/Footer/index.vue';
 import elementPlusEn from 'element-plus/es/locale/lang/en';
 // import elementPlusId from 'element-plus/es/locale/lang/id';
 import useHome from './stores/index';
+import flexible from './utils/flexible';
+
 
 const homeStore = useHome();
 
@@ -46,12 +39,20 @@ onBeforeMount(() => {
     }
   };
 });
+
+onMounted(() => {
+  flexible(window, document);
+})
+
 </script>
 
 <style lang="less">
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Plus Jakarta Sans';
+  position: relative;
+  overflow-x: hidden;
 }
 </style>
 
