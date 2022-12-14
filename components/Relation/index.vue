@@ -198,14 +198,15 @@ const partners = ref([
       height: 98px;
       margin: auto;
       overflow: hidden;
+      position: relative;
       &::before,
       &:after {
         content: "";
         position: absolute;
         z-index: 1;
         top: 0;
-        height: 100%;
-        width: 408px;
+        height: 98px;
+        width: 210px;
       }
       &::before {
         left: 0;
