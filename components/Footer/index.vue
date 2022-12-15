@@ -1,6 +1,7 @@
 <template>
   <client-only>
     <DestyFooter
+      class="desty-footer"
       :lang="langRef"
       @handleLang="handleLang"
       @handleNav="handleNavAction"
@@ -32,5 +33,9 @@ function handleNavAction(key) {
 </script>
 
 <style lang="less" scoped>
-
+.desty-footer{
+  width: 100%;
+  position:absolute;
+  z-index: 2;
+}
 </style>

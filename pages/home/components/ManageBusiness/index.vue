@@ -91,7 +91,6 @@ function handleStartNow() {
       background: linear-gradient(151.45deg, rgba(12, 27, 184, 0.23) -4.34%, rgba(12, 27, 184, 0.2) 106.2%);
       filter: blur(200px);
       transform: rotate(10.49deg);
-      z-index: -1;
     }
     .main-title {
       font-weight: 400;
@@ -156,7 +155,6 @@ function handleStartNow() {
       background: linear-gradient(151.45deg, rgba(12, 27, 184, 0.23) -4.34%, rgba(12, 27, 184, 0.2) 106.2%);
       filter: blur(200px);
       transform: rotate(10.49deg);
-      z-index: -1;
     }
   }
 }

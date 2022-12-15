@@ -46,9 +46,9 @@ useHead({
 <style lang="less" scoped>
 .indexPage {
   // display: flex;
+  // flex-direction: column;
   // justify-content: center;
   // align-items: center;
-  // flex-direction: column;
   // height: 300px;
 }
 </style>

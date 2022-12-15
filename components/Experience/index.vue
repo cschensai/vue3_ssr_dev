@@ -41,6 +41,7 @@ const goExperience = () => {
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   position: relative;
+  transform: translateY(25px);
   &-title {
     font-weight: 700;
     font-size: 56px;
@@ -48,6 +49,7 @@ const goExperience = () => {
     text-align: center;
     color: #000000;
     z-index: 1;
+    margin: 107px 0 15px 0;
   }
   &-des {
     width: 374px;
@@ -57,6 +59,7 @@ const goExperience = () => {
     line-height: 40px;
     text-align: center;
     color: #000000;
+    margin: 0;
   }
   &-btn {
     box-sizing: border-box;
@@ -71,6 +74,7 @@ const goExperience = () => {
     background: #0c1bb8;
     border: 2px solid #0c1bb8;
     border-radius: 12px;
+    margin-top: 29px;
     cursor: pointer;
     span {
       font-family: "Public Sans";
@@ -96,13 +100,14 @@ const goExperience = () => {
 @media screen and (max-width: 768px) {
   .experience {
     height: 324px;
+    transform: translateY(20px);
     &-title {
       width: 329px;
       height: 84px;
       font-weight: 700;
       font-size: 30px;
       line-height: 42px;
-      margin-top: 40px;
+      margin: 40px 0 16px 0;
     }
     &-des {
       width: 274px;
@@ -110,8 +115,10 @@ const goExperience = () => {
       font-weight: 400;
       font-size: 18px;
       line-height: 30px;
-      margin-top: 16px;
-      margin-bottom: 12px;
+      z-index: 1;
+    }
+    &-btn {
+      margin-top: 12px;
       z-index: 1;
     }
     .white-supers {

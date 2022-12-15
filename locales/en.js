@@ -32,4 +32,40 @@ export default {
   scrollBar: {
     text: 'Scroll down',
   },
+  tools: {
+    des: "Merchant Tools",
+    title1: "Built by ",
+    title2: "to connect seamlessly",
+    pageTitle: "One link to consolidate your traffic & sales channels",
+    pageDes:
+      "Link-in-bio & Landing Page for Merchants, Creators, Influencers, and everyone!",
+    more: "Learn more",
+    pageMenu1: "Link-in-bio landing page",
+    pageMenu2: "Free features for all",
+    storeTitle: "One store to elevate your brand",
+    storeDes:
+      "Elevate your brand using our Webstore builder to create your own official website & store",
+    storeMenu1: "Online store builder",
+    storeMenu2: "No subscription fee",
+    menuTitle: "One system to grow your F&B business",
+    menuDes:
+      "Ordering food & drinks made easy using our digital ordering solution. Scan, Order, and Pay!",
+    menuMenu1: "QR scan ordering system",
+    menuMenu2: "No subscription fee",
+    chatTitle: "One system to consolidate all your eCommerce chats",
+    chatDes: "Reply all your chats comfortably on one dashboard",
+    chatMenu1: "Design website as you like",
+    chatMenu2: "Forever free",
+  },
+  relation: {
+    title: 'Merchants',
+    brandsTitle: 'Some of the brands who chose ',
+    backedTitle: 'Backed by',
+    featured: 'As Featured On'
+  },
+  experience: {
+    title: 'Experience Desty free for 14 days',
+    des: 'Start managing your business in Desty ecosystem now!',
+    btn: 'Start Free Trial'
+  }
 }

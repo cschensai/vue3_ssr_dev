@@ -1,63 +1,72 @@
 <template>
-  <section class="tools">
-    <div class="tools-head">
-      <div class="tools-head-title">
-        <span>Merchant Tools</span>
-        <div class="hr"></div>
+  <div class="desty-platform">
+    <section class="tools">
+      <div class="tools-head">
+        <div class="tools-head-title">
+          <span>Merchant Tools</span>
+          <div class="hr"></div>
+        </div>
+        <div class="tools-head-des">
+          Built by <span class="text-color">Desty</span> to connect seamlessly
+        </div>
       </div>
-      <div class="tools-head-des">Built by Desty to connect seamlessly</div>
-    </div>
-    <div class="tools-content card-deck-js">
-      <div
-        :class="['tools-content-platform', item.platform]"
-        v-for="item in platformList"
-        :key="item.platform"
-      >
-        <div class="card-body">
-          <img
-            class="card-trademark"
-            :src="`https://static.desty.app/desty-homepage/v2/${item.trademark}.svg`"
-            alt=""
-          />
-          <p class="card-title">{{ item.title }}</p>
-          <p class="card-des">{{ item.des }}</p>
-          <div class="card-more">
+      <div class="tools-content card-deck-js">
+        <div
+          :class="['tools-content-platform', item.platform]"
+          v-for="item in platformList"
+          :key="item.platform"
+        >
+          <div class="card-body">
             <img
-              src="https://static.desty.app/desty-homepage/v2/plus.svg"
+              class="card-trademark"
+              :src="`https://static.desty.app/desty-homepage/v2/${item.trademark}.svg`"
               alt=""
             />
-            <span>Learn more</span>
-          </div>
-          <div class="card-menu">
-            <div class="card-menu-item">
+            <p class="card-title">{{ item.title }}</p>
+            <p class="card-des">{{ item.des }}</p>
+            <div class="card-more" @click="golink(item.link)">
               <img
-                src="https://static.desty.app/desty-homepage/v2/menu.svg"
+                src="https://static.desty.app/desty-homepage/v2/plus.svg"
                 alt=""
               />
-              <p>{{ item.menu1 }}</p>
+              <span>Learn more</span>
             </div>
-            <div class="card-menu-item">
+            <div class="card-menu">
+              <div class="card-menu-item">
+                <img
+                  src="https://static.desty.app/desty-homepage/v2/menu.svg"
+                  alt=""
+                />
+                <p>{{ item.menu1 }}</p>
+              </div>
+              <div class="card-menu-item">
+                <img
+                  src="https://static.desty.app/desty-homepage/v2/menu.svg"
+                  alt=""
+                />
+                <p>{{ item.menu2 }}</p>
+              </div>
+            </div>
+            <div class="card-backimg">
               <img
-                src="https://static.desty.app/desty-homepage/v2/menu.svg"
+                :src="`https://static.desty.app/desty-homepage/v2/${item.backimg}.png`"
                 alt=""
               />
-              <p>{{ item.menu2 }}</p>
             </div>
-          </div>
-          <div class="card-backimg">
-            <img
-              :src="`https://static.desty.app/desty-homepage/v2/${item.backimg}.png`"
-              alt=""
-            />
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <div class="desty-platform-bg"></div>
+  </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+
+const golink = (link) => {
+  window.location.href = link;
+};
 
 const platformList = ref([
   {
@@ -68,6 +77,7 @@ const platformList = ref([
     menu1: "Link-in-bio landing page",
     menu2: "Free features for all",
     backimg: "page-assets",
+    link: "https://desty.page",
   },
   {
     platform: "tools-store",
@@ -77,6 +87,7 @@ const platformList = ref([
     menu1: "Online store builder",
     menu2: "No subscription fee",
     backimg: "store-assets",
+    link: "https://desty.store",
   },
   {
     platform: "tools-menu",
@@ -86,6 +97,7 @@ const platformList = ref([
     menu1: "QR scan ordering system",
     menu2: "No subscription fee",
     backimg: "menu-assets",
+    link: "https://desty.menu",
   },
   {
     platform: "tools-chat",
@@ -95,6 +107,7 @@ const platformList = ref([
     menu1: "QR scan ordering system",
     menu2: "Design website as you like",
     backimg: "chat-assets",
+    link: "https://omni.desty.app/chat/Home",
   },
 ]);
 
@@ -140,8 +153,8 @@ onBeforeMount(() => {
 
   function animateStackCards() {
     var top = this.element.getBoundingClientRect().top;
-    var offsetTop = 100,
-      cardHeight = 300,
+    var offsetTop = 450,
+      cardHeight = 600,
       marginY = 40;
     for (var i = 0; i < this.items.length; i++) {
       // cardTop/cardHeight/marginY are the css values for the card top position/height/Y offset
@@ -154,7 +167,7 @@ onBeforeMount(() => {
           "transform: translateY(" +
             marginY * i +
             "px) scale(" +
-            (cardHeight - scrolling * 0.03) / cardHeight +
+            (cardHeight - scrolling * 0.02) / cardHeight +
             ");"
         );
       }
@@ -175,12 +188,29 @@ onBeforeMount(() => {
 </script>
 
 <style lang="less" scoped>
+.desty-platform {
+  width: 100%;
+  position: relative;
+  &-bg {
+    width: 100%;
+    height: 985px;
+    position: absolute;
+    top: -438px;
+    z-index: -1;
+    background-image: url(https://static.desty.app/desty-homepage/v2/tools-bg-pc.png);
+    background-size: cover;
+  }
+}
 .tools {
   box-sizing: border-box;
-  width: 1298px;
+  width: 1280px;
   margin: 0 auto;
   font-family: "Plus Jakarta Sans";
   font-style: normal;
+  margin-top: 120px;
+  .text-color {
+    color: #000986;
+  }
   &-head {
     display: flex;
     justify-content: flex-start;
@@ -204,7 +234,6 @@ onBeforeMount(() => {
     }
     &-des {
       width: 522px;
-      height: 120px;
       font-weight: 800;
       font-size: 48px;
       line-height: 60px;
@@ -215,6 +244,18 @@ onBeforeMount(() => {
     display: flex;
     flex-direction: column;
     margin-bottom: 120px;
+    &:nth-child(0) {
+      transform: translateY(0px);
+    }
+    &:nth-child(1) {
+      transform: translateY(40px);
+    }
+    &:nth-child(2) {
+      transform: translateY(80px);
+    }
+    &:nth-child(3) {
+      transform: translateY(120px);
+    }
     &-platform {
       width: 100%;
       height: 576px;
@@ -222,15 +263,6 @@ onBeforeMount(() => {
       position: sticky;
       top: 80px;
       transform-origin: center top;
-      &:nth-child(0) {
-        transform: translateY(0px);
-      }
-      &:nth-child(1) {
-        transform: translateY(40px);
-      }
-      &:nth-child(2) {
-        transform: translateY(80px);
-      }
     }
     .card-body {
       font-family: "Plus Jakarta Sans";
@@ -245,7 +277,6 @@ onBeforeMount(() => {
       }
       .card-title {
         width: 551px;
-        height: 108px;
         font-weight: 700;
         font-size: 40px;
         line-height: 54px;
@@ -254,7 +285,6 @@ onBeforeMount(() => {
       }
       .card-des {
         width: 478px;
-        height: 60px;
         font-weight: 400;
         font-size: 20px;
         line-height: 30px;
@@ -299,8 +329,11 @@ onBeforeMount(() => {
       .card-backimg {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: -5px;
         z-index: -1;
+        img {
+          border-radius: 24px;
+        }
       }
     }
     .tools-page {
@@ -333,6 +366,84 @@ onBeforeMount(() => {
         background: #13d27d;
         border: 2px solid #13d27d;
         box-shadow: 4px 4px 0px #08aa62;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .desty-platform {
+    &-bg {
+      height: 743px;
+      top: -285px;
+      background-image: url(https://static.desty.app/desty-homepage/v2/tools-bg-moble.png);
+    }
+  }
+  .tools {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 16px;
+    &-head {
+      gap: 16px;
+      margin-bottom: 40px;
+      &-title {
+        gap: 16px;
+        span {
+          font-size: 20px;
+          line-height: 28px;
+          white-space: nowrap;
+        }
+        .hr {
+          width: 228px;
+        }
+      }
+      &-des {
+        width: 100%;
+        font-size: 30px;
+        line-height: 38px;
+      }
+    }
+    &-content {
+      &-platform {
+        height: 706px;
+      }
+      .card-body {
+        padding: 20px 16px 0 16px;
+        .card-trademark {
+          height: 40px;
+          margin-bottom: 20.4px;
+        }
+        .card-title {
+          width: 266px;
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 42px;
+        }
+        .card-des {
+          width: 100%;
+          font-size: 16px;
+          line-height: 26px;
+          margin: 20px 0 24px 0;
+        }
+        .card-more {
+          width: 140px;
+          height: 52px;
+        }
+        .card-menu {
+          display: none;
+        }
+        .card-backimg {
+          width: 100%;
+          bottom: 0;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .tools-chat {
+        .card-backimg {
+          bottom: 40px;
+        }
       }
     }
   }

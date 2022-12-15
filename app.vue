@@ -53,6 +53,7 @@ body {
   font-family: 'Plus Jakarta Sans';
   position: relative;
   overflow-x: hidden;
+  background-color: #F3F3F5;
 }
 </style>
 
