@@ -6,7 +6,9 @@
           <span>Merchants</span>
           <div class="hr"></div>
         </div>
-        <h3 data-aos="fade-up">Some of the brands who chose Desty</h3>
+        <h3 data-aos="fade-up">
+          Some of the brands who chose <span class="text-color">Desty</span>
+        </h3>
       </header>
       <section class="featured-on-scroll">
         <div class="list">
@@ -164,6 +166,9 @@ const featured = ref([
   --line-img-height: 38px;
   --box-img-height: 70px;
   --box-img-width: 197px;
+  .text-color {
+    color: #0012b2;
+  }
   .wrapper {
     width: 1000px;
     margin-left: auto;
@@ -310,7 +315,7 @@ const featured = ref([
       box-sizing: border-box;
       display: flex;
       flex-direction: row-reverse;
-      padding: 20px 0 110px;
+      padding-bottom: 35px;
 
       .wrapper {
         width: 100vw;
@@ -406,8 +411,8 @@ const featured = ref([
       }
     }
     .our-partners {
-      margin-bottom: 60px;
       z-index: 1;
+      padding-bottom: 35px;
       .title {
         margin: 40px 0 24px 0;
       }

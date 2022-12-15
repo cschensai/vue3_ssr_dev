@@ -356,6 +356,7 @@ onBeforeMount(() => {
         span {
           font-size: 20px;
           line-height: 28px;
+          white-space: nowrap;
         }
         .hr {
           width: 228px;
@@ -406,7 +407,7 @@ onBeforeMount(() => {
         }
       }
       .tools-chat {
-        .card-backimg{
+        .card-backimg {
           bottom: 40px;
         }
       }
