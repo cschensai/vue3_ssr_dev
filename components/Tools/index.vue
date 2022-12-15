@@ -5,7 +5,9 @@
         <span>Merchant Tools</span>
         <div class="hr"></div>
       </div>
-      <div class="tools-head-des">Built by Desty to connect seamlessly</div>
+      <div class="tools-head-des">
+        Built by <span class="text-color">Desty</span> to connect seamlessly
+      </div>
     </div>
     <div class="tools-content card-deck-js">
       <div
@@ -140,8 +142,8 @@ onBeforeMount(() => {
 
   function animateStackCards() {
     var top = this.element.getBoundingClientRect().top;
-    var offsetTop = 100,
-      cardHeight = 300,
+    var offsetTop = 300,
+      cardHeight = 600,
       marginY = 40;
     for (var i = 0; i < this.items.length; i++) {
       // cardTop/cardHeight/marginY are the css values for the card top position/height/Y offset
@@ -154,7 +156,7 @@ onBeforeMount(() => {
           "transform: translateY(" +
             marginY * i +
             "px) scale(" +
-            (cardHeight - scrolling * 0.03) / cardHeight +
+            (cardHeight - scrolling * 0.02) / cardHeight +
             ");"
         );
       }
@@ -181,6 +183,10 @@ onBeforeMount(() => {
   margin: 0 auto;
   font-family: "Plus Jakarta Sans";
   font-style: normal;
+  margin-top: 120px;
+  .text-color {
+    color: #000986;
+  }
   &-head {
     display: flex;
     justify-content: flex-start;
@@ -204,7 +210,6 @@ onBeforeMount(() => {
     }
     &-des {
       width: 522px;
-      height: 120px;
       font-weight: 800;
       font-size: 48px;
       line-height: 60px;
@@ -231,6 +236,9 @@ onBeforeMount(() => {
       &:nth-child(2) {
         transform: translateY(80px);
       }
+      &:nth-child(3) {
+        transform: translateY(120px);
+      }
     }
     .card-body {
       font-family: "Plus Jakarta Sans";
@@ -245,7 +253,6 @@ onBeforeMount(() => {
       }
       .card-title {
         width: 551px;
-        height: 108px;
         font-weight: 700;
         font-size: 40px;
         line-height: 54px;
@@ -254,7 +261,6 @@ onBeforeMount(() => {
       }
       .card-des {
         width: 478px;
-        height: 60px;
         font-weight: 400;
         font-size: 20px;
         line-height: 30px;
@@ -333,6 +339,76 @@ onBeforeMount(() => {
         background: #13d27d;
         border: 2px solid #13d27d;
         box-shadow: 4px 4px 0px #08aa62;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .tools {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 16px;
+    &-head {
+      gap: 16px;
+      margin-bottom: 40px;
+      &-title {
+        gap: 16px;
+        span {
+          font-size: 20px;
+          line-height: 28px;
+        }
+        .hr {
+          width: 228px;
+        }
+      }
+      &-des {
+        width: 100%;
+        font-size: 30px;
+        line-height: 38px;
+      }
+    }
+    &-content {
+      &-platform {
+        height: 706px;
+      }
+      .card-body {
+        padding: 20px 16px 0 16px;
+        .card-trademark {
+          height: 40px;
+          margin-bottom: 20.4px;
+        }
+        .card-title {
+          width: 266px;
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 42px;
+        }
+        .card-des {
+          width: 100%;
+          font-size: 16px;
+          line-height: 26px;
+          margin: 20px 0 24px 0;
+        }
+        .card-more {
+          width: 140px;
+          height: 52px;
+        }
+        .card-menu {
+          display: none;
+        }
+        .card-backimg {
+          width: 100%;
+          bottom: 0;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .tools-chat {
+        .card-backimg{
+          bottom: 40px;
+        }
       }
     }
   }

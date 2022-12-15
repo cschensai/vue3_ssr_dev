@@ -147,9 +147,20 @@ const featured = ref([
     transform: translate3d(-1124px, 0, 0);
   }
 }
+@keyframes slide-mobile {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-380px, 0, 0);
+    transform: translate3d(-380px, 0, 0);
+  }
+}
 
 .relations {
   width: 100%;
+  padding-top: 120px;
   --line-img-height: 38px;
   --box-img-height: 70px;
   --box-img-width: 197px;
@@ -331,17 +342,87 @@ const featured = ref([
 
 @media screen and (max-width: 768px) {
   .relations {
-    .our-partners {
+    padding-top: 90px;
+    .title {
+      h3 {
+        font-size: 30px;
+        line-height: 44px;
+      }
+    }
+    .featured-on {
+      &-title {
+        gap: 16px;
+        span {
+          font-size: 20px;
+          line-height: 28px;
+        }
+        .hr {
+          width: 211px;
+        }
+      }
       .title {
         h3 {
-          font-size: 30px;
-          line-height: 44px;
+          width: 329px;
+          height: 84px;
+          margin: 24px auto;
         }
+      }
+      &-scroll {
+        width: 380px;
+        height: 67px;
+        &::before,
+        &:after {
+          height: 67px;
+          width: 140px;
+        }
+        .list {
+          height: 67px;
+          .rowup {
+            -webkit-animation: 10s slide-data linear infinite normal;
+            animation: 10s slide-data linear infinite normal;
+          }
+        }
+        img {
+          height: 35px !important;
+        }
+        &-middle {
+          height: 67px;
+          justify-content: flex-start;
+        }
+      }
+    }
+    .backed-by {
+      .title {
+        margin: 33px 0 24px 0;
+      }
+      .box {
+        width: 100%;
+        height: 118px;
+        gap: 28px 20px;
+        img {
+          width: 100px;
+          height: 22px;
+        }
+      }
+    }
+    .our-partners {
+      margin-bottom: 60px;
+      z-index: 1;
+      .title {
+        margin: 40px 0 24px 0;
       }
       .marquee {
         padding: 0;
+        .wrapper {
+          .content {
+            width: 100%;
+            height: 102px;
+            gap: 0;
+          }
+        }
         &-img {
           height: 42.5px !important;
+          z-index: 1;
         }
       }
     }

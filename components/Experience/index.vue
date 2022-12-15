@@ -114,6 +114,9 @@ const goExperience = () => {
       margin-bottom: 12px;
       z-index: 1;
     }
+    &-btn{
+      z-index: 1;
+    }
     .white-supers {
       left: -160px;
       top: -100px;

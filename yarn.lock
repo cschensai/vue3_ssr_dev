@@ -34,7 +34,7 @@
   resolved "http://nexus.desty.chat/repository/npm-group/@babel/compat-data/-/compat-data-7.20.5.tgz#86f172690b093373a933223b4745deeb6049e733"
   integrity sha512-KZXo2t10+/jxmkhNXc7pZTqRvSOIvVv/+lJwHS+B2rErwOyjuVRh60yVpb7liQ1U5t7lLJ1bz+t8tSypUZdm0g==
 
-"@babel/core@^7.16.7", "@babel/core@^7.19.0", "@babel/core@^7.19.6", "@babel/core@^7.20.2":
+"@babel/core@^7.16.7", "@babel/core@^7.19.0", "@babel/core@^7.19.6", "@babel/core@^7.20.5":
   version "7.20.5"
   resolved "http://nexus.desty.chat/repository/npm-group/@babel/core/-/core-7.20.5.tgz#45e2114dc6cd4ab167f81daf7820e8fa1250d113"
   integrity sha512-UdOWmk4pNWTm/4DlPUl/Pt4Gz4rcEMb7CY0Y3eJl5Yz1vI8ZJGmHWaVE55LoxRjdpx0z259GE9U5STA9atUinQ==
@@ -240,7 +240,7 @@
     "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-typescript" "^7.20.0"
 
-"@babel/standalone@^7.19.0", "@babel/standalone@^7.20.4":
+"@babel/standalone@^7.19.0", "@babel/standalone@^7.20.6":
   version "7.20.6"
   resolved "http://nexus.desty.chat/repository/npm-group/@babel/standalone/-/standalone-7.20.6.tgz#7deb7ad244176414c3cbde020aad0607afdbe2fe"
   integrity sha512-u5at/CbBLETf7kx2LOY4XdhseD79Y099WZKAOMXeT8qvd9OSR515my2UNBBLY4qIht/Qi9KySeQHQwQwxJN4Sw==
@@ -817,9 +817,9 @@
   integrity sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==
 
 "@types/node@*":
-  version "18.11.13"
-  resolved "http://nexus.desty.chat/repository/npm-group/@types/node/-/node-18.11.13.tgz#dff34f226ec1ac0432ae3b136ec5552bd3b9c0fe"
-  integrity sha512-IASpMGVcWpUsx5xBOrxMj7Bl8lqfuTY7FKAnPmu5cHkfQVWF8GulWS1jbRqA934qZL35xh5xN/+Xe/i26Bod4w==
+  version "18.11.15"
+  resolved "http://nexus.desty.chat/repository/npm-group/@types/node/-/node-18.11.15.tgz#de0e1fbd2b22b962d45971431e2ae696643d3f5d"
+  integrity sha512-VkhBbVo2+2oozlkdHXLrb3zjsRkpdnaU2bXmX8Wgle3PUi569eLRaHGlgETQHR7lLL1w7GiG3h9SnePhxNDecw==
 
 "@types/resolve@1.17.1":
   version "1.17.1"
@@ -1831,7 +1831,7 @@ depd@2.0.0:
   resolved "http://nexus.desty.chat/repository/npm-group/depd/-/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
   integrity sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==
 
-destr@^1.1.1, destr@^1.2.0, destr@^1.2.1:
+destr@^1.1.1, destr@^1.2.0, destr@^1.2.1, destr@^1.2.2:
   version "1.2.2"
   resolved "http://nexus.desty.chat/repository/npm-group/destr/-/destr-1.2.2.tgz#7ba9befcafb645a50e76b260449c63927b51e22f"
   integrity sha512-lrbCJwD9saUQrqUfXvl6qoM+QN3W7tLV5pAOs+OqOmopCCz/JkE05MHedJR1xfk4IAnZuJXPVuN5+7jNA2ZCiA==
@@ -1841,17 +1841,10 @@ destroy@1.2.0:
   resolved "http://nexus.desty.chat/repository/npm-group/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
 
-<<<<<<< HEAD
 desty-design@^1.3.3:
   version "1.3.3"
   resolved "http://nexus.desty.chat/repository/npm-group/desty-design/-/desty-design-1.3.3.tgz#de6140e3b0a3b519abea42bb544da6d68b3c296b"
   integrity sha512-Fy39zfRCS8ti/ohxFZSa2mRWy8saZXt+VI3WRWn0yEyfY53PFYeASuNCdUavZKLfMaUVpky/POjlMYLLpwjuJQ==
-=======
-desty-design@^1.3.0:
-  version "1.3.0"
-  resolved "http://nexus.desty.chat/repository/npm-group/desty-design/-/desty-design-1.3.0.tgz#c4b3461a76d719f7c7cace99b8dcd91481a6f699"
-  integrity sha512-w3jIHERL7uIw9HjBkKt7jeq6cYCAYIN2+jb0qjq1z5j4IV/raIRTbUwYrG0rXdVNCaLBeNKU/vLENgTw3Dwz8g==
->>>>>>> 2803a702b0b457b1e2a77a669dd9b19713255dd7
   dependencies:
     axios "^0.27.2"
     lodash.debounce "^4.0.8"
@@ -2480,9 +2473,9 @@ globals@^11.1.0:
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
 globby@^13.1.2:
-  version "13.1.2"
-  resolved "http://nexus.desty.chat/repository/npm-group/globby/-/globby-13.1.2.tgz#29047105582427ab6eca4f905200667b056da515"
-  integrity sha512-LKSDZXToac40u8Q1PQtZihbNdTYSNMuWe+K5l+oa6KgDzSvVrHXlJy40hUP522RjAIoNLJYBJi7ow+rbFpIhHQ==
+  version "13.1.3"
+  resolved "http://nexus.desty.chat/repository/npm-group/globby/-/globby-13.1.3.tgz#f62baf5720bcb2c1330c8d4ef222ee12318563ff"
+  integrity sha512-8krCNHXvlCgHDpegPzleMq07yMYTO2sXKASmZmquEYWEmCx6J5UTRbp5RwMJkTJGtcQ44YpiUYUiN0b9mzy8Bw==
   dependencies:
     dir-glob "^3.0.1"
     fast-glob "^3.2.11"
@@ -2513,14 +2506,14 @@ h3@^0.7.12, h3@^0.7.21:
     ufo "^0.8.5"
 
 h3@^1.0.1:
-  version "1.0.1"
-  resolved "http://nexus.desty.chat/repository/npm-group/h3/-/h3-1.0.1.tgz#1fc56ecfaba97a437db4a48e9f3b4a4b0b151e24"
-  integrity sha512-gDCGpRvjchZW2JBlTqbJ9IOs+mdkXXuwSQkSye+jubHAv/UhdamKqoQvd4RFgyBNjHSId8Y+b10UdTcPlP/V+w==
+  version "1.0.2"
+  resolved "http://nexus.desty.chat/repository/npm-group/h3/-/h3-1.0.2.tgz#3a2992921a62de697bd4a3f449401f7600116df6"
+  integrity sha512-25QqjQMz8pX1NI2rZ/ziNT9B8Aog7jmu2a0o8Qm9kKoH3zOhE+2icVs069h6DEp0g1Dst1+zKfRdRYcK0MogJA==
   dependencies:
     cookie-es "^0.5.0"
-    destr "^1.2.1"
+    destr "^1.2.2"
     radix3 "^1.0.0"
-    ufo "^1.0.0"
+    ufo "^1.0.1"
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -3501,9 +3494,9 @@ node-gyp-build@^4.2.2:
   integrity sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==
 
 node-releases@^2.0.6:
-  version "2.0.6"
-  resolved "http://nexus.desty.chat/repository/npm-group/node-releases/-/node-releases-2.0.6.tgz#8a7088c63a55e493845683ebf3c828d8c51c5503"
-  integrity sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg==
+  version "2.0.7"
+  resolved "http://nexus.desty.chat/repository/npm-group/node-releases/-/node-releases-2.0.7.tgz#593edbc7c22860ee4d32d3933cfebdfab0c0e0e5"
+  integrity sha512-EJ3rzxL9pTWPjk5arA0s0dgXpnyiAbJDE6wHT62g7VsgrgQgmmZ+Ru++M1BFofncWja+Pnn3rEr3fieRySAdKQ==
 
 nopt@^5.0.0:
   version "5.0.0"
@@ -4779,9 +4772,9 @@ type-fest@^2.11.2:
   integrity sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==
 
 type-fest@^3.0.0:
-  version "3.3.0"
-  resolved "http://nexus.desty.chat/repository/npm-group/type-fest/-/type-fest-3.3.0.tgz#3378c9664eecfd1eb4f0522b13cb0630bc1ec044"
-  integrity sha512-gezeeOIZyQLGW5uuCeEnXF1aXmtt2afKspXz3YqoOcZ3l/YMJq1pujvgT+cz/Nw1O/7q/kSav5fihJHsC/AOUg==
+  version "3.4.0"
+  resolved "http://nexus.desty.chat/repository/npm-group/type-fest/-/type-fest-3.4.0.tgz#64a35b7748ab4a96b3e0c324475ea66643c5f9df"
+  integrity sha512-PEPg6RHlB9cFwoTMNENNrQFL0cXX04voWr2UPwQBJ3pVs7Mt8Y1oLWdUeMdGEwZE8HFFlujq8gS9enmyiQ8pLg==
 
 ufo@^0.7.9:
   version "0.7.11"
@@ -4793,7 +4786,7 @@ ufo@^0.8.3, ufo@^0.8.5, ufo@^0.8.6:
   resolved "http://nexus.desty.chat/repository/npm-group/ufo/-/ufo-0.8.6.tgz#c0ec89bc0e0c9fa59a683680feb0f28b55ec323b"
   integrity sha512-fk6CmUgwKCfX79EzcDQQpSCMxrHstvbLswFChHS0Vump+kFkw7nJBfTZoC1j0bOGoY9I7R3n2DGek5ajbcYnOw==
 
-ufo@^1.0.0:
+ufo@^1.0.0, ufo@^1.0.1:
   version "1.0.1"
   resolved "http://nexus.desty.chat/repository/npm-group/ufo/-/ufo-1.0.1.tgz#64ed43b530706bda2e4892f911f568cf4cf67d29"
   integrity sha512-boAm74ubXHY7KJQZLlXrtMz52qFvpsbOxDcZOnw/Wf+LS4Mmyu7JxmzD4tDLtUQtmZECypJ0FrCz4QIe6dvKRA==
@@ -4993,13 +4986,13 @@ untyped@^0.5.0:
     scule "^0.3.2"
 
 untyped@^1.0.0:
-  version "1.0.0"
-  resolved "http://nexus.desty.chat/repository/npm-group/untyped/-/untyped-1.0.0.tgz#bf892e66a68bd1c5ec08b802d175cf99c994a56f"
-  integrity sha512-aBeR3Z51038d7zVzsNShYEdO7u/VCp5R17fxpPXlD2QvG9g6uVJ+JM+zMJ7KFPIt1BNf3I6bU6PhAlsAFkIfdA==
+  version "1.1.0"
+  resolved "http://nexus.desty.chat/repository/npm-group/untyped/-/untyped-1.1.0.tgz#1c39e97954fa846a151275377e4cfe6c8b3e8e4d"
+  integrity sha512-v4H7juRA2cWFr+V4L2HExXwlRCwZv2A6o2M33+9aN/DPUyzqtFFMCTpiKF7sdOV8EaLxm+LTpDb0BoeGv2NswQ==
   dependencies:
-    "@babel/core" "^7.20.2"
-    "@babel/standalone" "^7.20.4"
-    "@babel/types" "^7.20.2"
+    "@babel/core" "^7.20.5"
+    "@babel/standalone" "^7.20.6"
+    "@babel/types" "^7.20.5"
     scule "^1.0.0"
 
 upath@^2.0.1:
@@ -5115,9 +5108,9 @@ vscode-languageserver@^7.0.0:
     vscode-languageserver-protocol "3.16.0"
 
 vscode-uri@^3.0.2:
-  version "3.0.6"
-  resolved "http://nexus.desty.chat/repository/npm-group/vscode-uri/-/vscode-uri-3.0.6.tgz#5e6e2e1a4170543af30151b561a41f71db1d6f91"
-  integrity sha512-fmL7V1eiDBFRRnu+gfRWTzyPpNIHJTc4mWnFkwBUmO9U3KPgJAmTx7oxi2bl/Rh6HLdU7+4C9wlj0k2E4AdKFQ==
+  version "3.0.7"
+  resolved "http://nexus.desty.chat/repository/npm-group/vscode-uri/-/vscode-uri-3.0.7.tgz#6d19fef387ee6b46c479e5fb00870e15e58c1eb8"
+  integrity sha512-eOpPHogvorZRobNqJGhapa0JdwaxpjVvyBp0QIUMRMSf8ZAlqOdEquKuRmw9Qwu0qXtJIWqFtMkmvJjUZmMjVA==
 
 vue-bundle-renderer@^0.4.2:
   version "0.4.4"
