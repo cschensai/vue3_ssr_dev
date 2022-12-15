@@ -1,61 +1,64 @@
 <template>
-  <section class="tools">
-    <div class="tools-head">
-      <div class="tools-head-title">
-        <span>Merchant Tools</span>
-        <div class="hr"></div>
+  <div class="desty-platform">
+    <section class="tools">
+      <div class="tools-head">
+        <div class="tools-head-title">
+          <span>Merchant Tools</span>
+          <div class="hr"></div>
+        </div>
+        <div class="tools-head-des">
+          Built by <span class="text-color">Desty</span> to connect seamlessly
+        </div>
       </div>
-      <div class="tools-head-des">
-        Built by <span class="text-color">Desty</span> to connect seamlessly
-      </div>
-    </div>
-    <div class="tools-content card-deck-js">
-      <div
-        :class="['tools-content-platform', item.platform]"
-        v-for="item in platformList"
-        :key="item.platform"
-      >
-        <div class="card-body">
-          <img
-            class="card-trademark"
-            :src="`https://static.desty.app/desty-homepage/v2/${item.trademark}.svg`"
-            alt=""
-          />
-          <p class="card-title">{{ item.title }}</p>
-          <p class="card-des">{{ item.des }}</p>
-          <div class="card-more">
+      <div class="tools-content card-deck-js">
+        <div
+          :class="['tools-content-platform', item.platform]"
+          v-for="item in platformList"
+          :key="item.platform"
+        >
+          <div class="card-body">
             <img
-              src="https://static.desty.app/desty-homepage/v2/plus.svg"
+              class="card-trademark"
+              :src="`https://static.desty.app/desty-homepage/v2/${item.trademark}.svg`"
               alt=""
             />
-            <span>Learn more</span>
-          </div>
-          <div class="card-menu">
-            <div class="card-menu-item">
+            <p class="card-title">{{ item.title }}</p>
+            <p class="card-des">{{ item.des }}</p>
+            <div class="card-more">
               <img
-                src="https://static.desty.app/desty-homepage/v2/menu.svg"
+                src="https://static.desty.app/desty-homepage/v2/plus.svg"
                 alt=""
               />
-              <p>{{ item.menu1 }}</p>
+              <span>Learn more</span>
             </div>
-            <div class="card-menu-item">
+            <div class="card-menu">
+              <div class="card-menu-item">
+                <img
+                  src="https://static.desty.app/desty-homepage/v2/menu.svg"
+                  alt=""
+                />
+                <p>{{ item.menu1 }}</p>
+              </div>
+              <div class="card-menu-item">
+                <img
+                  src="https://static.desty.app/desty-homepage/v2/menu.svg"
+                  alt=""
+                />
+                <p>{{ item.menu2 }}</p>
+              </div>
+            </div>
+            <div class="card-backimg">
               <img
-                src="https://static.desty.app/desty-homepage/v2/menu.svg"
+                :src="`https://static.desty.app/desty-homepage/v2/${item.backimg}.png`"
                 alt=""
               />
-              <p>{{ item.menu2 }}</p>
             </div>
-          </div>
-          <div class="card-backimg">
-            <img
-              :src="`https://static.desty.app/desty-homepage/v2/${item.backimg}.png`"
-              alt=""
-            />
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <div class="desty-platform-bg"></div>
+  </div>
 </template>
 
 <script setup>
@@ -142,7 +145,7 @@ onBeforeMount(() => {
 
   function animateStackCards() {
     var top = this.element.getBoundingClientRect().top;
-    var offsetTop = 300,
+    var offsetTop = 400,
       cardHeight = 600,
       marginY = 40;
     for (var i = 0; i < this.items.length; i++) {
@@ -177,9 +180,22 @@ onBeforeMount(() => {
 </script>
 
 <style lang="less" scoped>
+.desty-platform {
+  width: 100%;
+  position: relative;
+  &-bg {
+    width: 100%;
+    height: 985px;
+    position: absolute;
+    top: -438px;
+    z-index: -1;
+    background-image: url(https://static.desty.app/desty-homepage/v2/tools-bg-pc.png);
+    background-size: cover;
+  }
+}
 .tools {
   box-sizing: border-box;
-  width: 1298px;
+  width: 1280px;
   margin: 0 auto;
   font-family: "Plus Jakarta Sans";
   font-style: normal;
@@ -305,8 +321,11 @@ onBeforeMount(() => {
       .card-backimg {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: -5px;
         z-index: -1;
+        img {
+          border-radius: 24px;
+        }
       }
     }
     .tools-page {
@@ -344,6 +363,13 @@ onBeforeMount(() => {
   }
 }
 @media screen and (max-width: 768px) {
+  .desty-platform {
+    &-bg {
+      height: 743px;
+      top: -285px;
+      background-image: url(https://static.desty.app/desty-homepage/v2/tools-bg-moble.png);
+    }
+  }
   .tools {
     box-sizing: border-box;
     width: 100%;
