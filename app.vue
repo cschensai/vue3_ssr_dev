@@ -5,6 +5,8 @@
       <!-- 路由组件 -->
       <NuxtPage />
       <Footer />
+      <!-- chat section -->
+      <Chat />
     </ElConfigProvider>
   </div>
 </template>
@@ -13,16 +15,14 @@
 import { ElConfigProvider } from 'element-plus';
 import Header from '~/components/Header/index.vue';
 import Footer from '~/components/Footer/index.vue';
+import Chat from '~/components/Chat/index.vue';
 import elementPlusEn from 'element-plus/es/locale/lang/en';
 // import elementPlusId from 'element-plus/es/locale/lang/id';
 import useHome from './stores/index';
 import flexible from './utils/flexible';
 
-
 const homeStore = useHome();
 
-// import { ref } from 'vue';
-// const time = ref(getLocaleTime()); 
 onBeforeMount(() => {
   // 设置当前设备变量
   const WIDTH = 768;

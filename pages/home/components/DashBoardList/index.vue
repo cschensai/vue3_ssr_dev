@@ -74,7 +74,7 @@ import { DASHBOARD_LIST } from '~/constant/index';
         padding: 20px;
         box-sizing: border-box;
         .title {
-          width: 219px;
+          max-width: 136px;
           font-weight: 800;
           font-size: 28px;
           line-height: 35px;

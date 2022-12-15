@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-const useMenuHome = defineStore('home', {
+const useHome = defineStore('home', {
   state: () => {
     return {
       isPhone: false,
@@ -13,4 +13,4 @@ const useMenuHome = defineStore('home', {
   },
 })
 
-export default useMenuHome;
+export default useHome;

@@ -14,7 +14,7 @@ export function handleNav(key, config, push) {
   let url;
   switch (key) {
     case 'login':
-      url = 'https://omni.desty.app/register';
+      url = `${config.VITE_OMNI_URL}/register`;
       break;
     case 'destypage':
       url = config.VITE_PAGE_URL;

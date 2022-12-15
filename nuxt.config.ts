@@ -66,6 +66,10 @@ export default defineNuxtConfig({
     {
       src: '~/plugins/desty-design',
       mode: 'client',
+    },
+    {
+      src: '~/plugins/lottie-web',
+      mode: 'client',
     }
   ],
   // 注册运行时环境配置变量

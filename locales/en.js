@@ -11,7 +11,10 @@ export default {
     preMainTitle: 'the',
     middleMainTitle: 'One Ecosystem',
     centerMainTitle: 'to Manage',
-    nextMainTitle: 'Your Business'
+    nextMainTitle: 'Your Business',
+    subTitle: 'Used by 1 million+ users in Indonesia',
+    startNow: 'Start now',
+    watchVideo: 'Watch video',
   },
   dashboardList: {
     featureTitle: 'Features',
@@ -25,5 +28,8 @@ export default {
     stockDesc: 'All stocks will be accurately and automatically updated to avoid overselling & underselling!',
     consolidatedTitle: 'Consolidated Data',
     consolidatedDesc: 'Analyze your sales and stock data from all your marketplace stores to make the right decisions',
+  },
+  scrollBar: {
+    text: 'Scroll down',
   },
 }
