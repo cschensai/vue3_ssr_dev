@@ -25,7 +25,7 @@
       </template>
       <template v-slot:extra-content>
         <div class="action-btn" @click="handleNavAction('login')">
-          {{ $t('headerv2.loginBtn') }}
+          {{ $t('manageBusiness.startNow') }}
         </div>
       </template>
     </DestyHeaderV2>

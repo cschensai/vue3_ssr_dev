@@ -284,7 +284,7 @@ const featured = ref([
   }
   .backed-by {
     overflow: hidden;
-    background-color: #fff;
+    // background-color: #fff;
     .title {
       margin: 71px 0 40px 0;
     }
