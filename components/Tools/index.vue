@@ -24,7 +24,7 @@
             />
             <p class="card-title">{{ item.title }}</p>
             <p class="card-des">{{ item.des }}</p>
-            <div class="card-more">
+            <div class="card-more" @click="golink(item.link)">
               <img
                 src="https://static.desty.app/desty-homepage/v2/plus.svg"
                 alt=""
@@ -64,6 +64,10 @@
 <script setup>
 import { ref } from "vue";
 
+const golink = (link) => {
+  window.location.href = link;
+};
+
 const platformList = ref([
   {
     platform: "tools-page",
@@ -73,6 +77,7 @@ const platformList = ref([
     menu1: "Link-in-bio landing page",
     menu2: "Free features for all",
     backimg: "page-assets",
+    link: "https://desty.page",
   },
   {
     platform: "tools-store",
@@ -82,6 +87,7 @@ const platformList = ref([
     menu1: "Online store builder",
     menu2: "No subscription fee",
     backimg: "store-assets",
+    link: "https://desty.store",
   },
   {
     platform: "tools-menu",
@@ -91,6 +97,7 @@ const platformList = ref([
     menu1: "QR scan ordering system",
     menu2: "No subscription fee",
     backimg: "menu-assets",
+    link: "https://desty.menu",
   },
   {
     platform: "tools-chat",
@@ -100,6 +107,7 @@ const platformList = ref([
     menu1: "QR scan ordering system",
     menu2: "Design website as you like",
     backimg: "chat-assets",
+    link: "https://omni.desty.app/chat/Home",
   },
 ]);
 
@@ -145,7 +153,7 @@ onBeforeMount(() => {
 
   function animateStackCards() {
     var top = this.element.getBoundingClientRect().top;
-    var offsetTop = 400,
+    var offsetTop = 450,
       cardHeight = 600,
       marginY = 40;
     for (var i = 0; i < this.items.length; i++) {
@@ -236,6 +244,18 @@ onBeforeMount(() => {
     display: flex;
     flex-direction: column;
     margin-bottom: 120px;
+    &:nth-child(0) {
+      transform: translateY(0px);
+    }
+    &:nth-child(1) {
+      transform: translateY(40px);
+    }
+    &:nth-child(2) {
+      transform: translateY(80px);
+    }
+    &:nth-child(3) {
+      transform: translateY(120px);
+    }
     &-platform {
       width: 100%;
       height: 576px;
@@ -243,18 +263,6 @@ onBeforeMount(() => {
       position: sticky;
       top: 80px;
       transform-origin: center top;
-      &:nth-child(0) {
-        transform: translateY(0px);
-      }
-      &:nth-child(1) {
-        transform: translateY(40px);
-      }
-      &:nth-child(2) {
-        transform: translateY(80px);
-      }
-      &:nth-child(3) {
-        transform: translateY(120px);
-      }
     }
     .card-body {
       font-family: "Plus Jakarta Sans";
