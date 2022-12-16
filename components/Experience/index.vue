@@ -1,11 +1,11 @@
 <template>
   <section class="experience">
-    <p class="experience-title">Experience Desty free for 14 days</p>
+    <p class="experience-title">{{ $t("experience.title") }}</p>
     <p class="experience-des">
-      Start managing your business in Desty ecosystem now!
+      {{ $t("experience.des") }}
     </p>
     <div class="experience-btn" @click="goExperience">
-      <span>Start Free Trial</span>
+      <span> {{ $t("experience.btn") }}</span>
       <img
         src="https://static.desty.app/desty-homepage/v2/right_arrow.svg"
         alt=""
