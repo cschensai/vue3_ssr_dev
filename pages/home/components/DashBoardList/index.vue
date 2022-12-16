@@ -104,9 +104,9 @@ import { DASHBOARD_LIST } from '~/constant/index';
 @media screen and (max-width: 768px) {
   .dashboard-list {
     max-width: 100%;
-    margin: 0 auto;
+    margin: -40px auto 0;
     .feature-title {
-      padding: 16px;
+      padding: 0 16px 16px;
       box-sizing: border-box;
       .featured-on-title {
         font-size: 20px;

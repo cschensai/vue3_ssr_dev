@@ -332,6 +332,7 @@ import { MERCHANT_LIST, FEATURED_LIST } from "~/constant/index";
 @media screen and (max-width: 768px) {
   .relations {
     transform: translateY(20px);
+    overflow-x: hidden;
     .title {
       h3 {
         font-size: 30px;

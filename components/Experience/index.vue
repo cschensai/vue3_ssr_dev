@@ -101,6 +101,7 @@ const goExperience = () => {
   .experience {
     height: 324px;
     transform: translateY(20px);
+    overflow-x: hidden;
     &-title {
       width: 329px;
       height: 84px;
