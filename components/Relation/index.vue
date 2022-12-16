@@ -33,43 +33,43 @@
         <nuxt-img
           alt="5y"
           loading="lazy"
-          src="https://static.desty.app/desty-homepage/5y.png?x-oss-process=style/img-webp"
+          src="https://static.desty.app/desty-homepage/v2/backed-5y.png"
           data-aos="fade-up"
         />
         <nuxt-img
           alt="cast"
           loading="lazy"
-          src="https://static.desty.app/desty-homepage/cast.png?x-oss-process=style/img-webp"
+          src="https://static.desty.app/desty-homepage/v2/backed-eactenturea.png"
           data-aos="fade-up"
         />
         <nuxt-img
           alt="squarepeg"
           loading="lazy"
-          src="https://static.desty.app/desty-homepage/squarepeg.png?x-oss-process=style/img-webp"
+          src="https://static.desty.app/desty-homepage/v2/backed-squarepeg.png"
           data-aos="fade-up"
         />
         <nuxt-img
           alt="fosun"
           loading="lazy"
-          src="https://static.desty.app/desty-homepage/fosun.png?x-oss-process=style/img-webp"
+          src="https://static.desty.app/desty-homepage/v2/backed-fosunrzcapital.png"
           data-aos="fade-up"
         />
         <nuxt-img
           alt="bace"
           loading="lazy"
-          src="https://static.desty.app/desty-homepage/bace.png?x-oss-process=style/img-webp"
+          src="https://static.desty.app/desty-homepage/v2/backed-bacecapital.png"
           data-aos="fade-up"
         />
         <nuxt-img
           alt="incapital"
           loading="lazy"
-          src="https://static.desty.app/desty-homepage/incapital.png?x-oss-process=style/img-webp"
+          src="https://static.desty.app/desty-homepage/v2/backed-incapital.png"
           data-aos="fade-up"
         />
         <nuxt-img
           alt="january"
           loading="lazy"
-          src="https://static.desty.app/desty-homepage/january.png?x-oss-process=style/img-webp"
+          src="https://static.desty.app/desty-homepage/v2/backed-januarycapital.png"
           data-aos="fade-up"
         />
       </section>
@@ -95,14 +95,6 @@
 import { ref } from "vue";
 
 const merchant = ref([
-  "https://static.desty.app/desty-homepage/techinasia.png?x-oss-process=style/img-webp",
-  "https://static.desty.app/desty-homepage/dailysocial.png?x-oss-process=style/img-webp",
-  "https://static.desty.app/desty-homepage/e27.png?x-oss-process=style/img-webp",
-  "https://static.desty.app/desty-homepage/liputan6.png?x-oss-process=style/img-webp",
-  "https://static.desty.app/desty-homepage/dealstreetasia.png?x-oss-process=style/img-webp",
-  "https://static.desty.app/desty-homepage/indotelk.png?x-oss-process=style/img-webp",
-]);
-const partners = ref([
   "https://static.desty.app/desty-homepage/ovo.png",
   "https://static.desty.app/desty-homepage/gopay.png",
   "https://static.desty.app/desty-homepage/shopee.png",
@@ -123,12 +115,12 @@ const partners = ref([
 ]);
 
 const featured = ref([
-  "https://static.desty.app/desty-homepage/v2/techinasia.png",
-  "https://static.desty.app/desty-homepage/v2/dailysocial.png",
-  "https://static.desty.app/desty-homepage/v2/liputan.png",
-  "https://static.desty.app/desty-homepage/v2/e27.png",
-  "https://static.desty.app/desty-homepage/v2/indotelk.png",
-  "https://static.desty.app/desty-homepage/v2/dealstreetasia.png",
+  "https://static.desty.app/desty-homepage/v2/featured-techinasia.png",
+  "https://static.desty.app/desty-homepage/v2/featured-dailysocial.png",
+  "https://static.desty.app/desty-homepage/v2/featured-liputan6.png",
+  "https://static.desty.app/desty-homepage/v2/featured-e27.png",
+  "https://static.desty.app/desty-homepage/v2/featured-indotelk.png",
+  "https://static.desty.app/desty-homepage/v2/featured-dealstreetasia.png",
 ]);
 </script>
 
@@ -162,10 +154,10 @@ const featured = ref([
 
 .relations {
   width: 100%;
-  padding-top: 120px;
   --line-img-height: 38px;
   --box-img-height: 70px;
   --box-img-width: 197px;
+  position: relative;
   .text-color {
     color: #0012b2;
   }
@@ -189,6 +181,12 @@ const featured = ref([
     }
   }
   .featured-on {
+    padding-top: 120px;
+    background: linear-gradient(
+      179.65deg,
+      rgba(255, 255, 255, 0) 0.3%,
+      #ffffff 84.91%
+    );
     .title {
       display: flex;
       flex-direction: column;
@@ -259,10 +257,11 @@ const featured = ref([
         width: 1124px;
         display: flex;
         flex-direction: row;
-        justify-content: center;
         align-items: center;
+        justify-content: flex-start;
         padding: 0px;
         gap: 80px;
+        overflow: hidden;
       }
     }
     .list {
@@ -284,7 +283,7 @@ const featured = ref([
   }
   .backed-by {
     overflow: hidden;
-    // background-color: #fff;
+    background: #ffffff;
     .title {
       margin: 71px 0 40px 0;
     }
@@ -301,12 +300,15 @@ const featured = ref([
         display: inline-block;
         max-height: var(--box-img-height);
         max-width: var(--box-img-width);
+        flex: 1;
       }
     }
   }
   .our-partners {
+    background: #ffffff;
+    padding-top: 60px;
     .title {
-      margin: 60px 0 40px 0;
+      margin-bottom: 40px;
     }
     .marquee {
       width: 100%;
@@ -333,10 +335,13 @@ const featured = ref([
           flex-wrap: wrap;
           gap: 40px 80px;
           .marquee-img {
+            width: 196px;
             height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img {
-              width: 100%;
-              height: 100%;
+              height: 50%;
             }
           }
         }
@@ -404,9 +409,11 @@ const featured = ref([
         width: 100%;
         height: 118px;
         gap: 28px 20px;
+        padding: 0 16px;
+        box-sizing: border-box;
         img {
           width: 100px;
-          height: 22px;
+          max-height: 31px;
         }
       }
     }
@@ -422,10 +429,11 @@ const featured = ref([
           .content {
             width: 100%;
             height: 102px;
-            gap: 0;
+            gap: 16.82px 0;
           }
         }
         &-img {
+          width: 33% !important;
           height: 42.5px !important;
           z-index: 1;
         }
