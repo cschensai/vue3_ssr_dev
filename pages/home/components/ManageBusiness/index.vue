@@ -42,7 +42,7 @@
           :animationData="hero"
         />
       </client-only> -->
-      <div id="lottie"></div>
+      <div id="manage-business-lottie"></div>
       <div class="scroll-down" v-if="store.isPhone">{{ $t('scrollBar.text') }}</div>
     </div>
   </div>
@@ -77,16 +77,16 @@ function handleStartNow() {
   location.href = `${config.VITE_OMNI_URL}/register`;
 }
 
+// 加载动画
 onBeforeMount(() => {
-    const params = {
-        container: document.getElementById('lottie'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: animationData
-    };
-
-    lottie.loadAnimation(params);
+  const params = {
+    container: document.getElementById('manage-business-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    animationData: animationData
+  };
+  lottie.loadAnimation(params);
 })
 
 </script>
@@ -105,11 +105,12 @@ onBeforeMount(() => {
       position: absolute;
       width: 826px;
       height: 854px;
-      left: -594px;
+      left: -694px;
       top: 384px;
       background: linear-gradient(151.45deg, rgba(12, 27, 184, 0.23) -4.34%, rgba(12, 27, 184, 0.2) 106.2%);
       filter: blur(200px);
       transform: rotate(10.49deg);
+      z-index: -1;
     }
     .main-title {
       font-weight: 400;
@@ -175,13 +176,11 @@ onBeforeMount(() => {
       background: linear-gradient(151.45deg, rgba(12, 27, 184, 0.23) -4.34%, rgba(12, 27, 184, 0.2) 106.2%);
       filter: blur(200px);
       transform: rotate(10.49deg);
+      z-index: -1;
     }
   }
 }
 @media screen and (max-width: 768px) {
-  #lottie {
-    transform: translateX(-20px);
-  }
   .manage-business {
     border-top: none;
     padding-top: 0;
@@ -195,7 +194,7 @@ onBeforeMount(() => {
       .shadow-bg {
         width: 448px;
         height: 464px;
-        left: -300px;
+        left: -500px;
         top: 538px;
       }
       .main-title {
@@ -234,6 +233,9 @@ onBeforeMount(() => {
         height: 446px;
         right: -360px;
         top: -192px;
+      }
+      #manage-business-lottie {
+        transform: translateX(-20px);
       }
       .scroll-down {
         text-align: center;
