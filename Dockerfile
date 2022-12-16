@@ -1,0 +1,14 @@
+FROM node:lts
+RUN mkdir -p /app
+WORKDIR /app
+COPY package.json /app
+COPY yarn.lock /app
+RUN yarn config set registry 'http://nexus.desty.chat/repository/npm-group'
+ENV NODE_OPTIONS="--max-old-space-size=4000"
+RUN yarn install
+COPY . /app
+ENV HOST=0.0.0.0
+ENV PORT=3033
+RUN yarn build:test
+CMD ["yarn", "start:test"]
+EXPOSE 3033
