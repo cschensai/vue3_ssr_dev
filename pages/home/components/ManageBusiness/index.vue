@@ -42,7 +42,7 @@
           :animationData="hero"
         />
       </client-only> -->
-      <div id="lottie"></div>
+      <div id="manage-business-lottie"></div>
       <div class="scroll-down" v-if="store.isPhone">{{ $t('scrollBar.text') }}</div>
     </div>
   </div>
@@ -77,16 +77,16 @@ function handleStartNow() {
   location.href = `${config.VITE_OMNI_URL}/register`;
 }
 
+// 加载动画
 onBeforeMount(() => {
-    const params = {
-        container: document.getElementById('lottie'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: animationData
-    };
-
-    lottie.loadAnimation(params);
+  const params = {
+    container: document.getElementById('manage-business-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    animationData: animationData
+  };
+  lottie.loadAnimation(params);
 })
 
 </script>
