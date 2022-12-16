@@ -51,7 +51,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Plus Jakarta Sans';
-  position: relative;
+  // position: relative;
   overflow-x: hidden;
   background-color: #F3F3F5;
 }

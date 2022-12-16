@@ -373,6 +373,7 @@ const featured = ref([
 @media screen and (max-width: 768px) {
   .relations {
     transform: translateY(20px);
+    overflow-x: hidden;
     .title {
       h3 {
         font-size: 30px;

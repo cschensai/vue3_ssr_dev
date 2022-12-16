@@ -28,7 +28,7 @@
   color: #000;
   .scroll-bar-outer {
     position: relative;
-    width: 1px;
+    width: 2px;
     height: 180px;
     background-color: rgba(0, 0, 0, 0.2);
     overflow: hidden;

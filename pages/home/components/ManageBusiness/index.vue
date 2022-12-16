@@ -1,54 +1,55 @@
 <template>
-  <div class="manage-business">
-    <div class="left">
-      <div class="shadow-bg"></div>
-      <h1 class="main-title">
-        <template v-if="locale === 'en'">
-          <div>
-            {{ $t('manageBusiness.preMainTitle') }}
-            <span class="strong">{{ $t('manageBusiness.middleMainTitle') }}</span>
+
+    <div class="manage-business">
+      <div class="left">
+        <div class="shadow-bg"></div>
+        <h1 class="main-title">
+          <template v-if="locale === 'en'">
+            <div>
+              {{ $t('manageBusiness.preMainTitle') }}
+              <span class="strong">{{ $t('manageBusiness.middleMainTitle') }}</span>
+            </div>
+            <div>
+              {{ $t('manageBusiness.centerMainTitle') }}
+              <span class="strong">{{ $t('manageBusiness.nextMainTitle') }}</span>
+            </div>
+          </template>
+          <template v-else>
+            <div>
+              <span class="strong">{{ $t('manageBusiness.preMainTitle') }}</span>
+              {{ $t('manageBusiness.middleMainTitle') }}
+            </div>
+            <div>
+              <span class="strong">{{ $t('manageBusiness.centerMainTitle') }}</span>
+            </div>
+          </template>
+        </h1>
+        <div class="sub-title">{{ $t('manageBusiness.subTitle') }}</div>
+        <div class="action-box">
+          <div class="start-now" @click="handleStartNow">{{ $t('manageBusiness.startNow') }}</div>
+          <div class="watch-video" @click="handleWatchVideo">
+            <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="desty home page" />
+            {{ $t('manageBusiness.watchVideo') }}
           </div>
-          <div>
-            {{ $t('manageBusiness.centerMainTitle') }}
-            <span class="strong">{{ $t('manageBusiness.nextMainTitle') }}</span>
-          </div>
-        </template>
-        <template v-else>
-          <div>
-            <span class="strong">{{ $t('manageBusiness.preMainTitle') }}</span>
-            {{ $t('manageBusiness.middleMainTitle') }}
-          </div>
-          <div>
-            <span class="strong">{{ $t('manageBusiness.centerMainTitle') }}</span>
-          </div>
-        </template>
-      </h1>
-      <div class="sub-title">{{ $t('manageBusiness.subTitle') }}</div>
-      <div class="action-box">
-        <div class="start-now" @click="handleStartNow">{{ $t('manageBusiness.startNow') }}</div>
-        <div class="watch-video" @click="handleWatchVideo">
-          <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="desty home page" />
-          {{ $t('manageBusiness.watchVideo') }}
         </div>
+        <ScrollBar v-if="!store.isPhone" />
       </div>
-      <ScrollBar v-if="!store.isPhone" />
+      <div class="right">
+        <div class="shadow-bg"></div>
+        <!-- <client-only>
+          <lottie-animation
+            autoplay
+            loop
+            :animationData="hero"
+          />
+        </client-only> -->
+        <div id="manage-business-lottie"></div>
+        <div class="scroll-down" v-if="store.isPhone">{{ $t('scrollBar.text') }}</div>
+      </div>
     </div>
-    <div class="right">
-      <div class="shadow-bg"></div>
-      <!-- <client-only>
-        <lottie-animation
-          autoplay
-          loop
-          :animationData="hero"
-        />
-      </client-only> -->
-      <div id="manage-business-lottie"></div>
-      <div class="scroll-down" v-if="store.isPhone">{{ $t('scrollBar.text') }}</div>
-    </div>
-  </div>
-  <client-only>
-  <VideoDialog ref="videoDialog" />
-  </client-only>
+    <client-only>
+    <VideoDialog ref="videoDialog" />
+    </client-only>
 </template>
 
 <script setup>
@@ -93,6 +94,7 @@ onBeforeMount(() => {
 
 <style lang="less" scoped>
 .manage-business {
+  position: relative;
   max-width: 1282px;
   margin: 109px auto 0;
   display: flex;
@@ -105,8 +107,8 @@ onBeforeMount(() => {
       position: absolute;
       width: 826px;
       height: 854px;
-      left: -594px;
-      top: 384px;
+      left: -894px;
+      top: 300px;
       background: linear-gradient(151.45deg, rgba(12, 27, 184, 0.23) -4.34%, rgba(12, 27, 184, 0.2) 106.2%);
       filter: blur(200px);
       transform: rotate(10.49deg);
@@ -188,6 +190,7 @@ onBeforeMount(() => {
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    overflow-x: hidden;
     .left {
       padding: 16px;
       box-sizing: border-box;
@@ -235,12 +238,15 @@ onBeforeMount(() => {
         top: -192px;
       }
       #manage-business-lottie {
-        transform: translateX(-20px);
+        transform: translateX(-10%);
+        min-height: 100px;
       }
       .scroll-down {
         text-align: center;
         position: relative;
-        bottom: 80px;
+        bottom: 130px;
+        left: 20px;
+        font-size: 12px;
       }
     }
   }
