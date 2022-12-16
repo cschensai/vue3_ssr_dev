@@ -244,25 +244,22 @@ onBeforeMount(() => {
     display: flex;
     flex-direction: column;
     margin-bottom: 120px;
-    &:nth-child(0) {
-      transform: translateY(0px);
-    }
-    &:nth-child(1) {
-      transform: translateY(40px);
-    }
-    &:nth-child(2) {
-      transform: translateY(80px);
-    }
-    &:nth-child(3) {
-      transform: translateY(120px);
-    }
     &-platform {
       width: 100%;
       height: 576px;
       border-radius: 24px;
       position: sticky;
-      top: 80px;
+      top: 120px;
       transform-origin: center top;
+      &:nth-child(1) {
+        transform: translateY(0px);
+      }
+      &:nth-child(2) {
+        transform: translateY(80px);
+      }
+      &:nth-child(3) {
+        transform: translateY(120px);
+      }
     }
     .card-body {
       font-family: "Plus Jakarta Sans";
@@ -405,6 +402,7 @@ onBeforeMount(() => {
     &-content {
       &-platform {
         height: 706px;
+        top: 80px;
       }
       .card-body {
         padding: 20px 16px 0 16px;
