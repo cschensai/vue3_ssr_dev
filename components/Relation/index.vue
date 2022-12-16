@@ -3,18 +3,18 @@
     <section class="section featured-on">
       <header class="title">
         <div class="featured-on-title">
-          <span>Merchants</span>
+          <span>{{ $t("relation.title") }}</span>
           <div class="hr"></div>
         </div>
         <h3 data-aos="fade-up">
-          Some of the brands who chose <span class="text-color">Desty</span>
+          {{ $t("relation.brandsTitle") }} <span class="text-color">Desty</span>
         </h3>
       </header>
       <section class="featured-on-scroll">
         <div class="list">
           <div class="featured-on-scroll-middle">
             <div class="cc rowup" v-for="item in merchant" :key="item">
-              <img :src="item" />
+              <img :src="item" alt="desty home page" />
             </div>
           </div>
           <div class="featured-on-scroll-middle">
@@ -27,46 +27,53 @@
     </section>
     <section class="backed-by">
       <header class="title">
-        <h3 data-aos="fade-up">Backed by</h3>
+        <h3 data-aos="fade-up">{{ $t("relation.backedTitle") }}</h3>
       </header>
       <section class="wrapper box">
         <nuxt-img
+          class="box-5y"
           alt="5y"
           loading="lazy"
           src="https://static.desty.app/desty-homepage/v2/backed-5y.png"
           data-aos="fade-up"
         />
         <nuxt-img
+          class="box-cast"
           alt="cast"
           loading="lazy"
           src="https://static.desty.app/desty-homepage/v2/backed-eactenturea.png"
           data-aos="fade-up"
         />
         <nuxt-img
+          class="box-squarepeg"
           alt="squarepeg"
           loading="lazy"
           src="https://static.desty.app/desty-homepage/v2/backed-squarepeg.png"
           data-aos="fade-up"
         />
         <nuxt-img
+          class="box-fosun"
           alt="fosun"
           loading="lazy"
           src="https://static.desty.app/desty-homepage/v2/backed-fosunrzcapital.png"
           data-aos="fade-up"
         />
         <nuxt-img
+          class="box-bace"
           alt="bace"
           loading="lazy"
           src="https://static.desty.app/desty-homepage/v2/backed-bacecapital.png"
           data-aos="fade-up"
         />
         <nuxt-img
+          class="box-incapital"
           alt="incapital"
           loading="lazy"
           src="https://static.desty.app/desty-homepage/v2/backed-incapital.png"
           data-aos="fade-up"
         />
         <nuxt-img
+          class="box-january"
           alt="january"
           loading="lazy"
           src="https://static.desty.app/desty-homepage/v2/backed-januarycapital.png"
@@ -76,13 +83,13 @@
     </section>
     <section class="our-partners">
       <header class="title">
-        <h3 data-aos="fade-up">As Featured On</h3>
+        <h3 data-aos="fade-up">{{ $t("relation.featured") }}</h3>
       </header>
       <section class="marquee" data-aos="zoom-in">
         <section class="wrapper">
           <div class="content">
             <div class="marquee-img" v-for="item in featured" :key="item">
-              <img :src="item" />
+              <img :src="item.img" alt="desty home page" />
             </div>
           </div>
         </section>
@@ -115,12 +122,24 @@ const merchant = ref([
 ]);
 
 const featured = ref([
-  "https://static.desty.app/desty-homepage/v2/featured-techinasia.png",
-  "https://static.desty.app/desty-homepage/v2/featured-dailysocial.png",
-  "https://static.desty.app/desty-homepage/v2/featured-liputan6.png",
-  "https://static.desty.app/desty-homepage/v2/featured-e27.png",
-  "https://static.desty.app/desty-homepage/v2/featured-indotelk.png",
-  "https://static.desty.app/desty-homepage/v2/featured-dealstreetasia.png",
+  {
+    img: "https://static.desty.app/desty-homepage/v2/featured-techinasia.png",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/featured-dailysocial.png",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/featured-liputan6.png",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/featured-e27.png",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/featured-indotelk.png",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/featured-dealstreetasia.png",
+  },
 ]);
 </script>
 
@@ -158,6 +177,7 @@ const featured = ref([
   --box-img-height: 70px;
   --box-img-width: 197px;
   position: relative;
+  transform: translateY(25px);
   .text-color {
     color: #0012b2;
   }
@@ -181,7 +201,7 @@ const featured = ref([
     }
   }
   .featured-on {
-    padding-top: 120px;
+    padding-top: 95px;
     background: linear-gradient(
       179.65deg,
       rgba(255, 255, 255, 0) 0.3%,
@@ -317,7 +337,7 @@ const featured = ref([
       box-sizing: border-box;
       display: flex;
       flex-direction: row-reverse;
-      padding-bottom: 35px;
+      padding-bottom: 60px;
 
       .wrapper {
         width: 100vw;
@@ -352,7 +372,7 @@ const featured = ref([
 
 @media screen and (max-width: 768px) {
   .relations {
-    padding-top: 90px;
+    transform: translateY(20px);
     .title {
       h3 {
         font-size: 30px;
@@ -360,6 +380,7 @@ const featured = ref([
       }
     }
     .featured-on {
+      padding-top: 70px;
       &-title {
         gap: 16px;
         span {
@@ -407,19 +428,43 @@ const featured = ref([
       }
       .box {
         width: 100%;
-        height: 118px;
+        height: 138px;
         gap: 28px 20px;
         padding: 0 16px;
         box-sizing: border-box;
-        img {
-          width: 100px;
-          max-height: 31px;
+        &-5y {
+          width: 92.13px;
+          // height: 31.58px;
+        }
+        &-cast {
+          width: 97.55px;
+          // height: 17.15px;
+        }
+        &-squarepeg {
+          width: 97.55px;
+          // height: 21.48px;
+        }
+        &-fosun {
+          width: 86.71px;
+          // height: 17.3px;
+        }
+        &-bace {
+          width: 86.71px;
+          // height: 18.74px;
+        }
+        &-incapital {
+          width: 81.29px;
+          // height: 21.96px;
+        }
+        &-january {
+          width: 97.55px;
+          // height: 8.17px;
         }
       }
     }
     .our-partners {
       z-index: 1;
-      padding-bottom: 35px;
+      padding-bottom: 60px;
       .title {
         margin: 40px 0 24px 0;
       }

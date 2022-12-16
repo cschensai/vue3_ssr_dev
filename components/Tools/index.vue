@@ -3,11 +3,12 @@
     <section class="tools">
       <div class="tools-head">
         <div class="tools-head-title">
-          <span>Merchant Tools</span>
+          <span>{{ $t("tools.des") }}</span>
           <div class="hr"></div>
         </div>
         <div class="tools-head-des">
-          Built by <span class="text-color">Desty</span> to connect seamlessly
+          {{ $t("tools.title1") }} <span class="text-color">Desty</span>
+          {{ $t("tools.title2") }}
         </div>
       </div>
       <div class="tools-content card-deck-js">
@@ -20,29 +21,29 @@
             <img
               class="card-trademark"
               :src="`https://static.desty.app/desty-homepage/v2/${item.trademark}.svg`"
-              alt=""
+              :alt="item.name"
             />
             <p class="card-title">{{ item.title }}</p>
             <p class="card-des">{{ item.des }}</p>
             <div class="card-more" @click="golink(item.link)">
               <img
                 src="https://static.desty.app/desty-homepage/v2/plus.svg"
-                alt=""
+                :alt="item.name"
               />
-              <span>Learn more</span>
+              <span>{{ $t("tools.more") }}</span>
             </div>
             <div class="card-menu">
               <div class="card-menu-item">
                 <img
                   src="https://static.desty.app/desty-homepage/v2/menu.svg"
-                  alt=""
+                  :alt="item.name"
                 />
                 <p>{{ item.menu1 }}</p>
               </div>
               <div class="card-menu-item">
                 <img
                   src="https://static.desty.app/desty-homepage/v2/menu.svg"
-                  alt=""
+                  :alt="item.name"
                 />
                 <p>{{ item.menu2 }}</p>
               </div>
@@ -50,7 +51,7 @@
             <div class="card-backimg">
               <img
                 :src="`https://static.desty.app/desty-homepage/v2/${item.backimg}.png`"
-                alt=""
+                :alt="item.name"
               />
             </div>
           </div>
@@ -62,54 +63,63 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const golink = (link) => {
   window.location.href = link;
 };
 
-const platformList = ref([
-  {
-    platform: "tools-page",
-    trademark: "desty-page-icon",
-    title: "One link to consolidate your traffic & sales channels",
-    des: "Link-in-bio & Landing Page for Merchants, Creators, Influencers, and everyone!",
-    menu1: "Link-in-bio landing page",
-    menu2: "Free features for all",
-    backimg: "page-assets",
-    link: "https://desty.page",
-  },
-  {
-    platform: "tools-store",
-    trademark: "desty-store-icon",
-    title: "One store to elevate your brand",
-    des: "Elevate your brand using our Webstore builder to create your own official website & store",
-    menu1: "Online store builder",
-    menu2: "No subscription fee",
-    backimg: "store-assets",
-    link: "https://desty.store",
-  },
-  {
-    platform: "tools-menu",
-    trademark: "desty-menu-icon",
-    title: "One system to grow your F&B business",
-    des: "Ordering food & drinks made easy using our digital ordering solution. Scan, Order, and Pay!",
-    menu1: "QR scan ordering system",
-    menu2: "No subscription fee",
-    backimg: "menu-assets",
-    link: "https://desty.menu",
-  },
-  {
-    platform: "tools-chat",
-    trademark: "desty-chat-icon",
-    title: "One system to consolidate all your eCommerce chats",
-    des: "Reply all your chats comfortably on one dashboard",
-    menu1: "QR scan ordering system",
-    menu2: "Design website as you like",
-    backimg: "chat-assets",
-    link: "https://omni.desty.app/chat/Home",
-  },
-]);
+const platformList = computed(() => {
+  return [
+    {
+      platform: "tools-page",
+      trademark: "desty-page-icon",
+      title: t("tools.pageTitle"),
+      des: t("tools.pageDes"),
+      menu1: t("tools.pageMenu1"),
+      menu2: t("tools.pageMenu2"),
+      backimg: "page-assets",
+      link: "https://desty.page",
+      name: "Desty Page",
+    },
+    {
+      platform: "tools-store",
+      trademark: "desty-store-icon",
+      title: t("tools.storeTitle"),
+      des: t("tools.storeDes"),
+      menu1: t("tools.storeMenu1"),
+      menu2: t("tools.storeMenu2"),
+      backimg: "store-assets",
+      link: "https://desty.store",
+      name: "Desty Store",
+    },
+    {
+      platform: "tools-menu",
+      trademark: "desty-menu-icon",
+      title: t("tools.menuTitle"),
+      des: t("tools.menuDes"),
+      menu1: t("tools.menuMenu1"),
+      menu2: t("tools.menuMenu1"),
+      backimg: "menu-assets",
+      link: "https://desty.menu",
+      name: "Desty Menu",
+    },
+    {
+      platform: "tools-chat",
+      trademark: "desty-chat-icon",
+      title: t("tools.chatTitle"),
+      des: t("tools.chatDes"),
+      menu1: t("tools.chatMenu1"),
+      menu2: t("tools.chatMenu1"),
+      backimg: "chat-assets",
+      link: "https://omni.desty.app/chat/Home",
+      name: "Desty Omni",
+    },
+  ];
+});
 
 onBeforeMount(() => {
   var StackCards = function (element) {
@@ -430,7 +440,8 @@ onBeforeMount(() => {
           display: none;
         }
         .card-backimg {
-          width: 100%;
+          // width: 100%;
+          height: 300px;
           bottom: 0;
           img {
             width: 100%;
