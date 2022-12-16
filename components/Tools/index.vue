@@ -25,7 +25,7 @@
             />
             <p class="card-title">{{ $t(item.title) }}</p>
             <p class="card-des">{{ $t(item.des) }}</p>
-            <div class="card-more" @click="golink($t(item.link))">
+            <div class="card-more" @click="handleClinkMore($t(item.link))">
               <img
                 src="https://static.desty.app/desty-homepage/v2/plus.svg"
                 :alt="item.name"
@@ -68,7 +68,7 @@ import { PLATFORM_LIST } from "~/constant/index";
 
 const { t } = useI18n();
 
-const golink = (link) => {
+const handleClinkMore = (link) => {
   window.location.href = link;
 };
 
