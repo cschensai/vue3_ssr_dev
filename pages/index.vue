@@ -23,12 +23,12 @@
     <Meta property="twitter:image" content="https://static.desty.app/desty-design/desty-logo.svg" />
     <Meta name="twitter:domain" content="Desty App" />
   </Head>
-  <div class="indexPage">
+  <div class="index-page">
     <ManageBusiness />
     <DashBoardList />
-    <tools />
-    <relation />
-    <experience />
+    <Tools />
+    <Relation />
+    <Experience />
   </div>
 </template>
 
@@ -37,9 +37,9 @@
 // import useHome from '~~/stores';
 import ManageBusiness from '~/pages/home/components/ManageBusiness/index.vue';
 import DashBoardList from '~/pages/home/components/DashBoardList/index.vue';
+import Tools from "~~/components/Tools";
 import Relation from "~~/components/Relation";
-import experience from "~~/components/Experience";
-import tools from "~~/components/Tools";
+import Experience from "~~/components/Experience";
 
 
 // useHead({
@@ -70,7 +70,7 @@ import tools from "~~/components/Tools";
 </script>
 
 <style lang="less" scoped>
-.indexPage {
+.index-page {
   // display: flex;
   // flex-direction: column;
   // justify-content: center;
