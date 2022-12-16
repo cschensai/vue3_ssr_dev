@@ -23,24 +23,30 @@
     <Meta property="twitter:image" content="https://static.desty.app/desty-design/desty-logo.svg" />
     <Meta name="twitter:domain" content="Desty App" />
   </Head>
+  
   <div class="index-page">
+    <Header />
     <ManageBusiness />
     <DashBoardList />
     <Tools />
     <Relation />
     <Experience />
+    <Footer />
+    <Chat />
   </div>
 </template>
 
 <script setup>
 // import { ElButton } from 'element-plus';
 // import useHome from '~~/stores';
+import Header from '~/components/Header/index.vue';
+import Footer from '~/components/Footer/index.vue';
+import Chat from '~/components/Chat/index.vue';
 import ManageBusiness from '~/pages/home/components/ManageBusiness/index.vue';
 import DashBoardList from '~/pages/home/components/DashBoardList/index.vue';
 import Tools from "~~/components/Tools";
 import Relation from "~~/components/Relation";
 import Experience from "~~/components/Experience";
-
 
 // useHead({
 //   title: "index page",
