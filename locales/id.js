@@ -2,6 +2,14 @@ export default {
   ssr: {
     title: 'id',
   },
+  seo: {
+    titlePrev: 'desty app',
+    titleNext: 'Satu Ekosistem Untuk Atur Bisnis Kamu',
+    metaTitleContentNext: 'Satu Ekosistem Untuk Atur Bisnis Kamu',
+    metaDescContent: 'Mudah atur bisnis dengan Desty. Atur produk, order, stok, dan konsolidasi data dalam satu dashboard.',
+    ogLocaleContent: 'id_ID',
+    linkHrefLang: 'id-id',
+  },
   tokenGGMsg: 'en tokenGGMsg',
   headerv2: {
     title: 'Produk Desty',
@@ -30,7 +38,7 @@ export default {
     consolidatedDesc: 'Analisa penjualan dan data stok dari semua toko marketplace untuk tingkatkan bisnis',
   },
   scrollBar: {
-    text: 'Scroll down',
+    text: 'Scroll ke bawah',
   },
   tools: {
     des: "Peralatan Bisnis",

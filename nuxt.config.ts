@@ -13,7 +13,6 @@ const envData = loadEnv(envName, 'env');
 export default defineNuxtConfig({
   css: ['~/assets/less/uilib.less', '~/assets/less/index.less'],
   meta: {
-    title: 'Desty',
     meta: [
       // 防止点击输入框ios页面进行缩放
       {
@@ -25,6 +24,9 @@ export default defineNuxtConfig({
       rel: 'icon',
       type: 'image/x-icon',
       href: 'https://www.desty.app/favicon.ico?v=2',
+    }, {
+      rel: 'canonical',
+      href: 'https://desty.app',
     }]
   },
   build: {
