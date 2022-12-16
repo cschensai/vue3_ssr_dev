@@ -13,12 +13,12 @@
       <section class="featured-on-scroll">
         <div class="list">
           <div class="featured-on-scroll-middle">
-            <div class="cc rowup" v-for="item in merchant" :key="item">
+            <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
               <img :src="item" alt="desty home page" />
             </div>
           </div>
           <div class="featured-on-scroll-middle">
-            <div class="cc rowup" v-for="item in merchant" :key="item">
+            <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
               <img :src="item" />
             </div>
           </div>
@@ -88,7 +88,7 @@
       <section class="marquee" data-aos="zoom-in">
         <section class="wrapper">
           <div class="content">
-            <div class="marquee-img" v-for="item in featured" :key="item">
+            <div class="marquee-img" v-for="item in FEATURED_LIST" :key="item">
               <img :src="item.img" alt="desty home page" />
             </div>
           </div>
@@ -99,48 +99,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
-const merchant = ref([
-  "https://static.desty.app/desty-homepage/ovo.png",
-  "https://static.desty.app/desty-homepage/gopay.png",
-  "https://static.desty.app/desty-homepage/shopee.png",
-  "https://static.desty.app/desty-homepage/bca.png",
-  "https://static.desty.app/desty-homepage/bankbri.png",
-  "https://static.desty.app/desty-homepage/bni.png",
-  "https://static.desty.app/desty-homepage/mandri.png",
-  "https://static.desty.app/desty-homepage/permatabank.png",
-  "https://static.desty.app/desty-homepage/gosend.png",
-  "https://static.desty.app/desty-homepage/grab.png",
-  "https://static.desty.app/desty-homepage/anteraja.png",
-  "https://static.desty.app/desty-homepage/sicepa.png",
-  "https://static.desty.app/desty-homepage/jt.png",
-  "https://static.desty.app/desty-homepage/lionparcel.png",
-  "https://static.desty.app/desty-homepage/ninja.png",
-  "https://static.desty.app/desty-homepage/mahana.png",
-  "https://static.desty.app/desty-homepage/jne.png",
-]);
-
-const featured = ref([
-  {
-    img: "https://static.desty.app/desty-homepage/v2/featured-techinasia.png",
-  },
-  {
-    img: "https://static.desty.app/desty-homepage/v2/featured-dailysocial.png",
-  },
-  {
-    img: "https://static.desty.app/desty-homepage/v2/featured-liputan6.png",
-  },
-  {
-    img: "https://static.desty.app/desty-homepage/v2/featured-e27.png",
-  },
-  {
-    img: "https://static.desty.app/desty-homepage/v2/featured-indotelk.png",
-  },
-  {
-    img: "https://static.desty.app/desty-homepage/v2/featured-dealstreetasia.png",
-  },
-]);
+import { MERCHANT_LIST, FEATURED_LIST } from "~/constant/index";
 </script>
 
 <style lang="less" scoped>

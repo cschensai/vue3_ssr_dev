@@ -14,7 +14,7 @@
       <div class="tools-content card-deck-js">
         <div
           :class="['tools-content-platform', item.platform]"
-          v-for="item in platformList"
+          v-for="item in PLATFORM_LIST"
           :key="item.platform"
         >
           <div class="card-body">
@@ -23,9 +23,9 @@
               :src="`https://static.desty.app/desty-homepage/v2/${item.trademark}.svg`"
               :alt="item.name"
             />
-            <p class="card-title">{{ item.title }}</p>
-            <p class="card-des">{{ item.des }}</p>
-            <div class="card-more" @click="golink(item.link)">
+            <p class="card-title">{{ $t(item.title) }}</p>
+            <p class="card-des">{{ $t(item.des) }}</p>
+            <div class="card-more" @click="golink($t(item.link))">
               <img
                 src="https://static.desty.app/desty-homepage/v2/plus.svg"
                 :alt="item.name"
@@ -38,14 +38,14 @@
                   src="https://static.desty.app/desty-homepage/v2/menu.svg"
                   :alt="item.name"
                 />
-                <p>{{ item.menu1 }}</p>
+                <p>{{ $t(item.menu1) }}</p>
               </div>
               <div class="card-menu-item">
                 <img
                   src="https://static.desty.app/desty-homepage/v2/menu.svg"
                   :alt="item.name"
                 />
-                <p>{{ item.menu2 }}</p>
+                <p>{{ $t(item.menu2) }}</p>
               </div>
             </div>
             <div class="card-backimg">
@@ -63,63 +63,14 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
+import { PLATFORM_LIST } from "~/constant/index";
 
 const { t } = useI18n();
 
 const golink = (link) => {
   window.location.href = link;
 };
-
-const platformList = computed(() => {
-  return [
-    {
-      platform: "tools-page",
-      trademark: "desty-page-icon",
-      title: t("tools.pageTitle"),
-      des: t("tools.pageDes"),
-      menu1: t("tools.pageMenu1"),
-      menu2: t("tools.pageMenu2"),
-      backimg: "page-assets",
-      link: "https://desty.page",
-      name: "Desty Page",
-    },
-    {
-      platform: "tools-store",
-      trademark: "desty-store-icon",
-      title: t("tools.storeTitle"),
-      des: t("tools.storeDes"),
-      menu1: t("tools.storeMenu1"),
-      menu2: t("tools.storeMenu2"),
-      backimg: "store-assets",
-      link: "https://desty.store",
-      name: "Desty Store",
-    },
-    {
-      platform: "tools-menu",
-      trademark: "desty-menu-icon",
-      title: t("tools.menuTitle"),
-      des: t("tools.menuDes"),
-      menu1: t("tools.menuMenu1"),
-      menu2: t("tools.menuMenu1"),
-      backimg: "menu-assets",
-      link: "https://desty.menu",
-      name: "Desty Menu",
-    },
-    {
-      platform: "tools-chat",
-      trademark: "desty-chat-icon",
-      title: t("tools.chatTitle"),
-      des: t("tools.chatDes"),
-      menu1: t("tools.chatMenu1"),
-      menu2: t("tools.chatMenu1"),
-      backimg: "chat-assets",
-      link: "https://omni.desty.app/chat/Home",
-      name: "Desty Omni",
-    },
-  ];
-});
 
 onBeforeMount(() => {
   var StackCards = function (element) {
@@ -269,6 +220,9 @@ onBeforeMount(() => {
       }
       &:nth-child(3) {
         transform: translateY(120px);
+      }
+      &:nth-child(4) {
+        transform: translateY(160px);
       }
     }
     .card-body {
