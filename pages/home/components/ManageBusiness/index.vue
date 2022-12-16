@@ -105,7 +105,7 @@ onBeforeMount(() => {
       position: absolute;
       width: 826px;
       height: 854px;
-      left: -694px;
+      left: -594px;
       top: 384px;
       background: linear-gradient(151.45deg, rgba(12, 27, 184, 0.23) -4.34%, rgba(12, 27, 184, 0.2) 106.2%);
       filter: blur(200px);
