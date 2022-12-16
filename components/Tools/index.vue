@@ -315,7 +315,7 @@ onBeforeMount(() => {
         margin-top: 45px;
         display: flex;
         align-items: center;
-        gap: 94px;
+        gap: 48px;
         &-item {
           display: flex;
           gap: 12px;
