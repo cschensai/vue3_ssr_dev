@@ -103,12 +103,6 @@ import { MERCHANT_LIST, FEATURED_LIST } from "~/constant/index";
 </script>
 
 <style lang="less" scoped>
-0% {
-  transform: translateY(0%);
-}
-100% {
-  transform: translateY(-51%); //这里不是-100%！
-}
 @keyframes slide-data {
   0% {
     -webkit-transform: translate3d(0, 0, 0);

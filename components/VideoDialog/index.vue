@@ -40,6 +40,9 @@ defineExpose({ show });
 </script>
 
 <style lang="less">
+  .video-dialog .video-js {
+    margin: 0 auto;
+  }
   .video-dialog .video-js .vjs-big-play-button {
     left: 50%;
     top: 50%;
