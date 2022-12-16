@@ -3,8 +3,10 @@
   "private": false,
   "scripts": {
     "dev": "cross-env APP_ENV=development HOST=0.0.0.0 PORT=3033 nuxt dev",
-    "build:staging": "cross-env APP_ENV=staging nuxt build",
-    "build:production": "cross-env APP_ENV=production nuxt build",
+    "build-test": "cross-env APP_ENV=test nuxt build",
+    "build-staging": "cross-env APP_ENV=staging nuxt build",
+    "build": "cross-env APP_ENV=production nuxt build",
+    "start:test": "cross-env APP_ENV=test nuxt preview",
     "start:staging": "cross-env APP_ENV=staging nuxt preview",
     "start:build": "cross-env APP_ENV=production nuxt preview",
     "generate": "nuxt generate",
