@@ -2,10 +2,17 @@ export default {
   ssr: {
     title: 'en',
   },
+  seo: {
+    titlePrev: 'desty app',
+    titleNext: 'The One Ecosystemto Manage',
+    metaTitleContentNext: 'The One Ecosystemto Manage Your Business',
+    metaDescContent: 'Manage your business with Desty. Manage product, order, stocks, and consolidate data in one dashboard.',
+    ogLocaleContent: 'en_EN',
+    linkHrefLang: 'en-id',
+  },
   tokenGGMsg: 'en tokenGGMsg',
   headerv2: {
     title: 'Desty Product',
-    loginBtn: 'Login',
   },
   manageBusiness: {
     preMainTitle: 'the',

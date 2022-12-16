@@ -27,7 +27,7 @@ import { DASHBOARD_LIST } from '~/constant/index';
 <style lang="less" scoped>
 .dashboard-list {
   max-width: 1282px;
-  margin: 133px auto 0;
+  margin: 0 auto;
   .feature-title {
     .featured-on-title {
       font-size: 24px;
@@ -104,7 +104,7 @@ import { DASHBOARD_LIST } from '~/constant/index';
 @media screen and (max-width: 768px) {
   .dashboard-list {
     max-width: 100%;
-    margin: 80px auto 0;
+    margin: 0 auto;
     .feature-title {
       padding: 16px;
       box-sizing: border-box;

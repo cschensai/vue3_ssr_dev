@@ -35,13 +35,15 @@
     </div>
     <div class="right">
       <div class="shadow-bg"></div>
-      <client-only>
+      <!-- <client-only>
         <lottie-animation
           autoplay
           loop
-          :animationData="manageBusinessJson"
+          :animationData="hero"
         />
-      </client-only>
+      </client-only> -->
+      <div id="lottie"></div>
+      <div class="scroll-down" v-if="store.isPhone">{{ $t('scrollBar.text') }}</div>
     </div>
   </div>
   <client-only>
@@ -55,6 +57,10 @@ import useHome from '~/stores/index';
 import ScrollBar from '~/components/ScrollBar/index.vue';
 import VideoDialog from '~/components/VideoDialog/index.vue';
 import manageBusinessJson from '~/assets/animations/manageBusiness.json';
+import hero from '~/assets/animations/hero.json';
+// import '~/assets/animations/lottie.js';
+import lottie from 'lottie-web';
+import { animationData } from '~/assets/animations/animateData';
 
 
 const store = useHome();
@@ -71,6 +77,18 @@ function handleStartNow() {
   location.href = `${config.VITE_OMNI_URL}/register`;
 }
 
+onBeforeMount(() => {
+    const params = {
+        container: document.getElementById('lottie'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: animationData
+    };
+
+    lottie.loadAnimation(params);
+})
+
 </script>
 
 <style lang="less" scoped>
@@ -78,10 +96,11 @@ function handleStartNow() {
   max-width: 1282px;
   margin: 109px auto 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-top: 1px solid #000;
-  padding-top: 70px;
+  // padding-top: 70px;
   .left {
+    padding-top: 70px;
     .shadow-bg {
       position: absolute;
       width: 826px;
@@ -146,6 +165,7 @@ function handleStartNow() {
     }
   }
   .right {
+    flex: 1;
     .shadow-bg {
       position: absolute;
       width: 826px;
@@ -159,6 +179,9 @@ function handleStartNow() {
   }
 }
 @media screen and (max-width: 768px) {
+  #lottie {
+    transform: translateX(-20px);
+  }
   .manage-business {
     border-top: none;
     padding-top: 0;
@@ -211,6 +234,11 @@ function handleStartNow() {
         height: 446px;
         right: -360px;
         top: -192px;
+      }
+      .scroll-down {
+        text-align: center;
+        position: relative;
+        bottom: 80px;
       }
     }
   }
