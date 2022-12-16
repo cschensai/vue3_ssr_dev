@@ -9,6 +9,6 @@ RUN yarn install
 COPY . /app
 ENV HOST=0.0.0.0
 ENV PORT=3033
-RUN yarn build:test
+RUN yarn build-test
 CMD ["yarn", "start:test"]
 EXPOSE 3033
