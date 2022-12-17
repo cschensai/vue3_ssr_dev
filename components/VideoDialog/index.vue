@@ -1,6 +1,6 @@
 <template>
   <el-dialog
-    class="video-dialog"
+    custom-class="video-dialog"
     v-model="visible"
     :before-close="handleClose"
     :close-on-click-modal="false"
