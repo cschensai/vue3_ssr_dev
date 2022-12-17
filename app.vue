@@ -1,19 +1,18 @@
 <template>
   <div>
     <ElConfigProvider :locale="elementPlusEn">
-      <!-- <Header /> -->
+      <Header />
       <!-- 路由组件 -->
-      <!-- <NuxtPage /> -->
-      <!-- <Footer /> -->
+      <NuxtPage />
+      <Footer />
       <!-- chat section -->
-      <!-- <Chat /> -->
-      <ElButton type="primary">asd</ElButton>
+      <Chat />
     </ElConfigProvider>
   </div>
 </template>
 
 <script setup>
-import { ElConfigProvider, ElButton } from 'element-plus';
+import { ElConfigProvider } from 'element-plus';
 import Header from '~/components/Header/index.vue';
 import Footer from '~/components/Footer/index.vue';
 import Chat from '~/components/Chat/index.vue';
