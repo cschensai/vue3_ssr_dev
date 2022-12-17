@@ -4,23 +4,17 @@
     v-model="visible"
     :before-close="handleClose"
     :close-on-click-modal="false"
+    destroy-on-close
   >
-    <video-player
-      src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-      controls
-      loop
-      ref="video"
-    />
+    <iframe width="100%" :height="videoHeight" src="https://www.youtube.com/embed/MkANxeYAhMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </el-dialog>
 </template>
 
 <script setup>
+import useHome from '~/stores/index';
 import { ElDialog } from 'element-plus';
-import { VideoPlayer } from '@videojs-player/vue'
-import 'video.js/dist/video-js.css';
 
-
-const video = ref(null);
+const store = useHome();
 const visible = ref(false);
 // 打开
 function show() {
@@ -30,9 +24,12 @@ function show() {
 // 关闭
 function handleClose() {
   visible.value = false;
-  const videoEle = document.querySelector('#vjs_video_3_html5_api');
-  if (videoEle) videoEle.pause();
 }
+
+// 视频高度
+const videoHeight = computed(() => {
+  return store.isPhone ? 280 : 315;
+});
 
 // expose methods
 defineExpose({ show });
@@ -40,25 +37,12 @@ defineExpose({ show });
 </script>
 
 <style lang="less">
-  .video-dialog .video-js {
-    margin: 0 auto;
-  }
-  .video-dialog .video-js .vjs-big-play-button {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 80px;
+  .video-dialog {
+    
   }
   @media screen and (max-width: 768px) {
     .video-dialog {
-      width: 90% !important;
-      .video-js.v-video-player {
-        width: 100%;
-      }
+      width: 90%;
     }
   }
 </style>
