@@ -27,7 +27,6 @@
   <div class="index-page">
     <ManageBusiness />
     <DashBoardList />
-    <el-button type="primary">测试</el-button>
     <Tools />
     <Relation />
     <Experience />
@@ -35,7 +34,6 @@
 </template>
 
 <script setup>
-import { ElButton } from 'element-plus';
 // import useHome from '~~/stores';
 import ManageBusiness from '~/pages/home/components/ManageBusiness/index.vue';
 import DashBoardList from '~/pages/home/components/DashBoardList/index.vue';

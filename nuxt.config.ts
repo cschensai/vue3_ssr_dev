@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt/config';
+// import { defineNuxtConfig } from 'nuxt/config';
 import { loadEnv } from 'vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -41,10 +41,11 @@ export default defineNuxtConfig({
     },
   },
   // build modules
-  buildModules: ["@pinia/nuxt"],
+  // buildModules: [],
   modules: [
+    "@pinia/nuxt",
     // 请求代理配置，解决跨域
-	  '@nuxtjs/proxy',
+	  // '@nuxtjs/proxy',
     // 图片懒加载
     '@nuxt/image-edge',
   ],
