@@ -6,7 +6,7 @@
     :close-on-click-modal="false"
     destroy-on-close
   >
-    <iframe width="100%" :height="videoHeight" src="https://www.youtube.com/embed/MkANxeYAhMY?rel=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" :height="videoHeight" src="https://www.youtube.com/embed/MkANxeYAhMY?autoplay=true" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </el-dialog>
 </template>
 

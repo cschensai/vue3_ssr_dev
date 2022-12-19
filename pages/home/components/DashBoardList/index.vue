@@ -117,7 +117,7 @@ import { DASHBOARD_LIST } from '~/constant/index';
         }
       }
       .main-title {
-        width: 100%;
+        width: 327px;
         font-size: 30px;
         line-height: 38px;
         .color-text {

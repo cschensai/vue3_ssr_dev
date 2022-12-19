@@ -25,7 +25,7 @@ export default {
     watchVideo: 'Tonton video',
   },
   dashboardList: {
-    featureTitle: 'Fitur',
+    featureTitle: 'Features',
     mainTitle: 'Atur bisnis kamu dalam',
     colorTitle: 'Satu Dashboard',
     productTitle: 'Manajemen Produk',
@@ -41,9 +41,9 @@ export default {
     text: 'Scroll ke bawah',
   },
   tools: {
-    des: "Peralatan Bisnis",
+    des: "Merchant Tools",
     title1: "Dibuat oleh ",
-    title2: "agar terhubung sempurna",
+    title2: "untuk bisnis kamu",
     pageTitle: "Satu link untuk gabungkan traffic & channel penjualan",
     pageDes:
       "Link-in-bio & Landing Page untuk seller, content creator, Influencer, dan semua orang!",
