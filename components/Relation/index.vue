@@ -379,8 +379,9 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
     .our-partners {
       z-index: 1;
       padding-bottom: 60px;
+      padding-top: 40px;
       .title {
-        margin: 40px 0 24px 0;
+        margin-bottom: 24px;
       }
       .marquee {
         padding: 0;

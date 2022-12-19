@@ -1,26 +1,28 @@
 <template>
   <section class="experience">
-    <p class="experience-title">{{ $t("experience.title") }}</p>
-    <p class="experience-des">
-      {{ $t("experience.des") }}
-    </p>
-    <div class="experience-btn" @click="goExperience">
-      <span> {{ $t("experience.btn") }}</span>
+    <div class="experience-content">
+      <p class="experience-title">{{ $t("experience.title") }}</p>
+      <p class="experience-des">
+        {{ $t("experience.des") }}
+      </p>
+      <div class="experience-btn" @click="goExperience">
+        <span> {{ $t("experience.btn") }}</span>
+        <img
+          src="https://static.desty.app/desty-homepage/v2/right_arrow.svg"
+          alt=""
+        />
+      </div>
       <img
-        src="https://static.desty.app/desty-homepage/v2/right_arrow.svg"
+        class="white-supers"
+        src="https://static.desty.app/desty-homepage/v2/white-supers.png"
+        alt=""
+      />
+      <img
+        class="yellow-supers"
+        src="https://static.desty.app/desty-homepage/v2/yellow-supers.png"
         alt=""
       />
     </div>
-    <img
-      class="white-supers"
-      src="https://static.desty.app/desty-homepage/v2/white-supers.png"
-      alt=""
-    />
-    <img
-      class="yellow-supers"
-      src="https://static.desty.app/desty-homepage/v2/yellow-supers.png"
-      alt=""
-    />
   </section>
 </template>
 <script setup>
@@ -32,16 +34,21 @@ const goExperience = () => {
 .experience {
   width: 100%;
   height: 541px;
-  display: flex;
-  flex-direction: column;
   // justify-content: center;
-  align-items: center;
-  background: #eff2ff;
-  border-radius: 20px;
+  background: #ffffff;
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   position: relative;
   transform: translateY(25px);
+  &-content {
+    width: 100%;
+    height: 100%;
+    background: #eff2ff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &-title {
     font-weight: 700;
     font-size: 56px;
@@ -101,7 +108,7 @@ const goExperience = () => {
   .experience {
     height: 324px;
     transform: translateY(20px);
-    overflow-x: hidden;
+    overflow: hidden;
     &-title {
       width: 329px;
       height: 84px;
