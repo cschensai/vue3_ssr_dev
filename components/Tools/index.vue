@@ -315,6 +315,9 @@ onBeforeMount(() => {
     }
     .tools-menu {
       background: #ffad99;
+      .card-des {
+        width: 542px;
+      }
       .card-more {
         background: #ff0011;
         border: 2px solid #b7002d;
@@ -323,6 +326,9 @@ onBeforeMount(() => {
     }
     .tools-chat {
       background: #bcffe1;
+      .card-title {
+        width: 611px;
+      }
       .card-more {
         background: #13d27d;
         border: 2px solid #13d27d;
@@ -370,6 +376,7 @@ onBeforeMount(() => {
       }
       .card-body {
         padding: 20px 16px 0 16px;
+        overflow: hidden;
         .card-trademark {
           height: 40px;
           margin-bottom: 20.4px;
@@ -405,7 +412,7 @@ onBeforeMount(() => {
       }
       .tools-chat {
         .card-backimg {
-          bottom: 40px;
+          bottom: -32px;
         }
       }
     }

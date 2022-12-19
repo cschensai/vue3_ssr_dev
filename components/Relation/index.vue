@@ -7,7 +7,10 @@
           <div class="hr"></div>
         </div>
         <h3 data-aos="fade-up">
-          {{ $t("relation.brandsTitle") }} <span class="text-color">Desty</span>
+          <span class="first-row">
+            {{ $t("relation.brandsTitle1") }}
+          </span>
+          {{ $t("relation.brandsTitle2") }}<span class="text-color">Desty</span>
         </h3>
       </header>
       <section class="featured-on-scroll">
@@ -31,52 +34,12 @@
       </header>
       <section class="wrapper box">
         <nuxt-img
-          class="box-5y"
-          alt="5y"
+          v-for="backed in BACKED_LIST"
+          :key="backed.alt"
+          :class="backed.class"
+          :alt="backed.alt"
           loading="lazy"
-          src="https://static.desty.app/desty-homepage/v2/backed-5y.png"
-          data-aos="fade-up"
-        />
-        <nuxt-img
-          class="box-cast"
-          alt="cast"
-          loading="lazy"
-          src="https://static.desty.app/desty-homepage/v2/backed-eactenturea.png"
-          data-aos="fade-up"
-        />
-        <nuxt-img
-          class="box-squarepeg"
-          alt="squarepeg"
-          loading="lazy"
-          src="https://static.desty.app/desty-homepage/v2/backed-squarepeg.png"
-          data-aos="fade-up"
-        />
-        <nuxt-img
-          class="box-fosun"
-          alt="fosun"
-          loading="lazy"
-          src="https://static.desty.app/desty-homepage/v2/backed-fosunrzcapital.png"
-          data-aos="fade-up"
-        />
-        <nuxt-img
-          class="box-bace"
-          alt="bace"
-          loading="lazy"
-          src="https://static.desty.app/desty-homepage/v2/backed-bacecapital.png"
-          data-aos="fade-up"
-        />
-        <nuxt-img
-          class="box-incapital"
-          alt="incapital"
-          loading="lazy"
-          src="https://static.desty.app/desty-homepage/v2/backed-incapital.png"
-          data-aos="fade-up"
-        />
-        <nuxt-img
-          class="box-january"
-          alt="january"
-          loading="lazy"
-          src="https://static.desty.app/desty-homepage/v2/backed-januarycapital.png"
+          :src="backed.img"
           data-aos="fade-up"
         />
       </section>
@@ -99,7 +62,7 @@
 </template>
 
 <script setup>
-import { MERCHANT_LIST, FEATURED_LIST } from "~/constant/index";
+import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
 </script>
 
 <style lang="less" scoped>
@@ -131,6 +94,9 @@ import { MERCHANT_LIST, FEATURED_LIST } from "~/constant/index";
   --box-img-width: 197px;
   position: relative;
   transform: translateY(25px);
+  .first-row {
+    display: block;
+  }
   .text-color {
     color: #0012b2;
   }
@@ -264,17 +230,10 @@ import { MERCHANT_LIST, FEATURED_LIST } from "~/constant/index";
       width: 750px;
       height: 290px;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
-      gap: 40px 80px;
-
-      & > img {
-        display: inline-block;
-        max-height: var(--box-img-height);
-        max-width: var(--box-img-width);
-        flex: 1;
-      }
+      gap: 78px 80px;
     }
   }
   .our-partners {
@@ -382,10 +341,11 @@ import { MERCHANT_LIST, FEATURED_LIST } from "~/constant/index";
       }
       .box {
         width: 100%;
-        height: 138px;
-        gap: 28px 20px;
+        height: 118px;
+        gap: 24px 20px;
         padding: 0 16px;
         box-sizing: border-box;
+        justify-content: space-around;
         &-5y {
           width: 92.13px;
           // height: 31.58px;
