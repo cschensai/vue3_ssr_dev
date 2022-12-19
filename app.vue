@@ -1,13 +1,13 @@
 <template>
   <div>
     <ElConfigProvider :locale="elementPlusEn">
-      <!-- <Header /> -->
+      <Header />
       <!-- 路由组件 -->
-      <!-- <NuxtPage /> -->
-      <!-- <Footer /> -->
+      <NuxtPage />
+      <Footer />
       <!-- chat section -->
-      <!-- <Chat /> -->
-      <ElButton type="primary">asd</ElButton>
+      <Chat />
+      <!-- <ElButton type="primary">asd</ElButton> -->
     </ElConfigProvider>
   </div>
 </template>

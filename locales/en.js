@@ -66,7 +66,8 @@ export default {
   },
   relation: {
     title: 'Merchants',
-    brandsTitle: 'Some of the brands who chose ',
+    brandsTitle1: 'Some of the brands',
+    brandsTitle2: 'who chose ',
     backedTitle: 'Backed by',
     featured: 'As Featured On'
   },

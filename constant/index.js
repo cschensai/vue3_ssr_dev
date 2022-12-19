@@ -86,6 +86,45 @@ export const FEATURED_LIST = [
     img: "https://static.desty.app/desty-homepage/v2/featured-dealstreetasia.png",
   },
 ];
+
+export const BACKED_LIST = [
+  {
+    img: "https://static.desty.app/desty-homepage/v2/backed-5y.png",
+    class: "box-5y",
+    alt: "5y",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/backed-eactenturea.png",
+    class: "box-cast",
+    alt: "cast",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/backed-squarepeg.png",
+    class: "box-squarepeg",
+    alt: "squarepeg",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/backed-fosunrzcapital.png",
+    class: "box-fosun",
+    alt: "fosun",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/backed-bacecapital.png",
+    class: "box-bace",
+    alt: "bace",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/backed-incapital.png",
+    class: "box-incapital",
+    alt: "incapital",
+  },
+  {
+    img: "https://static.desty.app/desty-homepage/v2/backed-januarycapital.png",
+    class: "box-january",
+    alt: "january",
+  },
+];
+
 // Tools
 export const PLATFORM_LIST = [
   {
