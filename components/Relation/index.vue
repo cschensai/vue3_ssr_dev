@@ -14,15 +14,17 @@
         </h3>
       </header>
       <section class="featured-on-scroll">
-        <div class="list">
-          <div class="featured-on-scroll-middle">
-            <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
-              <img :src="item" alt="desty home page" />
+        <div class="featured-on-content">
+          <div class="list">
+            <div class="featured-on-scroll-middle">
+              <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
+                <img :src="item" alt="desty home page" />
+              </div>
             </div>
-          </div>
-          <div class="featured-on-scroll-middle">
-            <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
-              <img :src="item" />
+            <div class="featured-on-scroll-middle">
+              <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
+                <img :src="item" />
+              </div>
             </div>
           </div>
         </div>
@@ -72,8 +74,8 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-1124px, 0, 0);
-    transform: translate3d(-1124px, 0, 0);
+    -webkit-transform: translate3d(-2204px, 0, 0);
+    transform: translate3d(-2204px, 0, 0);
   }
 }
 @keyframes slide-mobile {
@@ -160,10 +162,9 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
       }
     }
     &-scroll {
-      width: 1124px;
+      width: 100%;
       height: 98px;
       margin: auto;
-      overflow: hidden;
       position: relative;
       &::before,
       &:after {
@@ -172,7 +173,7 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
         z-index: 1;
         top: 0;
         height: 98px;
-        width: 210px;
+        width: 408px;
       }
       &::before {
         left: 0;
@@ -193,30 +194,35 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
         transform: matrix(-1, 0, 0, 1, 0, 0);
       }
       &-middle {
-        width: 1124px;
+        width: 2174px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         padding: 0px;
-        gap: 80px;
+        gap: 60px;
         overflow: hidden;
+        -webkit-animation: 25s slide-data linear infinite normal;
+        animation: 25s slide-data linear infinite normal;
       }
     }
+    &-content {
+      width: 1124px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
     .list {
-      width: 2248px;
+      width: 4408px;
       height: 98px;
       margin: auto;
       position: relative;
       overflow: hidden;
       display: flex;
+      gap: 60px;
       .rowup {
-        -webkit-animation: 10s slide-data linear infinite normal;
-        animation: 10s slide-data linear infinite normal;
+        // -webkit-animation: 10s slide-data linear infinite normal;
+        // animation: 10s slide-data linear infinite normal;
         position: relative;
-        img {
-          height: 32px;
-        }
       }
     }
   }
@@ -309,6 +315,7 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
           width: 329px;
           height: 84px;
           margin: 24px auto;
+          margin-bottom: 20px;
         }
       }
       &-scroll {
@@ -321,17 +328,15 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
         }
         .list {
           height: 67px;
-          .rowup {
-            -webkit-animation: 10s slide-data linear infinite normal;
-            animation: 10s slide-data linear infinite normal;
-          }
-        }
-        img {
-          height: 35px !important;
         }
         &-middle {
+          width: 1035.3px;
           height: 67px;
           justify-content: flex-start;
+          gap: 28px;
+          .rowup {
+            flex: 1;
+          }
         }
       }
     }
