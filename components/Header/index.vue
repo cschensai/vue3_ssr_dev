@@ -4,7 +4,7 @@
       class="home-page-header-v2"
       :lang="langRef"
       @handleLang="handleLang"
-      @handleNavAction="handleNavAction"
+      @handleNav="handleNavAction"
     >
       <template v-slot:sub-menu-products-content>
         <div class="content-box">
@@ -24,7 +24,7 @@
         </div>
       </template>
       <template v-slot:extra-content>
-        <div class="action-btn" @click="handleNavAction('login')">
+        <div class="action-btn" @click="handleNavAction('startnow')">
           {{ $t('manageBusiness.startNow') }}
         </div>
       </template>

@@ -10,8 +10,8 @@ const envName = process.env.APP_ENV;
 const envData = loadEnv(envName, 'env');
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default defineNuxtConfig({
-  css: ['~/assets/less/uilib.less', '~/assets/less/index.less'],
+export default {
+  css: ['~/homeAssets/less/uilib.less', '~/homeAssets/less/index.less'],
   meta: {
     meta: [
       // 防止点击输入框ios页面进行缩放
@@ -29,16 +29,18 @@ export default defineNuxtConfig({
       href: 'https://desty.app',
     }]
   },
-  build: {
-    transpile: lifycycle === 'build' ? ['element-plus'] : [],
-    // 分离css
+  webpack: {
     extractCSS: true,
-    // bundle analyze
-    analyze: true,
     // postcss
     postcss: {
       postcssOptions: require('./postcss.config.js'),
     },
+  },
+  build: {
+    transpile: lifycycle === 'build' ? ['element-plus'] : [],
+    // 分离css
+    // bundle analyze
+    analyze: true,
   },
   // build modules
   // buildModules: [],
@@ -76,7 +78,9 @@ export default defineNuxtConfig({
     }
   ],
   // 注册运行时环境配置变量
-  publicRuntimeConfig: envData,
+  runtimeConfig: {
+    public: envData,
+  },
   vite: {
     envDir: '~/env',
     plugins: [
@@ -90,4 +94,4 @@ export default defineNuxtConfig({
       }),
     ],
   },
-})
+}

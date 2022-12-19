@@ -57,11 +57,11 @@ import { useI18n } from 'vue-i18n';
 import useHome from '~/stores/index';
 import ScrollBar from '~/components/ScrollBar/index.vue';
 import VideoDialog from '~/components/VideoDialog/index.vue';
-import manageBusinessJson from '~/assets/animations/manageBusiness.json';
-import hero from '~/assets/animations/hero.json';
-// import '~/assets/animations/lottie.js';
+import manageBusinessJson from '~/homeAssets/animations/manageBusiness.json';
+import hero from '~/homeAssets/animations/hero.json';
+// import '~/homeAssets/animations/lottie.js';
 import lottie from 'lottie-web';
-import { animationData } from '~/assets/animations/animateData';
+import { animationData } from '~/homeAssets/animations/animateData';
 
 
 const store = useHome();
