@@ -18,12 +18,20 @@
           <div class="list">
             <div class="featured-on-scroll-middle">
               <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
-                <img :src="item" alt="desty home page" />
+                <img
+                  :src="item.img"
+                  alt="desty home page"
+                  :class="item.class"
+                />
               </div>
             </div>
             <div class="featured-on-scroll-middle">
               <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
-                <img :src="item" />
+                <img
+                  :src="item.img"
+                  alt="desty home page"
+                  :class="item.class"
+                />
               </div>
             </div>
           </div>
@@ -74,8 +82,8 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-2204px, 0, 0);
-    transform: translate3d(-2204px, 0, 0);
+    -webkit-transform: translate3d(-2234px, 0, 0);
+    transform: translate3d(-2234px, 0, 0);
   }
 }
 @keyframes slide-mobile {
@@ -84,8 +92,8 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
     transform: translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(-380px, 0, 0);
-    transform: translate3d(-380px, 0, 0);
+    -webkit-transform: translate3d(-1288px, 0, 0);
+    transform: translate3d(-1288px, 0, 0);
   }
 }
 
@@ -220,8 +228,6 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
       display: flex;
       gap: 60px;
       .rowup {
-        // -webkit-animation: 10s slide-data linear infinite normal;
-        // animation: 10s slide-data linear infinite normal;
         position: relative;
       }
     }
@@ -319,7 +325,7 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
         }
       }
       &-scroll {
-        width: 380px;
+        width: 100%;
         height: 67px;
         &::before,
         &:after {
@@ -327,15 +333,92 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
           width: 140px;
         }
         .list {
+          width: 2540px;
           height: 67px;
+          gap: 28px;
         }
         &-middle {
-          width: 1035.3px;
+          width: 1256px;
           height: 67px;
           justify-content: flex-start;
           gap: 28px;
+          -webkit-animation: 25s slide-mobile linear infinite normal;
+          animation: 25s slide-mobile linear infinite normal;
           .rowup {
-            flex: 1;
+            display: flex;
+            align-items: center;
+            .backed-electronic {
+              width: 51.96px;
+              height: 36.23px;
+            }
+            .backed-biotalk {
+              width: 30.77px;
+              height: 43.46px;
+            }
+            .backed-mirael {
+              width: 47.17px;
+              height: 47.17px;
+            }
+            .backed-fine {
+              width: 36.92px;
+              height: 36.92px;
+            }
+            .backed-little {
+              width: 50.1px;
+              height: 29.01px;
+            }
+            .backed-haluu {
+              width: 41.02px;
+              height: 41.02px;
+            }
+            .backed-chubby {
+              width: 35.55px;
+              height: 28.71px;
+            }
+            .backed-nepia {
+              width: 64.95px;
+              height: 25.98px;
+            }
+            .backed-dobujack {
+              width: 41.02px;
+              height: 41.02px;
+            }
+            .backed-moxie {
+              width: 41.02px;
+              height: 41.02px;
+            }
+            .backed-astoria {
+              width: 50.59px;
+              height: 41.02px;
+            }
+            .backed-kopi {
+              width: 56.06px;
+              height: 34.87px;
+            }
+            .backed-belle {
+              width: 41.02px;
+              height: 41.02px;
+            }
+            .backed-eastern {
+              width: 51.96px;
+              height: 40.34px;
+            }
+            .backed-bakmi {
+              width: 37.17px;
+              height: 27.35px;
+            }
+            .backed-villo {
+              width: 41.02px;
+              height: 41.02px;
+            }
+            .backed-nako {
+              width: 25.3px;
+              height: 67px;
+            }
+            .backed-filosofi {
+              width: 35.55px;
+              height: 32.13px;
+            }
           }
         }
       }
