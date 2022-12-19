@@ -11,7 +11,7 @@ const envData = loadEnv(envName, 'env');
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default {
-  css: ['~/assets/less/uilib.less', '~/assets/less/index.less'],
+  css: ['~/homeAssets/less/uilib.less', '~/homeAssets/less/index.less'],
   meta: {
     meta: [
       // 防止点击输入框ios页面进行缩放
