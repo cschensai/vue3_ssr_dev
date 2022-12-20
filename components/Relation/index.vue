@@ -352,6 +352,7 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
         &:after {
           height: 67px;
           width: 140px;
+          background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
         }
         .list {
           width: 2540px;
