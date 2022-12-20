@@ -5,14 +5,30 @@
     :before-close="handleClose"
     :close-on-click-modal="false"
     destroy-on-close
+    :show-close="false"
+    center
   >
-    <iframe width="100%" :height="videoHeight" src="https://www.youtube.com/embed/MkANxeYAhMY?autoplay=true" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe
+      width="100%"
+      :height="videoHeight"
+      src="https://www.youtube.com/embed/MkANxeYAhMY?autoplay=true"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <img
+      src="https://static.desty.app/desty-homepage/v2/homepage-close.svg"
+      alt="Desty App"
+      class="desty-close"
+      @click="handleClose"
+    />
   </el-dialog>
 </template>
 
 <script setup>
-import useHome from '~/stores/index';
-import { ElDialog } from 'element-plus';
+import useHome from "~/stores/index";
+import { ElDialog, ElIcon } from "element-plus";
 
 const store = useHome();
 const visible = ref(false);
@@ -28,21 +44,51 @@ function handleClose() {
 
 // 视频高度
 const videoHeight = computed(() => {
-  return store.isPhone ? 280 : 315;
+  return store.isPhone ? 280 : 600;
 });
 
 // expose methods
 defineExpose({ show });
-
 </script>
 
 <style lang="less">
-  .video-dialog {
-    
+.el-overlay {
+  .el-overlay-dialog {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
   }
-  @media screen and (max-width: 768px) {
-    .video-dialog {
-      width: 90%;
+}
+
+.video-dialog {
+  width: 940px;
+  height: 600px;
+  position: relative;
+  .el-dialog__header {
+    display: none;
+  }
+  .el-dialog__body {
+    padding: 0;
+  }
+  .desty-close {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: -66px;
+    right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-dialog {
+    width: calc(100% - 48px);
+    height: 214px;
+    margin-top: 150px;
+    .desty-close {
+      position: absolute;
+      width: 24px;
+      height: 22px;
+      top: -39px;
+      right: 0;
     }
   }
+}
 </style>
