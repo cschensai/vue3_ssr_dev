@@ -59,6 +59,10 @@
       </div>
     </section>
     <div class="desty-platform-bg"></div>
+    <div class="desty-platform-white">
+      <div class="desty-white-1"></div>
+      <div class="desty-white-2"></div>
+    </div>
   </div>
 </template>
 
@@ -160,6 +164,34 @@ onBeforeMount(() => {
     z-index: -1;
     background-image: url(https://static.desty.app/desty-homepage/v2/tools-bg-pc.png);
     background-size: cover;
+  }
+  &-white {
+    width: 912px;
+    height: 787.59px;
+    position: absolute;
+    left: 0;
+    top: 700px;
+    z-index: -1;
+    .desty-white-1 {
+      position: absolute;
+      width: 668.93px;
+      height: 579.4px;
+      background: rgba(255, 255, 255, 0.52);
+      border-radius: 48px;
+      transform: matrix(0.87, -0.38, 0.54, 0.91, 0, 0);
+      left: -377px;
+      top: 590.11px;
+    }
+    .desty-white-2 {
+      position: absolute;
+      left: -368.26px;
+      top: 574.02px;
+      width: 682.55px;
+      height: 564.78px;
+      background: #ffffff;
+      border-radius: 48px;
+      transform: matrix(0.96, -0.22, 0.31, 0.97, 0, 0);
+    }
   }
 }
 .tools {
@@ -343,6 +375,9 @@ onBeforeMount(() => {
       height: 743px;
       top: -285px;
       background-image: url(https://static.desty.app/desty-homepage/v2/tools-bg-moble.png);
+    }
+    &-white {
+      display: none;
     }
   }
   .tools {
