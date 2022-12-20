@@ -62,7 +62,7 @@
         <section class="wrapper">
           <div class="content">
             <div class="marquee-img" v-for="item in FEATURED_LIST" :key="item">
-              <img :src="item.img" alt="desty home page" />
+              <img :src="item.img" alt="desty home page" :class="item.class" />
             </div>
           </div>
         </section>
@@ -284,8 +284,29 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
             display: flex;
             justify-content: center;
             align-items: center;
-            img {
-              height: 50%;
+            .featured-techinasia {
+              width: 142.82px;
+              height: 35.7px;
+            }
+            .featured-dailysocial {
+              width: 133.89px;
+              height: 38.08px;
+            }
+            .featured-liputan6 {
+              width: 124.37px;
+              height: 24.65px;
+            }
+            .featured-e27 {
+              width: 45.23px;
+              height: 24.46px;
+            }
+            .featured-indotelk {
+              width: 106.52px;
+              height: 25.73px;
+            }
+            .featured-dealstreetasia {
+              width: 37.62px;
+              height: 35.7px;
             }
           }
         }
@@ -478,12 +499,36 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
             width: 100%;
             height: 102px;
             gap: 16.82px 0;
+            .marquee-img {
+              width: 33% !important;
+              height: 42.5px !important;
+              z-index: 1;
+              .featured-techinasia {
+                width: 86.86px;
+                height: 21.72px;
+              }
+              .featured-dailysocial {
+                width: 81.43px;
+                height: 23.16px;
+              }
+              .featured-liputan6 {
+                width: 75.64px;
+                height: 14.99px;
+              }
+              .featured-e27 {
+                width: 27.51px;
+                height: 14.88px;
+              }
+              .featured-indotelk {
+                width: 64.78px;
+                height: 15.65px;
+              }
+              .featured-dealstreetasia {
+                width: 22.88px;
+                height: 21.72px;
+              }
+            }
           }
-        }
-        &-img {
-          width: 33% !important;
-          height: 42.5px !important;
-          z-index: 1;
         }
       }
     }

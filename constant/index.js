@@ -70,21 +70,27 @@ export const MERCHANT_LIST = [
 export const FEATURED_LIST = [
   {
     img: "https://static.desty.app/desty-homepage/v2/featured-techinasia.png",
+    class:"featured-techinasia"
   },
   {
     img: "https://static.desty.app/desty-homepage/v2/featured-dailysocial.png",
+    class:"featured-dailysocial"
   },
   {
     img: "https://static.desty.app/desty-homepage/v2/featured-liputan6.png",
+    class:"featured-liputan6"
   },
   {
     img: "https://static.desty.app/desty-homepage/v2/featured-e27.png",
+    class:"featured-e27"
   },
   {
     img: "https://static.desty.app/desty-homepage/v2/featured-indotelk.png",
+    class:"featured-indotelk"
   },
   {
     img: "https://static.desty.app/desty-homepage/v2/featured-dealstreetasia.png",
+    class:"featured-dealstreetasia"
   },
 ];
 
