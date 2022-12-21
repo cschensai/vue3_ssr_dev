@@ -9,6 +9,7 @@
     center
   >
     <iframe
+      class="video-dialog-iframe"
       width="100%"
       :height="videoHeight"
       src="https://www.youtube.com/embed/MkANxeYAhMY?autoplay=true"
@@ -63,6 +64,7 @@ defineExpose({ show });
   width: 940px;
   height: 600px;
   position: relative;
+  border-radius: 20px;
   .el-dialog__header {
     display: none;
   }
@@ -75,6 +77,9 @@ defineExpose({ show });
     height: 38px;
     top: -66px;
     right: 0;
+  }
+  &-iframe{
+    border-radius: 20px;
   }
 }
 @media screen and (max-width: 768px) {
