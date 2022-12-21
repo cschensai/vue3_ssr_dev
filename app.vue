@@ -20,6 +20,7 @@ import elementPlusEn from 'element-plus/es/locale/lang/en';
 // import elementPlusId from 'element-plus/es/locale/lang/id';
 import useHome from './stores/index';
 import flexible from './utils/flexible';
+import useAmplitude from '~/composables/useAmplitude';
 
 const homeStore = useHome();
 
@@ -41,6 +42,9 @@ onBeforeMount(() => {
 });
 
 onMounted(() => {
+  if (process.client) {
+    useAmplitude();
+  }
   flexible(window, document);
 })
 
