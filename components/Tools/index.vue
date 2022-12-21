@@ -296,6 +296,7 @@ onBeforeMount(() => {
         width: 156px;
         height: 56px;
         border-radius: 12px;
+        cursor: pointer;
       }
       .card-menu {
         margin-top: 45px;

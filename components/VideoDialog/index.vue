@@ -57,6 +57,9 @@ defineExpose({ show });
   .el-overlay-dialog {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -78,7 +81,7 @@ defineExpose({ show });
     top: -66px;
     right: 0;
   }
-  &-iframe{
+  &-iframe {
     border-radius: 20px;
   }
 }
