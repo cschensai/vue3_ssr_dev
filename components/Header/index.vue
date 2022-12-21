@@ -63,6 +63,9 @@ function handleNavAction(key) {
   width: 100%;
   box-sizing: border-box;
   z-index: 9;
+  background: rgba(243, 244, 245, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 0px 0px 40px 40px;
   .menu-title {
     font-weight: 800;
     font-size: 18px;
