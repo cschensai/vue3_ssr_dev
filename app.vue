@@ -23,6 +23,7 @@ import elementPlusEn from 'element-plus/es/locale/lang/en';
 // import elementPlusId from 'element-plus/es/locale/lang/id';
 import useHome from './stores/index';
 import flexible from './utils/flexible';
+import useAmplitude from '~/composables/useAmplitude';
 
 const homeStore = useHome();
 const config = useRuntimeConfig();
@@ -49,14 +50,27 @@ onBeforeMount(() => {
   };
 });
 
+// 设置amplitude
+function setAmplitude() {
+  if (process.client) {
+    useAmplitude();
+    amplitude.getInstance().logEvent('general: visit homepage - desty.app', {
+      source: document.referrer,
+      is_logged_in: false
+    });
+  }
+}
+
 onMounted(() => {
-  flexible(window, document);
   if (process.client) {
     nextTick(async () => {
       const token = await destyExchangeTokenRef.value?.getToken?.();
       homeStore.setCurrToken(token);
-    })
+      setAmplitude();
+    });
   }
+  
+  flexible(window, document);
 })
 
 </script>

@@ -75,7 +75,7 @@ export default {
     {
       src: '~/plugins/lottie-web',
       mode: 'client',
-    }
+    },
   ],
   // 注册运行时环境配置变量
   runtimeConfig: {
@@ -83,6 +83,9 @@ export default {
   },
   vite: {
     envDir: '~/env',
+    ssr: {
+      noExternal: ['element-plus/es'],
+    },
     plugins: [
       // element-plus按需加载
       AutoImport({

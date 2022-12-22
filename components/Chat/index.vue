@@ -27,6 +27,7 @@
           <div
             :class="['fxifZC', { hideFxifZC: !zenShow }]"
             @click.stop="closeWidget"
+            v-loading="zenShow"
           >
             <svg
               class="sc-1k07fow-0 iHCBIr"
