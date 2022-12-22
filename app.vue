@@ -46,7 +46,7 @@ onMounted(() => {
     useAmplitude();
   }
   amplitude.getInstance().logEvent('general: visit homepage - desty.app', {
-		source: window.location.href,
+		source: document.referrer,
 		is_logged_in: false
 	});
   flexible(window, document);

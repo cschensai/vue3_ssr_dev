@@ -72,7 +72,7 @@ const config = useRuntimeConfig();
 function handleWatchVideo() {
   videoDialog.value.show();
   amplitude.getInstance().logEvent('general: click start now - desty.app', {
-		button_location: 'hero_banner',
+		button_location: 'header',
 		is_logged_in: false
 	});
 }
