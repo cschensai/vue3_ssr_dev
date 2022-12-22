@@ -57,11 +57,11 @@ import { useI18n } from 'vue-i18n';
 import useHome from '~/stores/index';
 import ScrollBar from '~/components/ScrollBar/index.vue';
 import VideoDialog from '~/components/VideoDialog/index.vue';
-import manageBusinessJson from '~/assets/animations/manageBusiness.json';
-import hero from '~/assets/animations/hero.json';
+// import manageBusinessJson from '~/assets/animations/manageBusiness.json';
+// import hero from '~/assets/animations/hero.json';
 // import '~/assets/animations/lottie.js';
 import lottie from 'lottie-web';
-import { animationData } from '~/assets/animations/animateData';
+import {animationData} from '~/assets/animations/animateData.js';
 
 
 const store = useHome();
@@ -71,11 +71,18 @@ const config = useRuntimeConfig();
 
 function handleWatchVideo() {
   videoDialog.value.show();
+  amplitude.getInstance().logEvent('general: click start now - desty.app', {
+		button_location: 'hero_banner',
+		is_logged_in: false
+	});
 }
 
 // start now action
 function handleStartNow() {
   location.href = `${config.VITE_OMNI_URL}/register`;
+  amplitude.getInstance().logEvent('general: click watch video - desty.app', {
+		is_logged_in: false
+	});
 }
 
 // 加载动画
@@ -85,7 +92,7 @@ onBeforeMount(() => {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    animationData: animationData
+    animationData: animationData,
   };
   lottie.loadAnimation(params);
 })

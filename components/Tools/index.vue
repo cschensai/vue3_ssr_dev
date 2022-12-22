@@ -74,6 +74,12 @@ const { t } = useI18n();
 
 const handleClinkMore = (link) => {
   window.location.href = link;
+  amplitude
+    .getInstance()
+    .logEvent("general: click merchant tools - desty.app", {
+      click_learn_more_swiper: false,
+      is_logged_in: false,
+    });
 };
 
 onBeforeMount(() => {

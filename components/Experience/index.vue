@@ -28,6 +28,11 @@
 <script setup>
 const goExperience = () => {
   window.location.href = "https://omni.desty.app/register";
+  amplitude
+    .getInstance()
+    .logEvent("general: click free trial button - desty.app", {
+      is_logged_in: false,
+    });
 };
 </script>
 <style lang="less" scoped>

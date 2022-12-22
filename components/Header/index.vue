@@ -51,6 +51,10 @@ function handleLang(key) {
 // 导航
 function handleNavAction(key) {
   handleNav(key, config, push);
+  amplitude.getInstance().logEvent('general: click start now - desty.app', {
+		button_location: 'hero_banner',
+		is_logged_in: false
+	});
 }
 
 </script>
