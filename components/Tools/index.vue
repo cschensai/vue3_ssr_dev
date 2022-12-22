@@ -336,6 +336,11 @@ onBeforeMount(() => {
         background: #ffdd00;
         border: 2px solid #b79a00;
         box-shadow: 4px 4px 0px #b79a00;
+        &:hover {
+          background: #f4bb2c;
+          border: 2px solid #ffdd00;
+          box-shadow: 4px 4px 0px #ffdd00;
+        }
       }
     }
     .tools-store {
@@ -344,6 +349,11 @@ onBeforeMount(() => {
         background: #0088ff;
         border: 2px solid #004eb7;
         box-shadow: 4px 4px 0px #004eb7;
+        &:hover {
+          background: #004eb7;
+          border: 2px solid #0088ff;
+          box-shadow: 4px 4px 0px #0088ff;
+        }
       }
     }
     .tools-menu {
@@ -355,6 +365,11 @@ onBeforeMount(() => {
         background: #ff0011;
         border: 2px solid #b7002d;
         box-shadow: 4px 4px 0px #b7002d;
+        &:hover {
+          background: #b7002d;
+          border: 2px solid #ff0011;
+          box-shadow: 4px 4px 0px #ff0011;
+        }
       }
     }
     .tools-chat {
@@ -366,6 +381,11 @@ onBeforeMount(() => {
         background: #13d27d;
         border: 2px solid #13d27d;
         box-shadow: 4px 4px 0px #08aa62;
+        &:hover {
+          background: #08aa62;
+          border: 2px solid #13d27d;
+          box-shadow: 4px 4px 0px #13d27d;
+        }
       }
     }
   }
