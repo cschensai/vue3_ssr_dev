@@ -1,111 +1,110 @@
 <template>
   <client-only>
-  <div class="chat-box">
-    <div
-      :class="['float-icon zendesk-box', { hidefloat: zenShow }]"
-      @click="handleCustomerService"
-      v-loading="loadingZen"
-    >
-      <div class="zendesk">
-        <div :class="['gHHEeh', { hideHHEeh: zenShow }]">
-          <svg
-            position="right"
-            class="sc-1k07fow-1 cbnSms"
-            width="24px"
-            height="24px"
-            viewBox="0 0 24 24"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <path
-              d="M10,18 L6,22 L6,18 L10,18 Z M17,6 C19.7614237,6 22,8.23857625 22,11 C22,13.7614237 19.7614237,16 17,16 L17,16 L7,16 C4.23857625,16 2,13.7614237 2,11 C2,8.23857625 4.23857625,6 7,6 L7,6 Z"
-              id="🎨icon-fill"
-              transform="translate(12.000000, 14.000000) scale(-1, 1) translate(-12.000000, -14.000000) "
-            ></path>
-          </svg>
-        </div>
-        <div
-          :class="['fxifZC', { hideFxifZC: !zenShow }]"
-          @click.stop="closeWidget"
-        >
-          <svg
-            class="sc-1k07fow-0 iHCBIr"
-            width="88px"
-            height="88px"
-            viewBox="0 0 88 88"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <defs>
-              <filter
-                x="-47.9%"
-                y="-47.9%"
-                width="195.8%"
-                height="195.8%"
-                filterUnits="objectBoundingBox"
-                id="filter-1"
-              >
-                <feOffset
-                  dx="-4"
-                  dy="0"
-                  in="SourceAlpha"
-                  result="shadowOffsetOuter1"
-                ></feOffset>
-                <feGaussianBlur
-                  stdDeviation="10"
-                  in="shadowOffsetOuter1"
-                  result="shadowBlurOuter1"
-                ></feGaussianBlur>
-                <feColorMatrix
-                  values="0 0 0 0 0.141176471   0 0 0 0 0.141176471   0 0 0 0 0.141176471  0 0 0 0.2 0"
-                  type="matrix"
-                  in="shadowBlurOuter1"
-                  result="shadowMatrixOuter1"
-                ></feColorMatrix>
-                <feMerge>
-                  <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                  <feMergeNode in="SourceGraphic"></feMergeNode>
-                </feMerge>
-              </filter>
-            </defs>
-            <g
-              id="🦴Anatomy"
-              stroke="none"
-              stroke-width="1"
-              fill="none"
-              fill-rule="evenodd"
+    <div class="chat-box">
+      <div
+        :class="['float-icon zendesk-box', { hidefloat: zenShow }]"
+        @click="handleCustomerService"
+      >
+        <div class="zendesk">
+          <div :class="['gHHEeh', { hideHHEeh: zenShow }]">
+            <svg
+              position="right"
+              class="sc-1k07fow-1 cbnSms"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
             >
+              <path
+                d="M10,18 L6,22 L6,18 L10,18 Z M17,6 C19.7614237,6 22,8.23857625 22,11 C22,13.7614237 19.7614237,16 17,16 L17,16 L7,16 C4.23857625,16 2,13.7614237 2,11 C2,8.23857625 4.23857625,6 7,6 L7,6 Z"
+                id="🎨icon-fill"
+                transform="translate(12.000000, 14.000000) scale(-1, 1) translate(-12.000000, -14.000000) "
+              ></path>
+            </svg>
+          </div>
+          <div
+            :class="['fxifZC', { hideFxifZC: !zenShow }]"
+            @click.stop="closeWidget"
+          >
+            <svg
+              class="sc-1k07fow-0 iHCBIr"
+              width="88px"
+              height="88px"
+              viewBox="0 0 88 88"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs>
+                <filter
+                  x="-47.9%"
+                  y="-47.9%"
+                  width="195.8%"
+                  height="195.8%"
+                  filterUnits="objectBoundingBox"
+                  id="filter-1"
+                >
+                  <feOffset
+                    dx="-4"
+                    dy="0"
+                    in="SourceAlpha"
+                    result="shadowOffsetOuter1"
+                  ></feOffset>
+                  <feGaussianBlur
+                    stdDeviation="10"
+                    in="shadowOffsetOuter1"
+                    result="shadowBlurOuter1"
+                  ></feGaussianBlur>
+                  <feColorMatrix
+                    values="0 0 0 0 0.141176471   0 0 0 0 0.141176471   0 0 0 0 0.141176471  0 0 0 0.2 0"
+                    type="matrix"
+                    in="shadowBlurOuter1"
+                    result="shadowMatrixOuter1"
+                  ></feColorMatrix>
+                  <feMerge>
+                    <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                  </feMerge>
+                </filter>
+              </defs>
               <g
-                id="btn/chat-button"
-                filter="url(#filter-1)"
-                transform="translate(-4.000000, -4.000000)"
-                fill="#FFFFFF"
+                id="🦴Anatomy"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
               >
-                <g id="⚡️icon" transform="translate(38.000000, 38.000000)">
-                  <polygon
-                    id="Shape"
-                    points="17.2338475 0.833333333 19.1666667 2.76615247 11.9325273 10 19.1666667 17.2338475 17.2338475 19.1666667 10 11.9325273 2.76615247 19.1666667 0.833333333 17.2338475 8.06610603 10 0.833333333 2.76615247 2.76615247 0.833333333 10 8.06610603"
-                  ></polygon>
+                <g
+                  id="btn/chat-button"
+                  filter="url(#filter-1)"
+                  transform="translate(-4.000000, -4.000000)"
+                  fill="#FFFFFF"
+                >
+                  <g id="⚡️icon" transform="translate(38.000000, 38.000000)">
+                    <polygon
+                      id="Shape"
+                      points="17.2338475 0.833333333 19.1666667 2.76615247 11.9325273 10 19.1666667 17.2338475 17.2338475 19.1666667 10 11.9325273 2.76615247 19.1666667 0.833333333 17.2338475 8.06610603 10 0.833333333 2.76615247 2.76615247 0.833333333 10 8.06610603"
+                    ></polygon>
+                  </g>
                 </g>
               </g>
-            </g>
-          </svg>
+            </svg>
+          </div>
         </div>
       </div>
+      <a
+        href="https://api.whatsapp.com/send?phone=628995533789&text=Nama%3A%0APosisi%3A%20%0ACompany%20name%3A%0AInstagram%20company%3A%20%0ATotal%20transaksi%20(pilih%20salah%20satu)%3A%0AA)%20%3C50%20orders%2Fday%20%0AB)%2051-299%20orders%2Fday%0AC)%20%3E300%20orders%2Fday"
+        target="_blank"
+        class="float-icon"
+      >
+        <img
+          src="https://static.desty.app/desty-landing-page/whats-app.png"
+          class="whatsappIcon"
+        />
+      </a>
     </div>
-    <a
-      href="https://api.whatsapp.com/send?phone=628995533789&text=Nama%3A%0APosisi%3A%20%0ACompany%20name%3A%0AInstagram%20company%3A%20%0ATotal%20transaksi%20(pilih%20salah%20satu)%3A%0AA)%20%3C50%20orders%2Fday%20%0AB)%2051-299%20orders%2Fday%0AC)%20%3E300%20orders%2Fday"
-      target="_blank"
-      class="float-icon"
-    >
-      <img
-        src="https://static.desty.app/desty-landing-page/whats-app.png"
-        class="whatsappIcon"
-      />
-    </a>
-  </div>
   </client-only>
 </template>
 

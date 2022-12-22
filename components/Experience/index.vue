@@ -5,13 +5,14 @@
       <p class="experience-des">
         {{ $t("experience.des") }}
       </p>
-      <div class="experience-btn" @click="goExperience">
+      <MagneticButton class="experience-btn">
         <span> {{ $t("experience.btn") }}</span>
         <img
+          class="right-arrow"
           src="https://static.desty.app/desty-homepage/v2/right_arrow.svg"
-          alt=""
+          alt="desty home page"
         />
-      </div>
+      </MagneticButton>
       <img
         class="white-supers"
         src="https://static.desty.app/desty-homepage/v2/white-supers.png"
@@ -24,8 +25,12 @@
       />
     </div>
   </section>
+  <!-- <div class="test">
+  </div> -->
 </template>
 <script setup>
+import MagneticButton from '~/components/MagneticButton/index.vue';
+
 const goExperience = () => {
   window.location.href = "https://omni.desty.app/register";
 };
@@ -78,8 +83,9 @@ const goExperience = () => {
     gap: 12px;
     width: 193px;
     height: 53px;
+    padding: 0;
     background: #0c1bb8;
-    border: 2px solid #0c1bb8;
+    // border: 2px solid #0c1bb8;
     border-radius: 12px;
     margin-top: 29px;
     cursor: pointer;
@@ -91,6 +97,9 @@ const goExperience = () => {
       line-height: 21px;
       letter-spacing: -0.01em;
       color: #ffffff;
+    }
+    .right-arrow {
+      margin-left: 10px;
     }
   }
   .white-supers {
@@ -137,6 +146,11 @@ const goExperience = () => {
       right: -231px;
       top: 176px;
     }
+  }
+}
+.test {
+  :deep(.magnetic-button) {
+    width: 200px;
   }
 }
 </style>

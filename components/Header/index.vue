@@ -24,9 +24,7 @@
         </div>
       </template>
       <template v-slot:extra-content>
-        <div class="action-btn" @click="handleNavAction('startnow')">
-          {{ $t('manageBusiness.startNow') }}
-        </div>
+        <MagneticButton @handleClick="handleNavAction('startnow')">{{ $t('manageBusiness.startNow') }}</MagneticButton>
       </template>
     </DestyHeaderV2>
   </client-only>
@@ -35,9 +33,11 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
 import { SUB_MENU_LIST } from '~/constant/index';
+import MagneticButton from '~/components/MagneticButton/index.vue';
 import { handleNav } from '~/utils/utils';
 
 const langRef = ref('id');
+const startNowButtonRef = ref(null);
 const { locale } = useI18n();
 const config = useRuntimeConfig();
 const { push } = useRouter();
@@ -52,6 +52,13 @@ function handleLang(key) {
 function handleNavAction(key) {
   handleNav(key, config, push);
 }
+
+onMounted(async () => {
+   if (process.client) {
+      const ButtonCtrl = (await import('~/assets/animations/buttonMagnetic')).default;
+      new ButtonCtrl(startNowButtonRef.value)
+    }
+})
 
 </script>
 

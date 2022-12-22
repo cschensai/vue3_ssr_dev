@@ -37,9 +37,10 @@
 // import useHome from '~~/stores';
 import ManageBusiness from '~/pages/home/components/ManageBusiness/index.vue';
 import DashBoardList from '~/pages/home/components/DashBoardList/index.vue';
-import Tools from "~~/components/Tools";
-import Relation from "~~/components/Relation";
-import Experience from "~~/components/Experience";
+import Tools from "~/components/Tools";
+import Relation from "~/components/Relation";
+import Experience from "~/components/Experience";
+
 
 // useHead({
 //   title: "index page",

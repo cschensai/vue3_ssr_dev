@@ -26,7 +26,8 @@
         </h1>
         <div class="sub-title">{{ $t('manageBusiness.subTitle') }}</div>
         <div class="action-box">
-          <div class="start-now" @click="handleStartNow">{{ $t('manageBusiness.startNow') }}</div>
+          <!-- <div class="start-now" @click="handleStartNow">{{ $t('manageBusiness.startNow') }}</div> -->
+          <MagneticButton class="start-now" @handleClick="handleStartNow">{{ $t('manageBusiness.startNow') }}</MagneticButton>
           <div class="watch-video" @click="handleWatchVideo">
             <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="desty home page" />
             {{ $t('manageBusiness.watchVideo') }}
@@ -57,6 +58,7 @@ import { useI18n } from 'vue-i18n';
 import useHome from '~/stores/index';
 import ScrollBar from '~/components/ScrollBar/index.vue';
 import VideoDialog from '~/components/VideoDialog/index.vue';
+import MagneticButton from '~/components/MagneticButton/index.vue';
 import manageBusinessJson from '~/assets/animations/manageBusiness.json';
 import hero from '~/assets/animations/hero.json';
 // import '~/assets/animations/lottie.js';
@@ -85,7 +87,7 @@ onBeforeMount(() => {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    animationData: animationData
+    animationData: animationData,
   };
   lottie.loadAnimation(params);
 })
@@ -140,8 +142,9 @@ onBeforeMount(() => {
         cursor: pointer;
         width: 207px;
         height: 56px;
+        padding: 0;
         background-color: #0C1BB8;
-        border: 2px solid #0C1BB8;
+        // border: 2px solid #0C1BB8;
         border-radius: 12px;
         display: flex;
         justify-content: center;

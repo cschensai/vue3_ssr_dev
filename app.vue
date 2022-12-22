@@ -8,6 +8,9 @@
       <!-- chat section -->
       <Chat />
     </ElConfigProvider>
+    <client-only>
+      <DestyExchangeToken ref="destyExchangeTokenRef" :isProduction="isProduction" />
+    </client-only>
   </div>
 </template>
 
@@ -22,6 +25,12 @@ import useHome from './stores/index';
 import flexible from './utils/flexible';
 
 const homeStore = useHome();
+const config = useRuntimeConfig();
+const destyExchangeTokenRef = ref(null);
+
+const isProduction = computed(() => {
+  return config.VITE_NODE_ENV === 'production';
+})
 
 onBeforeMount(() => {
   // 设置当前设备变量
@@ -42,6 +51,12 @@ onBeforeMount(() => {
 
 onMounted(() => {
   flexible(window, document);
+  if (process.client) {
+    nextTick(async () => {
+      const token = await destyExchangeTokenRef.value?.getToken?.();
+      homeStore.setCurrToken(token);
+    })
+  }
 })
 
 </script>
