@@ -1,30 +1,32 @@
 <template>
-  <el-dialog
-    custom-class="video-dialog"
-    v-model="visible"
-    :before-close="handleClose"
-    :close-on-click-modal="false"
-    destroy-on-close
-    :show-close="false"
-    center
-  >
-    <iframe
-      class="video-dialog-iframe"
-      width="100%"
-      :height="videoHeight"
-      src="https://www.youtube.com/embed/MkANxeYAhMY?autoplay=true"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <img
-      src="https://static.desty.app/desty-homepage/v2/homepage-close.svg"
-      alt="Desty App"
-      class="desty-close"
-      @click="handleClose"
-    />
-  </el-dialog>
+  <client-only>
+    <el-dialog
+      custom-class="video-dialog"
+      v-model="visible"
+      :before-close="handleClose"
+      :close-on-click-modal="false"
+      destroy-on-close
+      :show-close="false"
+      center
+    >
+      <iframe
+        class="video-dialog-iframe"
+        width="100%"
+        :height="videoHeight"
+        src="https://www.youtube.com/embed/MkANxeYAhMY?autoplay=true"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <img
+        src="https://static.desty.app/desty-homepage/v2/homepage-close.svg"
+        alt="Desty App"
+        class="desty-close"
+        @click="handleClose"
+      />
+    </el-dialog>
+  </client-only>
 </template>
 
 <script setup>

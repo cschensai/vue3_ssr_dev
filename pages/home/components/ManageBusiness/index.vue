@@ -1,56 +1,46 @@
 <template>
-
-    <div class="manage-business">
-      <div class="left">
-        <div class="shadow-bg"></div>
-        <h1 class="main-title">
-          <template v-if="locale === 'en'">
-            <div>
-              {{ $t('manageBusiness.preMainTitle') }}
-              <span class="strong">{{ $t('manageBusiness.middleMainTitle') }}</span>
-            </div>
-            <div>
-              {{ $t('manageBusiness.centerMainTitle') }}
-              <span class="strong">{{ $t('manageBusiness.nextMainTitle') }}</span>
-            </div>
-          </template>
-          <template v-else>
-            <div>
-              <span class="strong">{{ $t('manageBusiness.preMainTitle') }}</span>
-              {{ $t('manageBusiness.middleMainTitle') }}
-            </div>
-            <div>
-              <span class="strong">{{ $t('manageBusiness.centerMainTitle') }}</span>
-            </div>
-          </template>
-        </h1>
-        <div class="sub-title">{{ $t('manageBusiness.subTitle') }}</div>
-        <div class="action-box">
-          <!-- <div class="start-now" @click="handleStartNow">{{ $t('manageBusiness.startNow') }}</div> -->
-          <MagneticButton class="start-now" @handleClick="handleStartNow">{{ $t('manageBusiness.startNow') }}</MagneticButton>
-          <div class="watch-video" @click="handleWatchVideo">
-            <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="desty home page" />
-            {{ $t('manageBusiness.watchVideo') }}
+  <div class="manage-business">
+    <div class="left">
+      <div class="shadow-bg"></div>
+      <h1 class="main-title">
+        <template v-if="locale === 'en'">
+          <div>
+            {{ $t('manageBusiness.preMainTitle') }}
+            <span class="strong">{{ $t('manageBusiness.middleMainTitle') }}</span>
           </div>
+          <div>
+            {{ $t('manageBusiness.centerMainTitle') }}
+            <span class="strong">{{ $t('manageBusiness.nextMainTitle') }}</span>
+          </div>
+        </template>
+        <template v-else>
+          <div>
+            <span class="strong">{{ $t('manageBusiness.preMainTitle') }}</span>
+            {{ $t('manageBusiness.middleMainTitle') }}
+          </div>
+          <div>
+            <span class="strong">{{ $t('manageBusiness.centerMainTitle') }}</span>
+          </div>
+        </template>
+      </h1>
+      <div class="sub-title">{{ $t('manageBusiness.subTitle') }}</div>
+      <div class="action-box">
+        <!-- <div class="start-now" @click="handleStartNow">{{ $t('manageBusiness.startNow') }}</div> -->
+        <MagneticButton class="start-now" @handleClick="handleStartNow">{{ $t('manageBusiness.startNow') }}</MagneticButton>
+        <div class="watch-video" @click="handleWatchVideo">
+          <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="desty home page" />
+          {{ $t('manageBusiness.watchVideo') }}
         </div>
-        <ScrollBar v-if="!store.isPhone" />
       </div>
-      <div class="right">
-        <div class="shadow-bg"></div>
-        <!-- <client-only>
-          <lottie-animation
-            autoplay
-            loop
-            :animationData="hero"
-          />
-        </client-only> -->
-        <div id="manage-business-lottie"></div>
-        <div class="scroll-down" v-if="store.isPhone">{{ $t('scrollBar.text') }}</div>
-      </div>
+      <ScrollBar v-if="!store.isPhone" />
     </div>
-    <client-only>
-    <VideoDialog ref="videoDialog" />
-    </client-only>
+    <div class="right">
+      <div class="shadow-bg"></div>
+      <div id="manage-business-lottie"></div>
+      <div class="scroll-down" v-if="store.isPhone">{{ $t('scrollBar.text') }}</div>
+    </div>
+  </div>
+  <VideoDialog ref="videoDialog" />
 </template>
 
 <script setup>
@@ -59,7 +49,6 @@ import useHome from '~/stores/index';
 import ScrollBar from '~/components/ScrollBar/index.vue';
 import VideoDialog from '~/components/VideoDialog/index.vue';
 import MagneticButton from '~/components/MagneticButton/index.vue';
-// import '~/assets/animations/lottie.js';
 import lottie from 'lottie-web';
 import { animationData } from '~/assets/animations/animateData.js';
 
@@ -69,33 +58,33 @@ const { locale } = useI18n();
 const videoDialog = ref(null);
 const config = useRuntimeConfig();
 
-function handleWatchVideo() {
-  videoDialog.value.show();
-  amplitude.getInstance().logEvent('general: click watch video - desty.app', {
-		is_logged_in: !!store.currToken
-	});
-}
+// function handleWatchVideo() {
+//   videoDialog.value.show();
+//   amplitude.getInstance().logEvent('general: click watch video - desty.app', {
+// 		is_logged_in: !!store.currToken
+// 	});
+// }
 
-// start now action
-function handleStartNow() {
-  location.href = `${config.VITE_OMNI_URL}/register`;
-  amplitude.getInstance().logEvent('general: click start now - desty.app', {
-		button_location: 'hero_banner',
-		is_logged_in: !!store.currToken
-	});
-}
+// // start now action
+// function handleStartNow() {
+//   location.href = `${config.VITE_OMNI_URL}/register`;
+//   amplitude.getInstance().logEvent('general: click start now - desty.app', {
+// 		button_location: 'hero_banner',
+// 		is_logged_in: !!store.currToken
+// 	});
+// }
 
-// 加载动画
-onBeforeMount(() => {
-  const params = {
-    container: document.getElementById('manage-business-lottie'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  };
-  lottie.loadAnimation(params);
-})
+// // 加载动画
+// onBeforeMount(() => {
+//   const params = {
+//     container: document.getElementById('manage-business-lottie'),
+//     renderer: 'svg',
+//     loop: true,
+//     autoplay: true,
+//     animationData: animationData,
+//   };
+//   lottie.loadAnimation(params);
+// })
 
 </script>
 
@@ -265,6 +254,5 @@ onBeforeMount(() => {
       }
     }
   }
-  
 }
 </style>
