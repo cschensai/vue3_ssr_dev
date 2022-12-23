@@ -25,7 +25,6 @@
       </h1>
       <div class="sub-title">{{ $t('manageBusiness.subTitle') }}</div>
       <div class="action-box">
-        <!-- <div class="start-now" @click="handleStartNow">{{ $t('manageBusiness.startNow') }}</div> -->
         <MagneticButton class="start-now" @handleClick="handleStartNow">{{ $t('manageBusiness.startNow') }}</MagneticButton>
         <div class="watch-video" @click="handleWatchVideo">
           <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="desty home page" />
@@ -58,12 +57,12 @@ const { locale } = useI18n();
 const videoDialog = ref(null);
 const config = useRuntimeConfig();
 
-// function handleWatchVideo() {
-//   videoDialog.value.show();
-//   amplitude.getInstance().logEvent('general: click watch video - desty.app', {
-// 		is_logged_in: !!store.currToken
-// 	});
-// }
+function handleWatchVideo() {
+  videoDialog.value.show();
+  amplitude.getInstance().logEvent('general: click watch video - desty.app', {
+		is_logged_in: !!store.currToken
+	});
+}
 
 // // start now action
 // function handleStartNow() {
