@@ -1,12 +1,8 @@
 <template>
   <div>
     <ElConfigProvider :locale="elementPlusEn">
-      <Header />
       <!-- 路由组件 -->
       <NuxtPage />
-      <Footer />
-      <!-- chat section -->
-      <Chat />
     </ElConfigProvider>
     <client-only>
       <DestyExchangeToken ref="destyExchangeTokenRef" :isProduction="isProduction" />
@@ -16,9 +12,6 @@
 
 <script setup>
 import { ElConfigProvider } from 'element-plus';
-import Header from '~/components/Header/index.vue';
-import Footer from '~/components/Footer/index.vue';
-import Chat from '~/components/Chat/index.vue';
 import elementPlusEn from 'element-plus/es/locale/lang/en';
 // import elementPlusId from 'element-plus/es/locale/lang/id';
 import useHome from './stores/index';

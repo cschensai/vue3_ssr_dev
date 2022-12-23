@@ -61,7 +61,7 @@ import VideoDialog from '~/components/VideoDialog/index.vue';
 import MagneticButton from '~/components/MagneticButton/index.vue';
 // import '~/assets/animations/lottie.js';
 import lottie from 'lottie-web';
-import {animationData} from '~/assets/animations/animateData.js';
+import { animationData } from '~/assets/animations/animateData.js';
 
 
 const store = useHome();
@@ -146,7 +146,7 @@ onBeforeMount(() => {
       align-items: center;
       .start-now {
         cursor: pointer;
-        width: 207px;
+        width: 206px;
         height: 56px;
         padding: 0;
         background-color: #0C1BB8;

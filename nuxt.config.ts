@@ -73,7 +73,7 @@ export default {
       mode: 'client',
     },
     {
-      src: '~/plugins/lottie-web',
+      src: '~/plugins/buttonMagnetic',
       mode: 'client',
     },
   ],

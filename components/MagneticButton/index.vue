@@ -8,12 +8,12 @@
 </template>
 
 <script setup>
+  import { useNuxtApp } from '#app';
+
   const magneticButtonRef = ref(null);
   const emit = defineEmits(['handleClick']);
-  let ButtonCtrl;
-  if (process.client) {
-      ButtonCtrl = (await import('~/assets/animations/buttonMagnetic')).default;
-    }
+  const { ButtonCtrl } = useNuxtApp().vueApp;
+
   // 行为
   function handleClickAction() {
     emit('handleClick');
@@ -28,7 +28,8 @@
 
 <style lang="less" scoped>
 .magnetic-button {
-  padding: 14px 46px;
+  width: 206px;
+  height: 56px;
   font-size: 16px;
   color: #fff;
   background-color: #0C1BB8;

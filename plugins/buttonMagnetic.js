@@ -1,4 +1,3 @@
-import { EventEmitter } from 'events'
 import { gsap } from 'gsap'
 import { lerp, getMousePos, distance } from '~/utils/utils'
 
@@ -9,9 +8,8 @@ let mousepos = { x: 0, y: 0 }
 // eslint-disable-next-line no-return-assign
 window.addEventListener('mousemove', (ev) => (mousepos = getMousePos(ev)))
 
-export default class ButtonCtrl extends EventEmitter {
+class ButtonCtrl {
   constructor(el) {
-    super()
     // DOM elements
     // el: main button
     // text: inner text element
@@ -25,6 +23,7 @@ export default class ButtonCtrl extends EventEmitter {
       tx: { previous: 0, current: 0, amt: 0.1 },
       ty: { previous: 0, current: 0, amt: 0.1 },
     }
+
     // button state (hover)
     this.state = {
       hover: false,
@@ -95,11 +94,7 @@ export default class ButtonCtrl extends EventEmitter {
   }
 
   enter() {
-    this.emit('enter')
     this.state.hover = true
-    this.DOM.el.classList.add('button--hover')
-    document.body.classList.add('active')
-
     gsap.killTweensOf(this.DOM.filler)
     gsap.killTweensOf(this.DOM.textinner)
 
@@ -134,11 +129,7 @@ export default class ButtonCtrl extends EventEmitter {
   }
 
   leave() {
-    this.emit('leave')
     this.state.hover = false
-    this.DOM.el.classList.remove('button--hover')
-    document.body.classList.remove('active')
-
     gsap.killTweensOf(this.DOM.filler)
     gsap.killTweensOf(this.DOM.textinner)
 
@@ -171,3 +162,8 @@ export default class ButtonCtrl extends EventEmitter {
       )
   }
 }
+
+
+export default defineNuxtPlugin(nuxtapp => {
+  nuxtapp.vueApp.ButtonCtrl = ButtonCtrl;
+});

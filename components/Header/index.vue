@@ -59,13 +59,6 @@ function handleNavAction(key) {
 	});
 }
 
-onMounted(async () => {
-   if (process.client) {
-      const ButtonCtrl = (await import('~/assets/animations/buttonMagnetic')).default;
-      new ButtonCtrl(startNowButtonRef.value)
-    }
-})
-
 </script>
 
 <style lang="less" scoped>
@@ -79,6 +72,19 @@ onMounted(async () => {
   background: rgba(243, 244, 245, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 0px 0px 40px 40px;
+  background-color: transparent;
+  &::after {
+    backdrop-filter: blur(10px);
+    content: '';
+    background-color: red;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(243, 244, 245, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
   .menu-title {
     font-weight: 800;
     font-size: 18px;
