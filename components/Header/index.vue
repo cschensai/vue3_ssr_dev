@@ -76,7 +76,6 @@ function handleNavAction(key) {
   &::after {
     backdrop-filter: blur(10px);
     content: '';
-    background-color: red;
     position: absolute;
     left: 0;
     height: 100%;
