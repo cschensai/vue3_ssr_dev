@@ -75,16 +75,16 @@ const config = useRuntimeConfig();
 // }
 
 // // 加载动画
-// onBeforeMount(() => {
-//   const params = {
-//     container: document.getElementById('manage-business-lottie'),
-//     renderer: 'svg',
-//     loop: true,
-//     autoplay: true,
-//     animationData: animationData,
-//   };
-//   lottie.loadAnimation(params);
-// })
+onBeforeMount(() => {
+  const params = {
+    container: document.getElementById('manage-business-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+  };
+  lottie.loadAnimation(params);
+})
 
 </script>
 
