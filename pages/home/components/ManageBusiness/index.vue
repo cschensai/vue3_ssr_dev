@@ -103,6 +103,7 @@ onBeforeMount(() => {
 .manage-business {
   position: relative;
   max-width: 1282px;
+  max-height: 966px;
   margin: 109px auto 0;
   display: flex;
   align-items: flex-start;
@@ -188,6 +189,10 @@ onBeforeMount(() => {
       transform: rotate(10.49deg);
       z-index: -1;
     }
+    #manage-business-lottie{
+      width: 110%;
+      height: 140%;
+    }
   }
 }
 @media screen and (max-width: 768px) {
@@ -248,6 +253,8 @@ onBeforeMount(() => {
       #manage-business-lottie {
         transform: translateX(-10%);
         min-height: 100px;
+        width: 100%;
+        height: 100%;
       }
       .scroll-down {
         text-align: center;
