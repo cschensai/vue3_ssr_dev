@@ -77,12 +77,12 @@ import useHome from "~/stores/index";
 const { t } = useI18n();
 const store = useHome();
 
-const handleClinkMore = (link, amplitude) => {
+const handleClinkMore = (link, platform) => {
   window.location.href = link;
   amplitude
     .getInstance()
     .logEvent("general: click merchant tools - desty.app", {
-      click_learn_more_swiper: amplitude,
+      click_learn_more_swiper: platform,
       is_logged_in: !!store.currToken,
     });
 };

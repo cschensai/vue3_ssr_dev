@@ -5,7 +5,7 @@
       <p class="experience-des">
         {{ $t("experience.des") }}
       </p>
-      <MagneticButton class="experience-btn">
+      <MagneticButton class="experience-btn" @click="goExperience">
         <span> {{ $t("experience.btn") }}</span>
         <img
           class="right-arrow"
@@ -29,8 +29,8 @@
   </div> -->
 </template>
 <script setup>
-import MagneticButton from '~/components/MagneticButton/index.vue';
-import useHome from '~/stores/index';
+import MagneticButton from "~/components/MagneticButton/index.vue";
+import useHome from "~/stores/index";
 
 const store = useHome();
 
