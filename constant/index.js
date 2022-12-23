@@ -144,6 +144,7 @@ export const PLATFORM_LIST = [
     backimg: "page-assets",
     link: "https://desty.page",
     name: "Desty Page",
+    amplitude: "page",
   },
   {
     platform: "tools-store",
@@ -155,6 +156,7 @@ export const PLATFORM_LIST = [
     backimg: "store-assets",
     link: "https://desty.store",
     name: "Desty Store",
+    amplitude: "store",
   },
   {
     platform: "tools-menu",
@@ -166,6 +168,7 @@ export const PLATFORM_LIST = [
     backimg: "menu-assets",
     link: "https://desty.menu",
     name: "Desty Menu",
+    amplitude: "menu", 
   },
   {
     platform: "tools-chat",
@@ -177,5 +180,6 @@ export const PLATFORM_LIST = [
     backimg: "chat-assets",
     link: "https://omni.desty.app/chat/Home",
     name: "Desty Omni",
+    amplitude: "chat"
   },
 ];

@@ -58,7 +58,7 @@
   }
 
   &-filler {
-    background-color: #fe951b;
+    background-color: #3545D6;
     position: absolute;
     width: 150%;
     height: 200%;

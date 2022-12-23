@@ -30,13 +30,16 @@
 </template>
 <script setup>
 import MagneticButton from '~/components/MagneticButton/index.vue';
+import useHome from '~/stores/index';
+
+const store = useHome();
 
 const goExperience = () => {
   window.location.href = "https://omni.desty.app/register";
   amplitude
     .getInstance()
     .logEvent("general: click free trial button - desty.app", {
-      is_logged_in: false,
+      is_logged_in: !!store.currToken,
     });
 };
 </script>

@@ -56,7 +56,7 @@ function setAmplitude() {
     useAmplitude();
     amplitude.getInstance().logEvent('general: visit homepage - desty.app', {
       source: document.referrer,
-      is_logged_in: false
+      is_logged_in: !!homeStore.currToken
     });
   }
 }

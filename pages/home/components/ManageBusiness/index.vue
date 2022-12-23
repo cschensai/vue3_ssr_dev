@@ -72,8 +72,8 @@ const config = useRuntimeConfig();
 function handleWatchVideo() {
   videoDialog.value.show();
   amplitude.getInstance().logEvent('general: click start now - desty.app', {
-		button_location: 'header',
-		is_logged_in: false
+		button_location: 'hero_banner',
+		is_logged_in: !!store.currToken
 	});
 }
 
@@ -81,7 +81,7 @@ function handleWatchVideo() {
 function handleStartNow() {
   location.href = `${config.VITE_OMNI_URL}/register`;
   amplitude.getInstance().logEvent('general: click watch video - desty.app', {
-		is_logged_in: false
+		is_logged_in: !!store.currToken
 	});
 }
 

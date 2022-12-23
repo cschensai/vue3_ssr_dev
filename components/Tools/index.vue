@@ -25,7 +25,10 @@
             />
             <p class="card-title">{{ $t(item.title) }}</p>
             <p class="card-des">{{ $t(item.des) }}</p>
-            <div class="card-more" @click="handleClinkMore($t(item.link))">
+            <div
+              class="card-more"
+              @click="handleClinkMore(item.link, item.amplitude)"
+            >
               <img
                 src="https://static.desty.app/desty-homepage/v2/plus.svg"
                 :alt="item.name"
@@ -69,16 +72,18 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { PLATFORM_LIST } from "~/constant/index";
+import useHome from "~/stores/index";
 
 const { t } = useI18n();
+const store = useHome();
 
-const handleClinkMore = (link) => {
+const handleClinkMore = (link, amplitude) => {
   window.location.href = link;
   amplitude
     .getInstance()
     .logEvent("general: click merchant tools - desty.app", {
-      click_learn_more_swiper: false,
-      is_logged_in: false,
+      click_learn_more_swiper: amplitude,
+      is_logged_in: !!store.currToken,
     });
 };
 

@@ -35,12 +35,14 @@ import { useI18n } from 'vue-i18n';
 import { SUB_MENU_LIST } from '~/constant/index';
 import MagneticButton from '~/components/MagneticButton/index.vue';
 import { handleNav } from '~/utils/utils';
+import useHome from '~/stores/index';
 
 const langRef = ref('id');
 const startNowButtonRef = ref(null);
 const { locale } = useI18n();
 const config = useRuntimeConfig();
 const { push } = useRouter();
+const homeStore = useHome();
 
 // 更改语言
 function handleLang(key) {
@@ -52,8 +54,8 @@ function handleLang(key) {
 function handleNavAction(key) {
   handleNav(key, config, push);
   amplitude.getInstance().logEvent('general: click start now - desty.app', {
-		button_location: 'hero_banner',
-		is_logged_in: false
+		button_location: 'header',
+		is_logged_in: !!homeStore.currToken
 	});
 }
 
