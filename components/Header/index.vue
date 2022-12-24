@@ -71,9 +71,9 @@ function handleNavAction(key) {
   z-index: 9;
   // background: rgba(243, 244, 245, 0.8);
   // backdrop-filter: blur(10px);
-  border-radius: 0px 0px 40px 40px;
   background-color: transparent;
   &::after {
+    border-radius: 0px 0px 40px 40px;
     backdrop-filter: blur(10px);
     content: '';
     position: absolute;
