@@ -47,16 +47,21 @@ import Tools from "~/components/Tools";
 import Relation from "~/components/Relation";
 import Experience from "~/components/Experience";
 
-
-// useHead({
-//   title: "index page",
-//   meta: [
-//     {
-//       name: "description",
-//       content: "description content",
-//     },
-//   ],
-// });
+useHead({
+  //   title: "index page",
+  //   meta: [
+  //     {
+  //       name: "description",
+  //       content: "description content",
+  //     },
+  //   ],
+  script: [
+    {
+      src: 'https://static.desty.app/desty-homepage/v2/animationData.js',
+      body: false
+    }
+  ]
+})
 
 // const currentCount = useCount();
 

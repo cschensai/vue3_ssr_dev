@@ -43,14 +43,15 @@
 </template>
 
 <script setup>
+import { useNuxtApp } from '#app';
 import { useI18n } from 'vue-i18n';
 import useHome from '~/stores/index';
 import ScrollBar from '~/components/ScrollBar/index.vue';
 import VideoDialog from '~/components/VideoDialog/index.vue';
 import MagneticButton from '~/components/MagneticButton/index.vue';
 import lottie from 'lottie-web';
-import { animationData } from '~/assets/animations/animateData';
 
+// const { animationData } = useNuxtApp().vueApp;
 const store = useHome();
 const { locale } = useI18n();
 const videoDialog = ref(null);
@@ -74,15 +75,16 @@ function handleStartNow() {
 
 // // 加载动画
 onBeforeMount(() => {
-  // const animationDataRes = await import ('https://static.desty.app/desty-homepage/v2/animateData.js');
-  const params = {
-    container: document.getElementById('manage-business-lottie'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    animationData,
-  };
-  lottie.loadAnimation(params);
+  if (process.client) {
+    const params = {
+      container: document.getElementById('manage-business-lottie'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: window.animationDataObj,
+    };
+    lottie.loadAnimation(params);
+  }
 })
 
 </script>

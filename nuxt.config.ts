@@ -73,7 +73,7 @@ export default {
       mode: 'client',
     },
     {
-      src: '~/plugins/buttonMagnetic',
+      src: '~/plugins/button-magnetic',
       mode: 'client',
     },
   ],
