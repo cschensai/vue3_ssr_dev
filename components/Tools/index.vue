@@ -18,7 +18,8 @@
           :key="item.platform"
         >
           <div class="card-body">
-            <img
+            <nuxt-img
+              lazy="loading"
               class="card-trademark"
               :src="`https://static.desty.app/desty-homepage/v2/${item.trademark}.svg`"
               :alt="item.name"
@@ -29,7 +30,8 @@
               class="card-more"
               @click="handleClinkMore(item.link, item.amplitude)"
             >
-              <img
+              <nuxt-img
+                lazy="loading"
                 :src="`https://static.desty.app/desty-homepage/v2/${item.plus}.svg`"
                 :alt="item.name"
               />
@@ -37,14 +39,16 @@
             </div>
             <div class="card-menu">
               <div class="card-menu-item">
-                <img
+                <nuxt-img
+                  lazy="loading"
                   src="https://static.desty.app/desty-homepage/v2/menu.svg"
                   :alt="item.name"
                 />
                 <p>{{ $t(item.menu1) }}</p>
               </div>
               <div class="card-menu-item">
-                <img
+                <nuxt-img
+                  lazy="loading"
                   src="https://static.desty.app/desty-homepage/v2/menu.svg"
                   :alt="item.name"
                 />
@@ -52,7 +56,8 @@
               </div>
             </div>
             <div class="card-backimg">
-              <img
+              <nuxt-img
+                lazy="loading"
                 :src="`https://static.desty.app/desty-homepage/v2/${item.backimg}.png`"
                 :alt="item.name"
               />

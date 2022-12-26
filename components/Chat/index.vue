@@ -100,9 +100,10 @@
         target="_blank"
         class="float-icon"
       >
-        <img
+        <nuxt-img
           src="https://static.desty.app/desty-landing-page/whats-app.png"
           class="whatsappIcon"
+          lazy="loading"
         />
       </a>
     </div>

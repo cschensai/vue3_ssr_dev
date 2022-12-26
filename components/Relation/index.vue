@@ -18,7 +18,8 @@
           <div class="list">
             <div class="featured-on-scroll-middle">
               <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
-                <img
+                <nuxt-img
+                  lazy="loading"
                   :src="item.img"
                   alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
                   :class="item.class"
@@ -27,7 +28,8 @@
             </div>
             <div class="featured-on-scroll-middle">
               <div class="cc rowup" v-for="item in MERCHANT_LIST" :key="item">
-                <img
+                <nuxt-img
+                  lazy="loading"
                   :src="item.img"
                   alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
                   :class="item.class"
@@ -61,7 +63,7 @@
         <section class="wrapper">
           <div class="content">
             <div class="marquee-img" v-for="item in FEATURED_LIST" :key="item">
-              <img :src="item.img" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" :class="item.class" />
+              <nuxt-img lazy="loading" :src="item.img" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" :class="item.class" />
             </div>
           </div>
         </section>

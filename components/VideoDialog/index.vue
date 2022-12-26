@@ -19,7 +19,8 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-      <img
+      <nuxt-img
+        lazy="loading"
         src="https://static.desty.app/desty-homepage/v2/homepage-close.svg"
         alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
         class="desty-close"

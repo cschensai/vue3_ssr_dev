@@ -7,18 +7,21 @@
       </p>
       <MagneticButton class="experience-btn" @click="goExperience">
         <span> {{ $t("experience.btn") }}</span>
-        <img
+        <nuxt-img
           class="right-arrow"
           src="https://static.desty.app/desty-homepage/v2/right_arrow.svg"
           alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
+          lazy="loading"
         />
       </MagneticButton>
-      <img
+      <nuxt-img
+        lazy="loading"
         class="white-supers"
         src="https://static.desty.app/desty-homepage/v2/white-supers.png"
         alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
       />
-      <img
+      <nuxt-img
+        lazy="loading"
         class="yellow-supers"
         src="https://static.desty.app/desty-homepage/v2/yellow-supers.png"
         alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"

@@ -13,7 +13,7 @@
           <h3 class="title">{{ $t(item.title) }}</h3>
           <div class="desc">{{ $t(item.desc) }}</div>
         </div>
-        <img class="card-img" :src="`https://static.desty.app/desty-homepage/v2/${item.src}.png`" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" />
+        <nuxt-img lazy="loading" class="card-img" :src="`https://static.desty.app/desty-homepage/v2/${item.src}.png`" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" />
       </div>
     </div>
   </div>

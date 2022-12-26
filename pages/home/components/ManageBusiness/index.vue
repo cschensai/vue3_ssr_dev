@@ -27,7 +27,7 @@
       <div class="action-box">
         <MagneticButton class="start-now" @handleClick="handleStartNow">{{ $t('manageBusiness.startNow') }}</MagneticButton>
         <div class="watch-video" @click="handleWatchVideo">
-          <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" />
+          <nuxt-img lazy="loading" class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" />
           {{ $t('manageBusiness.watchVideo') }}
         </div>
       </div>
