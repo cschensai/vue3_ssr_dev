@@ -21,7 +21,7 @@
       ></iframe>
       <img
         src="https://static.desty.app/desty-homepage/v2/homepage-close.svg"
-        alt="Desty App"
+        alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
         class="desty-close"
         @click="handleClose"
       />

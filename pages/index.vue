@@ -2,6 +2,7 @@
   <!-- seo -->
   <Head>
     <Title>{{ $t('seo.titlePrev') }} | {{ $t('seo.titleNext') }}</Title>
+    <Link rel="canonical" href="https://desty.app" />
     <Link rel="alternate" href="https://desty.app" :hreflang="$t('seo.linkHrefLang')" />
     <Meta name="Page title" :content="`desty app | ${$t('seo.metaTitleContentNext')}`" />
     <Meta name="description" :content="$t('seo.metaDescContent')" />
@@ -19,7 +20,7 @@
     <Meta property="twitter:card" content="summary_large_image" />
     <Meta property="twitter:url" content="https://omni.desty.app" />
     <Meta property="twitter:title" :content="`desty app | ${$t('seo.metaTitleContentNext')}`" />
-    <Meta property="twitter:description" :content="$t('seo.ogLocaleContent')" />
+    <Meta property="twitter:description" :content="$t('seo.metaDescContent')" />
     <Meta property="twitter:image" content="https://static.desty.app/desty-design/desty-logo.svg" />
     <Meta name="twitter:domain" content="Desty App" />
   </Head>
@@ -59,7 +60,26 @@ useHead({
     {
       src: 'https://static.desty.app/desty-homepage/v2/animationData.js',
       body: false
-    }
+    },
+    {
+      type: 'application/ld+json',
+      children: `
+        {
+            "@context": "https://schema.org/",
+            "@type": "WebPage",
+            "name": "desty app | Satu Ekosistem Untuk Atur Bisnis Kamu",
+            "url": "https://desty.app",
+            "description": "Mudah atur bisnis dengan Desty. Atur produk, order, stok, dan konsolidasi data dalam satu dashboard.",
+            "image": "", //Insert desty.app logo thumbnail URL
+            "identifier": "desty app",
+            "alternateName": "Desty App",
+            "significantLink": "https://desty.app",
+            "dateCreated": "", //Insert page created time in ISO 8601
+            "isPartOf": "https://desty.omni",
+            "thumbnailUrl": "" //Insert desty.app logo thumbnail URL
+        }
+      `,
+    } 
   ]
 })
 

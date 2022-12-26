@@ -27,7 +27,7 @@
       <div class="action-box">
         <MagneticButton class="start-now" @handleClick="handleStartNow">{{ $t('manageBusiness.startNow') }}</MagneticButton>
         <div class="watch-video" @click="handleWatchVideo">
-          <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="desty home page" />
+          <img class="video-play" src="https://static.desty.app/desty-homepage/v2/video-play.svg" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" />
           {{ $t('manageBusiness.watchVideo') }}
         </div>
       </div>
@@ -94,7 +94,7 @@ onBeforeMount(() => {
   position: relative;
   max-width: 1282px;
   max-height: 966px;
-  margin: 109px auto 0;
+  margin: 116px auto 0;
   display: flex;
   align-items: flex-start;
   border-top: 1px solid #000;

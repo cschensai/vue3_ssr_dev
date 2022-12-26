@@ -10,18 +10,18 @@
         <img
           class="right-arrow"
           src="https://static.desty.app/desty-homepage/v2/right_arrow.svg"
-          alt="desty home page"
+          alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
         />
       </MagneticButton>
       <img
         class="white-supers"
         src="https://static.desty.app/desty-homepage/v2/white-supers.png"
-        alt=""
+        alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
       />
       <img
         class="yellow-supers"
         src="https://static.desty.app/desty-homepage/v2/yellow-supers.png"
-        alt=""
+        alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
       />
     </div>
   </section>

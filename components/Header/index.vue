@@ -11,7 +11,7 @@
           <div class="menu-title">{{ $t('headerv2.title') }}</div>
           <div class="sub-menu-box">
             <div class="sub-menu-box-item" v-for="item in SUB_MENU_LIST" :key="item.key" @click="handleNavAction(item.key)">
-              <img class="icon-img-logo" :src="`https://static.desty.app/desty-homepage/v2/${item.icon}.svg`" alt="desty home page" />
+              <img class="icon-img-logo" :src="`https://static.desty.app/desty-homepage/v2/${item.icon}.svg`" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" />
               {{ item.text }}
             </div>
           </div>
@@ -19,7 +19,7 @@
       </template>
       <template v-slot:mobile-sub-menu-products-content>
         <div class="mobile-sub-menu-box-item" v-for="item in SUB_MENU_LIST" :key="item.key" @click="handleNavAction(item.key)">
-          <img class="icon-img-logo" :src="`https://static.desty.app/desty-homepage/v2/${item.icon}.svg`" alt="desty home page" />
+          <img class="icon-img-logo" :src="`https://static.desty.app/desty-homepage/v2/${item.icon}.svg`" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" />
           {{ item.text }}
         </div>
       </template>

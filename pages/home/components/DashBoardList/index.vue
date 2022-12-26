@@ -13,7 +13,7 @@
           <h3 class="title">{{ $t(item.title) }}</h3>
           <div class="desc">{{ $t(item.desc) }}</div>
         </div>
-        <img class="card-img" :src="`https://static.desty.app/desty-homepage/v2/${item.src}.png`" alt="desty home page" />
+        <img class="card-img" :src="`https://static.desty.app/desty-homepage/v2/${item.src}.png`" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" />
       </div>
     </div>
   </div>
@@ -59,10 +59,11 @@ import { DASHBOARD_LIST } from '~/constant/index';
     display: flex;
     justify-content: space-between;
     .dashboard-item {
+      position: relative;
       flex: 1;
       height: 416px;
       background-color: #CDFDEC;
-      border-radius: 8px;
+      border-radius: 16px;
       margin-left: 20px;
       display: flex;
       flex-direction: column;
@@ -89,15 +90,18 @@ import { DASHBOARD_LIST } from '~/constant/index';
         }
       }
       .card-img {
-        width: 232px;
-        height: 200px;
+        bottom: 0;
+        left: -1px;
+        position: absolute;
+        width: 300px;
+        height: 260px;
         border-end-start-radius: 8px;
       }
-      &:nth-child(2n+1) {
-        .card-img {
-          width: 259px;
-        }
-      }
+      // &:nth-child(2n+1) {
+      //   .card-img {
+      //     width: 259px;
+      //   }
+      // }
     }
   }
 }
@@ -139,7 +143,6 @@ import { DASHBOARD_LIST } from '~/constant/index';
         flex-shrink: 0;
         width: 242px;
         height: 376px;
-        border-radius: 6px;
         margin-left: 16px;
         &:first-of-type {
           margin-left: 0;
@@ -159,15 +162,15 @@ import { DASHBOARD_LIST } from '~/constant/index';
           }
         }
         .card-img {
-          width: 200px;
-          height: 172px;
+          width: 264px;
+          height: 232px;
           border-end-start-radius: 6px;
         }
-        &:nth-child(2n+1) {
-          .card-img {
-            width: 216px;
-          }
-        }
+        // &:nth-child(2n+1) {
+        //   .card-img {
+        //     width: 216px;
+        //   }
+        // }
       }
     }
   }
