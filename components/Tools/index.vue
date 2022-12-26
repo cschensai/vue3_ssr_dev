@@ -30,7 +30,7 @@
               @click="handleClinkMore(item.link, item.amplitude)"
             >
               <img
-                src="https://static.desty.app/desty-homepage/v2/plus.svg"
+                :src="`https://static.desty.app/desty-homepage/v2/${item.plus}.svg`"
                 :alt="item.name"
               />
               <span>{{ $t("tools.more") }}</span>
@@ -303,11 +303,15 @@ onBeforeMount(() => {
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
         gap: 12px;
         width: 156px;
         height: 56px;
         border-radius: 12px;
         cursor: pointer;
+        color: #FFFFFF;
       }
       .card-menu {
         margin-top: 45px;
@@ -347,6 +351,7 @@ onBeforeMount(() => {
         background: #ffdd00;
         border: 2px solid #b79a00;
         box-shadow: 4px 4px 0px #b79a00;
+        color: #000000;
         &:hover {
           background: #f4bb2c;
           border: 2px solid #ffdd00;
@@ -397,6 +402,10 @@ onBeforeMount(() => {
           border: 2px solid #13d27d;
           box-shadow: 4px 4px 0px #13d27d;
         }
+      }
+      .card-backimg {
+        right: 30px;
+        bottom: 16px;
       }
     }
   }
@@ -463,6 +472,8 @@ onBeforeMount(() => {
         .card-more {
           width: 140px;
           height: 52px;
+          font-size: 16px;
+          line-height: 20px;
         }
         .card-menu {
           display: none;

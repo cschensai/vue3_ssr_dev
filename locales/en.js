@@ -61,8 +61,8 @@ export default {
     menuMenu2: "No subscription fee",
     chatTitle: "One system to consolidate all your eCommerce chats",
     chatDes: "Reply all your chats comfortably on one dashboard",
-    chatMenu1: "Design website as you like",
-    chatMenu2: "Forever free",
+    chatMenu1: "Ecommerce chat system",
+    chatMenu2: "No subscription fee",
   },
   relation: {
     title: 'Merchants',
