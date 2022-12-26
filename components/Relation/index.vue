@@ -6,7 +6,7 @@
           <span>{{ $t("relation.title") }}</span>
           <div class="hr"></div>
         </div>
-        <h3 data-aos="fade-up">
+        <h3>
           <span class="first-row">
             {{ $t("relation.brandsTitle1") }}
           </span>
@@ -40,7 +40,7 @@
     </section>
     <section class="backed-by">
       <header class="title">
-        <h3 data-aos="fade-up">{{ $t("relation.backedTitle") }}</h3>
+        <h3>{{ $t("relation.backedTitle") }}</h3>
       </header>
       <section class="wrapper box">
         <nuxt-img
@@ -50,15 +50,14 @@
           :alt="backed.alt"
           loading="lazy"
           :src="backed.img"
-          data-aos="fade-up"
         />
       </section>
     </section>
     <section class="our-partners">
       <header class="title">
-        <h3 data-aos="fade-up">{{ $t("relation.featured") }}</h3>
+        <h3>{{ $t("relation.featured") }}</h3>
       </header>
-      <section class="marquee" data-aos="zoom-in">
+      <section class="marquee">
         <section class="wrapper">
           <div class="content">
             <div class="marquee-img" v-for="item in FEATURED_LIST" :key="item">
@@ -352,7 +351,11 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
         &:after {
           height: 67px;
           width: 140px;
-          background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+          background: linear-gradient(
+            90deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
         }
         .list {
           width: 2540px;

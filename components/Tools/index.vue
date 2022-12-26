@@ -403,6 +403,10 @@ onBeforeMount(() => {
           box-shadow: 4px 4px 0px #13d27d;
         }
       }
+      .card-backimg {
+        right: 30px;
+        bottom: 16px;
+      }
     }
   }
 }
