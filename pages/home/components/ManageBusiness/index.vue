@@ -182,6 +182,7 @@ onBeforeMount(() => {
     #manage-business-lottie{
       width: 110%;
       height: 140%;
+      transform: translateY(-5%);
     }
   }
 }
