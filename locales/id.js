@@ -16,13 +16,13 @@ export default {
     loginBtn: 'Masuk',
   },
   manageBusiness: {
-    preMainTitle: 'Satu Tempat',
-    middleMainTitle: 'untuk Atur Semua',
+    preMainTitle: 'Satu Ekosistem',
+    middleMainTitle: 'untuk Atur',
     centerMainTitle: 'Bisnis Kamu',
     nextMainTitle: '',
     subTitle: 'Dipakai lebih dari 1 juta pengguna di Indonesia',
     startNow: 'Mulai sekarang',
-    watchVideo: 'Tonton video',
+    watchVideo: 'Lihat video',
   },
   dashboardList: {
     featureTitle: 'Features',
