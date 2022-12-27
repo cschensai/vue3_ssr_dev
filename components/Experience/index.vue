@@ -92,8 +92,8 @@ const goExperience = () => {
     justify-content: center;
     // padding: 16px 20px;
     gap: 12px;
-    width: 193px;
-    height: 53px;
+    width: 186px;
+    height: 55px;
     padding: 0;
     background: #0c1bb8;
     // border: 2px solid #0c1bb8;
