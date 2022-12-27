@@ -32,7 +32,7 @@
   "dependencies": {
     "@videojs-player/vue": "^1.0.0",
     "amplitude-js": "^8.21.3",
-    "desty-design": "^1.4.0",
+    "desty-design": "^1.4.1",
     "element-plus": "2.2.5",
     "gsap": "^3.11.3",
     "lottie-web": "^5.10.0",

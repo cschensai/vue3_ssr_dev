@@ -12,22 +12,40 @@ const envData = loadEnv(envName, 'env');
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default {
   css: ['~/assets/less/uilib.less', '~/assets/less/index.less'],
-  meta: {
-    meta: [
-      // 防止点击输入框ios页面进行缩放
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no',
-      }
-    ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: 'https://www.desty.app/favicon.ico?v=2',
-    }, {
-      rel: 'canonical',
-      href: 'https://desty.app',
-    }]
+  app: {
+    head: {
+      meta: [
+        // 防止点击输入框ios页面进行缩放
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no',
+        },
+      ],
+      link: [
+          {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: 'https://www.desty.app/favicon.ico?v=2',
+        },
+        // DNS-prefetch (DNS 预获取) 是尝试在请求资源之前解析域名。这可能是后面要加载的文件，也可能是用户尝试打开的链接目标
+        {
+          rel: 'dns-prefetch',
+          href: 'https://www.desty.app',
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://desty.page',
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://desty.store',
+        },
+        {
+          rel: 'dns-prefetch',
+          href: 'https://omni.desty.app',
+        }
+      ]
+    },
   },
   webpack: {
     extractCSS: true,

@@ -49,13 +49,6 @@ import Relation from "~/components/Relation";
 import Experience from "~/components/Experience";
 
 useHead({
-  //   title: "index page",
-  //   meta: [
-  //     {
-  //       name: "description",
-  //       content: "description content",
-  //     },
-  //   ],
   script: [
     {
       src: 'https://static.desty.app/desty-homepage/v2/animationData.js',

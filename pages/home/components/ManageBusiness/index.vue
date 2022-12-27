@@ -94,7 +94,7 @@ onBeforeMount(() => {
   position: relative;
   max-width: 1282px;
   max-height: 966px;
-  margin: 116px auto 0;
+  margin: 108px auto 0;
   display: flex;
   align-items: flex-start;
   border-top: 1px solid #000;
