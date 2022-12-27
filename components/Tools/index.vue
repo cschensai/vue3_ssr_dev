@@ -26,7 +26,10 @@
             />
             <p
               class="card-title"
-              :style="{ width: locale === 'en' ? '266px' : '296px' }"
+              :class="[
+                { enWidth: locale === 'en' },
+                { idWidth: locale === 'id' },
+              ]"
             >
               {{ $t(item.title) }}
             </p>
@@ -518,11 +521,17 @@ onBeforeMount(() => {
       .tools-chat {
         .card-backimg {
           bottom: -32px;
-          img{
+          img {
             width: 109%;
           }
         }
       }
+    }
+    .enWidth {
+      width: 266px !important;
+    }
+    .idWidth {
+      width: 296px !important;
     }
   }
 }
