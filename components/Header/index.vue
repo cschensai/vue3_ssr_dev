@@ -24,7 +24,7 @@
         </div>
       </template>
       <template v-slot:extra-content>
-        <MagneticButton @handleClick="handleNavAction('startnow')">{{ $t('manageBusiness.startNow') }}</MagneticButton>
+        <MagneticButton class="header-btn" @handleClick="handleNavAction('startnow')">{{ $t('manageBusiness.startNow') }}</MagneticButton>
       </template>
     </DestyHeaderV2>
   </client-only>
@@ -132,6 +132,9 @@ function handleNavAction(key) {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  .header-btn{
+    width: 142px;
   }
 }
 </style>
