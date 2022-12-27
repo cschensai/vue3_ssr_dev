@@ -17,6 +17,7 @@ export default {
   manageBusiness: {
     preMainTitle: 'The',
     middleMainTitle: 'One Ecosystem',
+    bisnis:"",
     centerMainTitle: 'to Manage',
     nextMainTitle: 'Your Business',
     subTitle: 'Used by 1 million+ users in Indonesia',

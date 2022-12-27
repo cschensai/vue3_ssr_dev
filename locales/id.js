@@ -18,9 +18,10 @@ export default {
   manageBusiness: {
     preMainTitle: 'Satu Ekosistem',
     middleMainTitle: 'untuk Atur',
-    centerMainTitle: 'Bisnis Kamu',
+    bisnis:"Bisnis",
+    centerMainTitle: 'Kamu',
     nextMainTitle: '',
-    subTitle: 'Dipakai lebih dari 1 juta pengguna di Indonesia',
+    subTitle: 'Digunakan lebih dari 1 juta pengguna di Indonesia',
     startNow: 'Mulai sekarang',
     watchVideo: 'Lihat video',
   },

@@ -16,7 +16,8 @@
         <template v-else>
           <div>
             <span class="strong">{{ $t('manageBusiness.preMainTitle') }}</span>
-            {{ $t('manageBusiness.middleMainTitle') }}
+            {{ $t('manageBusiness.middleMainTitle') }} 
+            <span class="strong">{{ $t('manageBusiness.bisnis') }}</span>
           </div>
           <div>
             <span class="strong">{{ $t('manageBusiness.centerMainTitle') }}</span>
@@ -216,7 +217,7 @@ onBeforeMount(() => {
         font-size: 18px;
         line-height: 32px;
         color: #000;
-        max-width: 100%;
+        max-width: 314px;
       }
       .action-box {
         margin: 24px 0 0;
