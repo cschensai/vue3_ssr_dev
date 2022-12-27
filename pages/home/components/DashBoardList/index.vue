@@ -95,7 +95,7 @@ import { DASHBOARD_LIST } from '~/constant/index';
         position: absolute;
         width: 300px;
         height: 260px;
-        border-end-start-radius: 8px;
+        border-end-start-radius: 16px;
       }
       // &:nth-child(2n+1) {
       //   .card-img {
