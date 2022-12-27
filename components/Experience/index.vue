@@ -150,6 +150,11 @@ const goExperience = () => {
       margin-top: 12px;
       z-index: 1;
       padding: 16px 11px;
+      span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+      }
     }
     .white-supers {
       left: -160px;

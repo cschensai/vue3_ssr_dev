@@ -164,7 +164,7 @@ import { DASHBOARD_LIST } from '~/constant/index';
           }
         }
         .card-img {
-          width: 264px;
+          width: 100%;
           height: 200px;
           border-end-start-radius: 6px;
           border-radius: 13.9178px;
