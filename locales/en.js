@@ -15,7 +15,7 @@ export default {
     title: 'Desty Product',
   },
   manageBusiness: {
-    preMainTitle: 'the',
+    preMainTitle: 'The',
     middleMainTitle: 'One Ecosystem',
     centerMainTitle: 'to Manage',
     nextMainTitle: 'Your Business',
