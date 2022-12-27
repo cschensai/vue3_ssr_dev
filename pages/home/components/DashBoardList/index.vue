@@ -144,6 +144,7 @@ import { DASHBOARD_LIST } from '~/constant/index';
         width: 242px;
         height: 376px;
         margin-left: 16px;
+        border-radius: 13.9178px;
         &:first-of-type {
           margin-left: 0;
         }
@@ -165,6 +166,7 @@ import { DASHBOARD_LIST } from '~/constant/index';
           width: 264px;
           height: 232px;
           border-end-start-radius: 6px;
+          border-radius: 13.9178px;
         }
         // &:nth-child(2n+1) {
         //   .card-img {

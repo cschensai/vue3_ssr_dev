@@ -225,6 +225,7 @@ onBeforeMount(() => {
           width: 140px;
           height: 52px;
           font-size: 16px;
+          margin-right: 28px;
         }
         .watch-video {
         font-size: 16px;
