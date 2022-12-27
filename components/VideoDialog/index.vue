@@ -83,6 +83,7 @@ defineExpose({ show });
     height: 38px;
     top: -66px;
     right: 0;
+    cursor: pointer;
   }
   &-iframe {
     border-radius: 20px;
