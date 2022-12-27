@@ -136,7 +136,7 @@ onBeforeMount(() => {
       align-items: center;
       .start-now {
         cursor: pointer;
-        width: 206px;
+        width: 207px;
         height: 56px;
         padding: 0;
         background-color: #0C1BB8;

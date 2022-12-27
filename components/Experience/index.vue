@@ -90,11 +90,10 @@ const goExperience = () => {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    // padding: 16px 20px;
+    padding: 16px;
     gap: 12px;
-    width: 193px;
-    height: 53px;
-    padding: 0;
+    min-width: 165px;
+    height: 55px;
     background: #0c1bb8;
     // border: 2px solid #0c1bb8;
     border-radius: 12px;
@@ -116,7 +115,7 @@ const goExperience = () => {
   .white-supers {
     position: absolute;
     left: -38px;
-    top: -60px;
+    top: 0px;
   }
   .yellow-supers {
     position: absolute;
@@ -146,8 +145,11 @@ const goExperience = () => {
       z-index: 1;
     }
     &-btn {
+      min-width: 154px;
+      height: 52px;
       margin-top: 12px;
       z-index: 1;
+      padding: 16px 11px;
     }
     .white-supers {
       left: -160px;

@@ -28,8 +28,7 @@
 
 <style lang="less" scoped>
 .magnetic-button {
-  width: 206px;
-  height: 56px;
+  height: 48px;
   font-size: 16px;
   color: #fff;
   background-color: #0C1BB8;
