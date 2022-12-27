@@ -196,7 +196,7 @@ onBeforeMount(() => {
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     .left {
       padding: 16px;
       box-sizing: border-box;

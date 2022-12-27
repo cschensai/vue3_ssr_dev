@@ -24,7 +24,12 @@
               :src="`https://static.desty.app/desty-homepage/v2/${item.trademark}.svg`"
               :alt="item.name"
             />
-            <p class="card-title">{{ $t(item.title) }}</p>
+            <p
+              class="card-title"
+              :style="{ width: locale === 'en' ? '266px' : '296px' }"
+            >
+              {{ $t(item.title) }}
+            </p>
             <p class="card-des">{{ $t(item.des) }}</p>
             <div
               class="card-more"
@@ -79,7 +84,7 @@ import { useI18n } from "vue-i18n";
 import { PLATFORM_LIST } from "~/constant/index";
 import useHome from "~/stores/index";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const store = useHome();
 
 const handleClinkMore = (link, platform) => {
@@ -316,7 +321,7 @@ onBeforeMount(() => {
         height: 56px;
         border-radius: 12px;
         cursor: pointer;
-        color: #FFFFFF;
+        color: #ffffff;
       }
       .card-menu {
         margin-top: 45px;
@@ -418,8 +423,8 @@ onBeforeMount(() => {
 @media screen and (max-width: 768px) {
   .desty-platform {
     &-bg {
-      height: 743px;
-      top: -285px;
+      height: 800px;
+      top: -293px;
       background-image: url(https://static.desty.app/desty-homepage/v2/tools-bg-moble.png);
     }
     &-white {
@@ -430,6 +435,7 @@ onBeforeMount(() => {
     box-sizing: border-box;
     width: 100%;
     padding: 0 16px;
+    margin-top: 28px;
     &-head {
       gap: 16px;
       margin-bottom: 40px;
@@ -493,9 +499,28 @@ onBeforeMount(() => {
           }
         }
       }
+      .tools-page {
+        .card-backimg {
+          left: -50px;
+        }
+      }
+      .tools-store {
+        .card-backimg {
+          bottom: 24px;
+        }
+      }
+      .tools-menu {
+        .card-backimg {
+          bottom: 25px;
+          left: -55px;
+        }
+      }
       .tools-chat {
         .card-backimg {
           bottom: -32px;
+          img{
+            width: 109%;
+          }
         }
       }
     }

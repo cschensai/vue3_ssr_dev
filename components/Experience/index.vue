@@ -156,8 +156,10 @@ const goExperience = () => {
       top: -100px;
     }
     .yellow-supers {
-      right: -231px;
-      top: 176px;
+      right: -123px;
+      top: 152px;
+      width: 309.77px;
+      height: 204.73px;
     }
   }
 }
