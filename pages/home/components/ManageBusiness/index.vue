@@ -182,7 +182,8 @@ onBeforeMount(() => {
     #manage-business-lottie{
       width: 110%;
       height: 140%;
-      transform: translateY(-5%);
+      // transform: translateY(-5%);
+      transform: translateX(-10%);
     }
   }
 }
@@ -242,7 +243,7 @@ onBeforeMount(() => {
         top: -192px;
       }
       #manage-business-lottie {
-        transform: translateX(-10%);
+        // transform: translateX(-10%);
         min-height: 100px;
         width: 100%;
         height: 100%;
