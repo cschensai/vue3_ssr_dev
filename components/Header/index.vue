@@ -2,7 +2,7 @@
   <client-only>
     <DestyHeaderV2
       class="home-page-header-v2"
-      :lang="langRef"
+      :lang="homeStore.currLang"
       @handleLang="handleLang"
       @handleNav="handleNavAction"
     >
@@ -37,7 +37,6 @@ import MagneticButton from '~/components/MagneticButton/index.vue';
 import { handleNav } from '~/utils/utils';
 import useHome from '~/stores/index';
 
-const langRef = ref('id');
 const startNowButtonRef = ref(null);
 const { locale } = useI18n();
 const config = useRuntimeConfig();
@@ -46,7 +45,7 @@ const homeStore = useHome();
 
 // 更改语言
 function handleLang(key) {
-  langRef.value = key;
+  homeStore.setCurrLang(key);
   locale.value = key;
 }
 

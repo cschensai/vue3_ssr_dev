@@ -2,7 +2,7 @@
   <client-only>
     <DestyFooter
       class="desty-footer"
-      :lang="langRef"
+      :lang="homeStore.currLang"
       @handleLang="handleLang"
       @handleNav="handleNavAction"
     />
@@ -12,16 +12,16 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
 import { handleNav } from '~/utils/utils';
+import useHome from '~/stores/index';
 
-
-const langRef = ref('id');
 const { locale } = useI18n();
 const config = useRuntimeConfig();
 const { push } = useRouter();
+const homeStore = useHome();
 
 // 更改语言
 function handleLang(key) {
-  langRef.value = key;
+  homeStore.setCurrLang(key);
   locale.value = key;
 }
 

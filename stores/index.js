@@ -5,6 +5,7 @@ const useHome = defineStore('home', {
     return {
       isPhone: false,
       currToken: '',
+      currLang: 'id',
     };
   },
   actions: {
@@ -13,6 +14,9 @@ const useHome = defineStore('home', {
     },
     setCurrToken(tokenVal) {
       this.currToken = tokenVal;
+    },
+    setCurrLang(lang) {
+      this.currLang = lang;
     },
   },
 })
