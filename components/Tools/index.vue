@@ -65,14 +65,14 @@
             </div>
             <div class="card-backimg">
               <nuxt-img
-                v-if="store.isPhone"
                 lazy="loading"
+                class="mobile-img"
                 :src="`https://static.desty.app/desty-homepage/v2/${item.mobileBackimg}.png`"
                 :alt="item.name"
               />
               <nuxt-img
-                v-else
                 lazy="loading"
+                class="pc-img"
                 :src="`https://static.desty.app/desty-homepage/v2/${item.backimg}.png`"
                 :alt="item.name"
               />
@@ -429,6 +429,9 @@ onBeforeMount(() => {
       }
     }
   }
+  .mobile-img {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .desty-platform {
@@ -520,6 +523,12 @@ onBeforeMount(() => {
     }
     .idWidth {
       width: 296px !important;
+    }
+    .pc-img {
+      display: none;
+    }
+    .mobile-img {
+      display: block;
     }
   }
 }
