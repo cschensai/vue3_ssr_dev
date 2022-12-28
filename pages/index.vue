@@ -68,7 +68,7 @@ useHead({
             "alternateName": "Desty App",
             "significantLink": "https://desty.app",
             "dateCreated": "", //Insert page created time in ISO 8601
-            "isPartOf": "https://desty.omni",
+            "hasPart": "https://desty.omni",
             "thumbnailUrl": "" //Insert desty.app logo thumbnail URL
         }
       `,
