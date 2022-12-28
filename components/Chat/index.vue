@@ -179,8 +179,6 @@ function closeWidget() {
   }
   .float-icon {
     position: fixed;
-    top: 658px;
-    right: 86px;
     &.zendesk-box {
       cursor: pointer;
       height: 66px;
@@ -264,6 +262,12 @@ function closeWidget() {
       }
     }
   }
+  @media screen and (min-width: 960px){
+    .float-icon{
+       top: 658px;
+       right: 86px;
+    }
+  }
   .scroll-top {
     top: 0;
     position: fixed;
@@ -279,10 +283,10 @@ function closeWidget() {
   @media screen and (max-width: 960px) {
     .float-icon {
       right: 0px;
-      top: 360px;
+      bottom: 13px;
     }
     .whatsappIcon {
-      top: -90px;
+      top: -65px;
     }
     .scroll-top {
       width: 100%;
