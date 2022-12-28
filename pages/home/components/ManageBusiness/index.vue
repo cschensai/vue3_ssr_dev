@@ -198,6 +198,7 @@ onBeforeMount(() => {
     max-width: 100%;
     // overflow-x: hidden;
     .left {
+      position: relative;
       padding: 16px;
       box-sizing: border-box;
       .shadow-bg {
@@ -238,11 +239,13 @@ onBeforeMount(() => {
       }
     }
     .right {
+      overflow-x: hidden;
       .shadow-bg {
-       width: 432px;
+        width: 50%;
         height: 446px;
-        right: -360px;
+        right: 0;
         top: -192px;
+        transform: rotate(0);
       }
       #manage-business-lottie {
         transform: translateX(-10%);

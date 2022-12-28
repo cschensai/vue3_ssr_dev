@@ -63,7 +63,7 @@ useHead({
             "name": "desty app | Satu Ekosistem Untuk Atur Bisnis Kamu",
             "url": "https://desty.app",
             "description": "Mudah atur bisnis dengan Desty. Atur produk, order, stok, dan konsolidasi data dalam satu dashboard.",
-            "image": "", //Insert desty.app logo thumbnail URL
+            "image": "https://www.desty.app/favicon.ico?v=2", //Insert desty.app logo thumbnail URL
             "identifier": "desty app",
             "alternateName": "Desty App",
             "significantLink": "https://desty.app",
