@@ -329,6 +329,7 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
     .featured-on {
       padding-top: 70px;
       &-title {
+        width: 100%;
         gap: 16px;
         span {
           font-size: 20px;
