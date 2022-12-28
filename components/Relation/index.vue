@@ -63,7 +63,12 @@
         <section class="wrapper">
           <div class="content">
             <div class="marquee-img" v-for="item in FEATURED_LIST" :key="item">
-              <nuxt-img lazy="loading" :src="item.img" alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu" :class="item.class" />
+              <nuxt-img
+                lazy="loading"
+                :src="item.img"
+                alt="Desty App, Desty Omni, Desty Page, Desty Store, Desty Menu"
+                :class="item.class"
+              />
             </div>
           </div>
         </section>
@@ -329,14 +334,17 @@ import { MERCHANT_LIST, FEATURED_LIST, BACKED_LIST } from "~/constant/index";
     .featured-on {
       padding-top: 70px;
       &-title {
+        box-sizing: border-box;
         width: 100%;
         gap: 16px;
+        padding: 0 16px;
         span {
           font-size: 20px;
           line-height: 28px;
         }
         .hr {
-          width: 211px;
+          // width: 211px;
+          width: calc(100% - 116px);
         }
       }
       .title {
