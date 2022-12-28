@@ -12,6 +12,7 @@ export function handleNav(key, config, push) {
     return;
   }
   let url;
+  let newTab = false;
   switch (key) {
     case 'startnow':
       url = `${config.VITE_OMNI_URL}/register`;
@@ -23,20 +24,25 @@ export function handleNav(key, config, push) {
       url = config.VITE_STORE_URL;
       break;
     case 'destyomni':
-      url = 'https://omni.desty.app';
+      newTab = true;
+      url = 'https://omnihome.desty.app';
       break;
     case 'destymenu':
+      newTab = true;
       url = config.VITE_MENU_URL;
       break;
     case 'blog':
     case 'companyblog':
+      newTab = true;
       url = 'https://desty.page/blog';
       break;
     case 'career':
     case 'companycareer':
+      newTab = true;
       url = 'https://desty.freshteam.com/jobs';
       break;
     case 'helpcenter':
+      newTab = true;
       url = 'https://desty.tawk.help/category/desty-menu';
       break;
     case 'companycontactus':
@@ -63,7 +69,10 @@ export function handleNav(key, config, push) {
     default:
       break;
   }
-  if (url) location.href = url;
+  if (url) {
+    if (newTab) window.open(url);
+    else location.href = url;
+  };
 }
 
 // Linear interpolation
