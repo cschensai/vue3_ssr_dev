@@ -65,6 +65,13 @@
             </div>
             <div class="card-backimg">
               <nuxt-img
+                v-if="store.isPhone"
+                lazy="loading"
+                :src="`https://static.desty.app/desty-homepage/v2/${item.mobileBackimg}.png`"
+                :alt="item.name"
+              />
+              <nuxt-img
+                v-else
                 lazy="loading"
                 :src="`https://static.desty.app/desty-homepage/v2/${item.backimg}.png`"
                 :alt="item.name"
@@ -461,7 +468,7 @@ onBeforeMount(() => {
     }
     &-content {
       &-platform {
-        height: 706px;
+        height: 726px;
         top: 80px;
       }
       .card-body {
@@ -493,8 +500,8 @@ onBeforeMount(() => {
           display: none;
         }
         .card-backimg {
-          // width: 100%;
-          height: 300px;
+          width: 100%;
+          left: 0;
           bottom: 0;
           img {
             width: 100%;
@@ -502,28 +509,9 @@ onBeforeMount(() => {
           }
         }
       }
-      .tools-page {
-        .card-backimg {
-          left: -50px;
-        }
-      }
-      .tools-store {
-        .card-backimg {
-          bottom: 24px;
-        }
-      }
-      .tools-menu {
-        .card-backimg {
-          bottom: 25px;
-          left: -55px;
-        }
-      }
       .tools-chat {
         .card-backimg {
           bottom: -32px;
-          img {
-            width: 109%;
-          }
         }
       }
     }
