@@ -7,7 +7,7 @@ export default {
     titleNext: 'The One Ecosystemto Manage Your Business',
     metaTitleContentNext: 'The One Ecosystemto Manage Your Business',
     metaDescContent: 'Manage your business with Desty. Manage product, order, stocks, and consolidate data in one dashboard.',
-    ogLocaleContent: 'en_EN',
+    ogLocaleContent: 'id_EN',
     linkHrefLang: 'en-id',
   },
   tokenGGMsg: 'en tokenGGMsg',
