@@ -73,7 +73,7 @@ function handleStartNow() {
 }
 
 // // 加载动画
-onBeforeMount(() => {
+onMounted(() => {
   if (process.client) {
     const params = {
       container: document.getElementById('manage-business-lottie'),
