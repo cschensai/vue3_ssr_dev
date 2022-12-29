@@ -90,12 +90,14 @@
 </template>
 
 <script setup>
+import { useNuxtApp } from '#app';
 import { useI18n } from "vue-i18n";
 import { PLATFORM_LIST } from "~/constant/index";
 import useHome from "~/stores/index";
 
-const { t, locale } = useI18n();
+const { locale } = useI18n();
 const store = useHome();
+const { amplitude } = useNuxtApp().vueApp;
 
 const handleClinkMore = (link, platform) => {
   window.location.href = link;

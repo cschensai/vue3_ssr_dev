@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+import { useNuxtApp } from '#app';
 import { useI18n } from 'vue-i18n';
 import { SUB_MENU_LIST } from '~/constant/index';
 import MagneticButton from '~/components/MagneticButton/index.vue';
@@ -42,6 +43,7 @@ const { locale } = useI18n();
 const config = useRuntimeConfig();
 const { push } = useRouter();
 const homeStore = useHome();
+const { amplitude } = useNuxtApp().vueApp;
 
 // 更改语言
 function handleLang(key) {

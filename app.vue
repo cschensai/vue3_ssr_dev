@@ -14,13 +14,14 @@
 import { ElConfigProvider } from 'element-plus';
 import elementPlusEn from 'element-plus/es/locale/lang/en';
 // import elementPlusId from 'element-plus/es/locale/lang/id';
+import { useNuxtApp } from '#app';
 import useHome from './stores/index';
 import flexible from './utils/flexible';
-import useAmplitude from '~/composables/useAmplitude';
 
 const homeStore = useHome();
 const config = useRuntimeConfig();
 const destyExchangeTokenRef = ref(null);
+const { amplitude } = useNuxtApp().vueApp;
 
 const isProduction = computed(() => {
   return config.VITE_NODE_ENV === 'production';
@@ -45,13 +46,14 @@ onBeforeMount(() => {
 
 // 设置amplitude
 function setAmplitude() {
-  if (process.client) {
-    useAmplitude();
-    amplitude.getInstance().logEvent('general: visit homepage - desty.app', {
-      source: document.referrer,
-      is_logged_in: !!homeStore.currToken
-    });
-  }
+  amplitude.getInstance().init(config.VITE_AMPLITUDE_API_KEY, {
+    includeUtm: true,
+    includeReferrer: true,
+  });
+  amplitude.getInstance().logEvent('general: visit homepage - desty.app', {
+    source: document.referrer,
+    is_logged_in: !!homeStore.currToken
+  });
 }
 
 onMounted(() => {
@@ -62,7 +64,6 @@ onMounted(() => {
       setAmplitude();
     });
   }
-  
   flexible(window, document);
 })
 

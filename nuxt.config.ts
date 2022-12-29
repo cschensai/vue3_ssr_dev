@@ -94,6 +94,10 @@ export default {
       src: '~/plugins/button-magnetic',
       mode: 'client',
     },
+    {
+      src: '~/plugins/amplitude',
+      mode: 'client',
+    },
   ],
   // 注册运行时环境配置变量
   runtimeConfig: {
@@ -102,7 +106,7 @@ export default {
   vite: {
     envDir: '~/env',
     ssr: {
-      noExternal: ['element-plus/es'],
+      noExternal: ['element-plus/es', 'desty-design/lib/index.es.js'],
     },
     plugins: [
       // element-plus按需加载

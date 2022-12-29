@@ -76,21 +76,6 @@ useHead({
   ]
 })
 
-// const currentCount = useCount();
-
-// const store = useUser();
-// const currentNumber = computed(() => {
-//   return store.number;
-// });
-// // composable
-// function handleCount() {
-//   currentCount.value++;
-// }
-// // store
-// function handleNumber() {
-//   store.addNumber();
-// }
-
 </script>
 
 <style lang="less" scoped>

@@ -32,10 +32,12 @@
   </div> -->
 </template>
 <script setup>
+import { useNuxtApp } from '#app';
 import MagneticButton from "~/components/MagneticButton/index.vue";
 import useHome from "~/stores/index";
 
 const store = useHome();
+const { amplitude } = useNuxtApp().vueApp;
 
 const goExperience = () => {
   window.location.href = "https://omni.desty.app/register";

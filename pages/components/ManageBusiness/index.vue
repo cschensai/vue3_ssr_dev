@@ -44,6 +44,7 @@
 </template>
 
 <script setup>
+import { useNuxtApp } from '#app';
 import lottie from 'lottie-web';
 import { useI18n } from 'vue-i18n';
 import useHome from '~/stores/index';
@@ -55,6 +56,7 @@ const store = useHome();
 const { locale } = useI18n();
 const videoDialog = ref(null);
 const config = useRuntimeConfig();
+const { amplitude } = useNuxtApp().vueApp;
 
 function handleWatchVideo() {
   videoDialog.value.show();
