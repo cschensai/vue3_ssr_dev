@@ -33,7 +33,7 @@
     <Relation />
     <Experience />
     <Footer />
-    <Chat />
+    <!-- <Chat /> -->
   </div>
 </template>
 
@@ -41,7 +41,7 @@
 // import useHome from '~~/stores';
 import Header from '~/components/Header/index.vue';
 import Footer from '~/components/Footer/index.vue';
-import Chat from '~/components/Chat/index.vue';
+// import Chat from '~/components/Chat/index.vue';
 import ManageBusiness from './components/ManageBusiness/index.vue';
 import DashBoardList from './components/DashBoardList/index.vue';
 import Tools from "~/components/Tools";
