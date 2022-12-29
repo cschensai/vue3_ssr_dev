@@ -44,15 +44,13 @@
 </template>
 
 <script setup>
-import { useNuxtApp } from '#app';
+import lottie from 'lottie-web';
 import { useI18n } from 'vue-i18n';
 import useHome from '~/stores/index';
 import ScrollBar from '~/components/ScrollBar/index.vue';
 import VideoDialog from '~/components/VideoDialog/index.vue';
 import MagneticButton from '~/components/MagneticButton/index.vue';
-import lottie from 'lottie-web';
 
-// const { animationData } = useNuxtApp().vueApp;
 const store = useHome();
 const { locale } = useI18n();
 const videoDialog = ref(null);
