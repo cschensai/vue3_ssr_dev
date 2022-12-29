@@ -46,9 +46,10 @@ onBeforeMount(() => {
 
 // 设置amplitude
 function setAmplitude() {
-  amplitude.getInstance().init(config.VITE_AMPLITUDE_API_KEY, {
+  amplitude.getInstance().init(config.VITE_AMPLITUDE_API_KEY, null, {
     includeUtm: true,
     includeReferrer: true,
+    deviceIdFromUrlParam: true,
   });
   amplitude.getInstance().logEvent('general: visit homepage - desty.app', {
     source: document.referrer,

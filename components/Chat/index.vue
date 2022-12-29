@@ -137,6 +137,7 @@ function importScript() {
 
 
 function handleCustomerService() {
+
   const hasZen = document.querySelector("#ze-snippet");
   if (hasZen) {
     window.zE("messenger", "open");
@@ -150,7 +151,6 @@ function handleCustomerService() {
         // window.zE("webWidget", "hide");
         window.zE("messenger", "open");
         zenShow.value = true;
-
         setTimeout(() => {
           loadingZen.value = false;
         }, 800);
