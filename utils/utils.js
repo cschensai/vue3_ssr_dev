@@ -11,6 +11,10 @@ export function handleNav(key, config, push) {
     push('/');
     return;
   }
+  if (key === 'companycontactus') {
+    push('/ajak');
+    return;
+  }
   let url;
   let newTab = false;
   switch (key) {
@@ -44,9 +48,6 @@ export function handleNav(key, config, push) {
     case 'helpcenter':
       newTab = true;
       url = 'https://desty.tawk.help/category/desty-menu';
-      break;
-    case 'companycontactus':
-      url = `${config.VITE_HOME_URL}/ajak`;
       break;
     case 'instagram':
       url = 'https://www.instagram.com/desty.app';
