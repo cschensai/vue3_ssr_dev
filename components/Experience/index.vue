@@ -102,7 +102,7 @@ const goExperience = () => {
     margin-top: 29px;
     cursor: pointer;
     span {
-      font-family: "Public Sans";
+      font-family: "Plus Jakarta Sans";
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
