@@ -92,10 +92,6 @@ export default defineNuxtConfig({
       mode: 'client',
     },
     {
-      src: '~/plugins/button-magnetic',
-      mode: 'client',
-    },
-    {
       src: '~/plugins/amplitude',
       mode: 'client',
     },

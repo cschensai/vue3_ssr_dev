@@ -1,6 +1,6 @@
 <template>
   <!-- seo -->
-  <Head>
+  <!-- <Head>
     <Title>{{ $t('seo.titlePrev') }} | {{ $t('seo.titleNext') }}</Title>
     <Link rel="canonical" href="https://desty.app" />
     <Link rel="alternate" href="https://desty.app" :hreflang="$t('seo.linkHrefLang')" />
@@ -23,58 +23,42 @@
     <Meta property="twitter:description" :content="$t('seo.metaDescContent')" />
     <Meta property="twitter:image" content="https://static.desty.app/desty-design/desty-logo.svg" />
     <Meta name="twitter:domain" content="Desty App" />
-  </Head>
+  </Head> -->
   
   <div class="index-page">
-    <Header />
-    <ManageBusiness />
-    <DashBoardList />
-    <Tools />
-    <Relation />
-    <Experience />
-    <Footer />
-    <!-- <Chat /> -->
+    page content
   </div>
 </template>
 
 <script setup>
-// import useHome from '~~/stores';
-import Header from '~/components/Header/index.vue';
-import Footer from '~/components/Footer/index.vue';
-// import Chat from '~/components/Chat/index.vue';
-import ManageBusiness from './components/ManageBusiness/index.vue';
-import DashBoardList from './components/DashBoardList/index.vue';
-import Tools from "~/components/Tools";
-import Relation from "~/components/Relation";
-import Experience from "~/components/Experience";
 
-useHead({
-  script: [
-    {
-      src: 'https://static.desty.app/desty-homepage/v2/animationData.js',
-      body: false
-    },
-    {
-      type: 'application/ld+json',
-      children: `
-        {
-            "@context": "https://schema.org/",
-            "@type": "WebPage",
-            "name": "desty app | Satu Ekosistem Untuk Atur Bisnis Kamu",
-            "url": "https://desty.app",
-            "description": "Mudah atur bisnis dengan Desty. Atur produk, order, stok, dan konsolidasi data dalam satu dashboard.",
-            "image": "https://www.desty.app/favicon.ico?v=2", //Insert desty.app logo thumbnail URL
-            "identifier": "desty app",
-            "alternateName": "Desty App",
-            "significantLink": "https://desty.app",
-            "dateCreated": "2022-12-25T10:00:00TZD", //Insert page created time in ISO 8601
-            "hasPart": "https://desty.omni",
-            "thumbnailUrl": "https://www.desty.app/favicon.ico?v=2" //Insert desty.app logo thumbnail URL
-        }
-      `,
-    } 
-  ]
-})
+// useHead({
+//   script: [
+//     {
+//       src: 'https://static.desty.app/desty-homepage/v2/animationData.js',
+//       body: false
+//     },
+//     {
+//       type: 'application/ld+json',
+//       children: `
+//         {
+//             "@context": "https://schema.org/",
+//             "@type": "WebPage",
+//             "name": "desty app | Satu Ekosistem Untuk Atur Bisnis Kamu",
+//             "url": "https://desty.app",
+//             "description": "Mudah atur bisnis dengan Desty. Atur produk, order, stok, dan konsolidasi data dalam satu dashboard.",
+//             "image": "https://www.desty.app/favicon.ico?v=2", //Insert desty.app logo thumbnail URL
+//             "identifier": "desty app",
+//             "alternateName": "Desty App",
+//             "significantLink": "https://desty.app",
+//             "dateCreated": "2022-12-25T10:00:00TZD", //Insert page created time in ISO 8601
+//             "hasPart": "https://desty.omni",
+//             "thumbnailUrl": "https://www.desty.app/favicon.ico?v=2" //Insert desty.app logo thumbnail URL
+//         }
+//       `,
+//     } 
+//   ]
+// })
 
 </script>
 
