@@ -31,7 +31,7 @@ export default {
     productTitle: 'Product Management',
     productDesc: 'Add and edit all products faster to all your marketplace stores',
     orderTitle: 'Order Processing',
-    orderDesc: 'Process all orders easier from pickup request to delivery tracking for all your marketplace stores',
+    orderDesc: 'Manage all orders easier from pickup request to delivery tracking for all your marketplace stores',
     stockTitle: 'Stock Synchronization',
     stockDesc: 'All stocks will be accurately and automatically updated to avoid overselling & underselling!',
     consolidatedTitle: 'Consolidated Data',
