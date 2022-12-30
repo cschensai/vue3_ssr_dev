@@ -289,6 +289,30 @@ onBeforeMount(() => {
       &:nth-child(4) {
         transform: translateY(160px);
       }
+      &:nth-of-type(1) {
+        .card-backimg {
+          width: 784px;
+          height: 552px;
+        }
+      }
+      &:nth-of-type(2) {
+        .card-backimg {
+          width: 604px;
+          height: 556px;
+        }
+      }
+      &:nth-of-type(3) {
+        .card-backimg {
+          width: 881px;
+          height: 572px;
+        }
+      }
+      &:nth-of-type(4) {
+        .card-backimg {
+          width: 586px;
+          height: 520px;
+        }
+      }
     }
     .card-body {
       font-family: "Plus Jakarta Sans";
@@ -364,6 +388,8 @@ onBeforeMount(() => {
         z-index: -1;
         img {
           border-radius: 24px;
+          width: 100%;
+          height: 100%;
         }
       }
     }
@@ -475,6 +501,30 @@ onBeforeMount(() => {
       &-platform {
         height: 726px;
         top: 80px;
+        &:nth-of-type(1) {
+          .card-backimg {
+            width: unset;
+            height: unset;
+          }
+        }
+        &:nth-of-type(2) {
+          .card-backimg {
+            width: unset;
+            height: unset;
+          }
+        }
+        &:nth-of-type(3) {
+          .card-backimg {
+            width: unset;
+            height: unset;
+          }
+        }
+        &:nth-of-type(4) {
+          .card-backimg {
+            width: unset;
+            height: unset;
+          }
+        }
       }
       .card-body {
         padding: 20px 16px 0 16px;

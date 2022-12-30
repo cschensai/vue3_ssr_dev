@@ -135,7 +135,8 @@ function handleNavAction(key) {
     }
   }
   .header-btn{
-    width: 142px;
+    width: unset;
+    padding: 0 14px;
   }
 }
 </style>

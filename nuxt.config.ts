@@ -1,4 +1,5 @@
 // import { defineNuxtConfig } from 'nuxt/config';
+import { defineNuxtConfig } from 'nuxt/config'
 import { loadEnv } from 'vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -10,7 +11,7 @@ const envName = process.env.APP_ENV;
 const envData = loadEnv(envName, 'env');
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default {
+export default defineNuxtConfig({
   css: ['~/assets/less/uilib.less', '~/assets/less/index.less'],
   app: {
     head: {
@@ -50,13 +51,13 @@ export default {
   webpack: {
     extractCSS: true,
     // postcss
-    postcss: {
-      postcssOptions: require('./postcss.config.js'),
-    },
+    // postcss: {
+    //   postcssOptions: require('./postcss.config.js'),
+    // },
   },
+  postcss: require('./postcss.config.js'),
   build: {
     transpile: lifycycle === 'build' ? ['element-plus'] : [],
-    // 分离css
     // bundle analyze
     analyze: true,
   },
@@ -119,5 +120,5 @@ export default {
       }),
     ],
   },
-}
+})
 

@@ -16,6 +16,7 @@ module.exports = {
       unitPrecision: 5, // 小数点的位数
       minPixelValue: 1, // 设置要替换的最小像素
       propList: ["*"],
+      exclude: 'ignore',
     },
   }
 }
