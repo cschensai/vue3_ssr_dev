@@ -30,7 +30,7 @@ export default {
     colorTitle: 'One Dashboard',
     productTitle: 'Product Management',
     productDesc: 'Add and edit all products faster to all your marketplace stores',
-    orderTitle: 'Order Management',
+    orderTitle: 'Order Processing',
     orderDesc: 'Process all orders easier from pickup request to delivery tracking for all your marketplace stores',
     stockTitle: 'Stock Synchronization',
     stockDesc: 'All stocks will be accurately and automatically updated to avoid overselling & underselling!',
